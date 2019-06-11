@@ -1,0 +1,38 @@
+
+*{box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+	margin-left: 0;
+}
+
+.nav-link{
+  border-radius: 12px;
+  padding: 8px 24px;
+  background-color: #5fad56;
+  margin-bottom: 15px;
+color: black;
+text-decoration: none;
+}
+body{
+	background-color: #a3db6b;
+}
+.fotoPerfil{
+height: 15vh;
+width: 15vw;
+margin: auto;
+}
+.fotoFavorito{
+	height: 25vh;
+	width: 25vw;
+	margin: auto;
+}
+.card{
+
+margin: 12px;
+
+}
+.titulo{
+	padding: 15px;
+}
