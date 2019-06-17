@@ -11,13 +11,13 @@
 
       <ul class="nav nav-pills success nav-fill">
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success" href="perfil-usuario.php">Verduras</a>
+          <a class="nav-link btn btn-outline-success" href="#">Verduras</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success active" href="miCarrito.php">Frutas</a>
+          <a class="nav-link btn btn-outline-success active" href="#">Frutas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success" href="favoritos.php">Almacen</a>
+          <a class="nav-link btn btn-outline-success" href="#">Almacen</a>
         </li>
 
     </div>
@@ -28,7 +28,7 @@
   <div class="card col-sm-12 col-md-6 col-lg-4">
   <img src="images/palta.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Compra Ejemplo</h5>
+    <h5 class="card-title">Canasta 1</h5>
     <div class="text-right">
       <select class="form-control" id="cantidad">
            <option>1</option>
@@ -45,7 +45,7 @@
 <div class="card col-sm-12 col-md-6 col-lg-4">
 <img src="images/palta.jpg" class="card-img-top" alt="...">
 <div class="card-body">
-  <h5 class="card-title">Compra Ejemplo</h5>
+  <h5 class="card-title">Canasta 2</h5>
   <div class="text-right">
     <select class="form-control" id="cantidad">
          <option>1</option>
@@ -62,7 +62,7 @@
 <div class="card col-sm-12 col-md-6 col-lg-4">
 <img src="images/palta.jpg" class="card-img-top" alt="...">
 <div class="card-body">
-  <h5 class="card-title">Compra Ejemplo</h5>
+  <h5 class="card-title">Canasta 3</h5>
   <div class="text-right">
     <select class="form-control" id="cantidad">
          <option>1</option>
@@ -79,7 +79,7 @@
 <div class="card col-sm-12 col-md-6 col-lg-4">
 <img src="images/palta.jpg" class="card-img-top" alt="...">
 <div class="card-body">
-  <h5 class="card-title">Compra Ejemplo</h5>
+  <h5 class="card-title">Canasta 4</h5>
   <div class="text-right">
     <select class="form-control" id="cantidad">
          <option>1</option>
