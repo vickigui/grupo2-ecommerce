@@ -48,14 +48,19 @@
 
   /* NAV
   -------------------------------------------------- */
-  .user {
+  .user a {
     color: var(--orange);
     margin-left:  20px;
     font-size: 1.5em;
   }
-  .carrito {color: var(--mid-green);
+
+
+  .carrito a {color: var(--mid-green);
     margin-left: 10px;
     font-size: 1.5em;}
+
+    .user a:hover,
+    .carrito a:hover {color: var(--yellow);}
 
 
   /* Titles

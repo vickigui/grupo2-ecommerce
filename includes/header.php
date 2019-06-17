@@ -30,22 +30,25 @@
    <div class="collapse navbar-collapse" id="navbarCollapse">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item active">
-         <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+         <a class="nav-link" href="index.php">HOME <span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">NOSOTROS</a>
+         <a class="nav-link" href="nosotros.php">NOSOTROS</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">PRODUCTOS</a>
+         <a class="nav-link" href="productos.php">PRODUCTOS</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">ALMACÉN</a>
+         <a class="nav-link" href="almacen.php">ALMACÉN</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">PROMOS</a>
+         <a class="nav-link" href="promos.php">PROMOS</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">RECETAS</a>
+         <a class="nav-link" href="recetas.php">RECETAS</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="faq.php">FAQ</a>
        </li>
 
 
@@ -55,8 +58,8 @@
        <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
      </form>
 
-     <div class="user"><i class="fas fa-user"></i></div>
-     <div class="carrito"><i class="fas fa-shopping-cart"></i></div>
+     <div class="user"><a class="nav-link" href="registro.php"><i class="fas fa-user"></i></a></div>
+     <div class="carrito"><a class="nav-link" href="miCarrito.php"><i class="fas fa-shopping-cart"></i></a></div>
    </div>
  </nav>
 </header>
