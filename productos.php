@@ -4,24 +4,22 @@
 
     <div class="jumbotron jumbotron-fluid">
 
-        <h1 class="display-4 text-center">Mi Carrito</h1>
+        <h1 class="display-4 text-center">Productos</h1>
       </div>
 
     <div class="text-right">
 
       <ul class="nav nav-pills success nav-fill">
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success" href="perfil-usuario.php">MI PERFIL</a>
+          <a class="nav-link btn btn-outline-success" href="perfil-usuario.php">Verduras</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success active" href="miCarrito.php">MI CARRITO</a>
+          <a class="nav-link btn btn-outline-success active" href="miCarrito.php">Frutas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success" href="favoritos.php">FAVORITOS</a>
+          <a class="nav-link btn btn-outline-success" href="favoritos.php">Almacen</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link btn btn-outline-success" href="#">CERRAR SESION</a>
-        </li>
+  
       </ul>
     </div>
     <br>
