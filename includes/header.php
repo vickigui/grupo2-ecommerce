@@ -33,19 +33,22 @@
          <a class="nav-link" href="index.php">HOME <span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">NOSOTROS</a>
+         <a class="nav-link" href="nosotros.php">NOSOTROS</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">PRODUCTOS</a>
+         <a class="nav-link" href="productos.php">PRODUCTOS</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">ALMACÉN</a>
+         <a class="nav-link" href="almacen.php">ALMACÉN</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">PROMOS</a>
+         <a class="nav-link" href="promos.php">PROMOS</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="#">RECETAS</a>
+         <a class="nav-link" href="recetas.php">RECETAS</a>
+       </li>
+       <li class="nav-item">
+         <a class="nav-link" href="faq.php">FAQ</a>
        </li>
 
 
