@@ -30,7 +30,7 @@
    <div class="collapse navbar-collapse" id="navbarCollapse">
      <ul class="navbar-nav mr-auto">
        <li class="nav-item active">
-         <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+         <a class="nav-link" href="index.php">HOME <span class="sr-only">(current)</span></a>
        </li>
        <li class="nav-item">
          <a class="nav-link" href="#">NOSOTROS</a>
@@ -55,8 +55,8 @@
        <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
      </form>
 
-     <div class="user"><i class="fas fa-user"></i></div>
-     <div class="carrito"><i class="fas fa-shopping-cart"></i></div>
+     <div class="user"><a class="nav-link" href="registro.php"><i class="fas fa-user"></i></a></div>
+     <div class="carrito"><a class="nav-link" href="miCarrito.php"><i class="fas fa-shopping-cart"></i></a></div>
    </div>
  </nav>
 </header>
