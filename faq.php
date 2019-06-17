@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<<?php require "includes/header.php"; ?>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/stylesMP.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <title>PALTA Tu Verduleria Online. Mi Perfil</title>
-  </head>
-  <body>
-  <header>
-<p>Header</p>
-  </header>
+<div class="container">
+<div class="jumbotron jumbotron-fluid">
+    <h1 class="display-4 text-center">Preguntas Frecuentes</h1>
 
+  </div>
 
-  <div class="container">
-<h2 class="text-center titulo">Preguntas Frecuentes</h2>
 
 
 <div class="card border-success">
@@ -124,10 +114,6 @@ Solo deberás abonar el valor de lo que recibas, los productos faltantes deberá
 
   </div>
 </div>
+</div>
     </div>
-
-  <footer>
-<p>footer</p>
-  </footer>
-  </body>
-</html>
+<?php require "includes/footer.php"; ?>

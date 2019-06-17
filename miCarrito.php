@@ -1,62 +1,118 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/stylesMP.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <title>PALTA Tu Verduleria Online. Mi Perfil</title>
-  </head>
-  <body>
-  <header>
-<p>Header</p>
-  </header>
-
+<?php require "includes/header.php"; ?>
 
   <div class="container">
 
-<div class="row">
-  <div class="col-4">
-    <img src="images/marge_simpson.jpg" class="rounded-circle fotoPerfil rounded mx-auto d-block" alt="fotoUsuario">
+    <div class="jumbotron jumbotron-fluid">
 
-  </div>
-  <div class="col-8">
-    <div class="text-center">
+        <h1 class="display-4 text-center">Mi Carrito</h1>
+      </div>
 
-      <h2 class="text-uppercase">Marge Simpson</h2>
-      <h3 >Mi Carrito</h3>
+    <div class="text-right">
+
+      <ul class="nav nav-pills success nav-fill">
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-success" href="perfil-usuario.php">MI PERFIL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-success active" href="miCarrito.php">MI CARRITO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-success" href="favoritos.php">FAVORITOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-success" href="#">CERRAR SESION</a>
+        </li>
+      </ul>
     </div>
+    <br>
+    <div class="main">
+<div class="card-group">
 
+  <div class="card col-sm-12 col-md-6 col-lg-4">
+  <img src="images/palta.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Compra Ejemplo</h5>
+    <div class="text-right">
+      <select class="form-control" id="cantidad">
+           <option>1</option>
+           <option>2</option>
+           <option>3</option>
+           <option>4</option>
+           <option>5</option>
+         </select>
+      <a href="#" class="btn btn-success">Quitar</a>
+      <a href="#" class="btn btn-success">Agregar</a>
+    </div>
   </div>
 </div>
-    <div class="row">
-      <div class="col-4">
-        <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link" href="perfil-usuario.php">MI PERFIL</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#">MI CARRITO</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="favoritos.php">FAVORITOS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">CERRAR SESION</a>
-      </li>
-    </ul>
+<div class="card col-sm-12 col-md-6 col-lg-4">
+<img src="images/palta.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Compra Ejemplo</h5>
+  <div class="text-right">
+    <select class="form-control" id="cantidad">
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+         <option>4</option>
+         <option>5</option>
+       </select>
+    <a href="#" class="btn btn-success">Quitar</a>
+    <a href="#" class="btn btn-success">Agregar</a>
+  </div>
+</div>
+</div>
+<div class="card col-sm-12 col-md-6 col-lg-4">
+<img src="images/palta.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Compra Ejemplo</h5>
+  <div class="text-right">
+    <select class="form-control" id="cantidad">
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+         <option>4</option>
+         <option>5</option>
+       </select>
+    <a href="#" class="btn btn-success">Quitar</a>
+    <a href="#" class="btn btn-success">Agregar</a>
+  </div>
+</div>
+</div>
+<div class="card col-sm-12 col-md-6 col-lg-4">
+<img src="images/palta.jpg" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Compra Ejemplo</h5>
+  <div class="text-right">
+    <select class="form-control" id="cantidad">
+         <option>1</option>
+         <option>2</option>
+         <option>3</option>
+         <option>4</option>
+         <option>5</option>
+       </select>
+    <a href="#" class="btn btn-success">Quitar</a>
+    <a href="#" class="btn btn-success">Agregar</a>
+  </div>
+</div>
+</div>
 
 
-      </div>
+</div>
 
 
 
+    </div>
+
+    <div class="text-right">
+
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-success">Cancelar</button>
+        <button type="button" class="btn btn-success">Finalizar</button>
+        <button type="button" class="btn btn-success">Seguir Comprando</button>
       </div>
     </div>
 
-  <footer>
-<p>footer</p>
-  </footer>
-  </body>
-</html>
+</div>
+
+<?php require "includes/footer.php"; ?>
