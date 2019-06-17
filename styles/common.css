@@ -70,7 +70,7 @@
   /* FOOTER
   -------------------------------------------------- */
   footer section {padding: 30px 0px;}
-  .main {
+  footer .main {
     background: var(--light-green);
     color: var(--font-text-grey);
   }
@@ -119,6 +119,7 @@
   .carousel-caption {
     bottom: 3rem;
     z-index: 10;
+
   }
 
   /* Declare heights because of positioning of img element */
@@ -126,10 +127,13 @@
     height: 32rem;
   }
   .carousel-item > img {
+    background-color:rgba(50, 50, 50, 0.5);
+    opacity:0.5;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+
   }
 
 
