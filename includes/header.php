@@ -39,16 +39,13 @@
          <a class="nav-link" href="productos.php">PRODUCTOS</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="almacen.php">ALMACÉN</a>
-       </li>
-       <li class="nav-item">
          <a class="nav-link" href="promos.php">PROMOS</a>
        </li>
        <li class="nav-item">
          <a class="nav-link" href="recetas.php">RECETAS</a>
        </li>
        <li class="nav-item">
-         <a class="nav-link" href="faq.php">FAQ</a>
+         <a class="nav-link" href="contacto.php">Contacto</a>
        </li>
 
 

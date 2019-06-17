@@ -14,6 +14,7 @@
            <p><i class="fab fa-lg fa-whatsapp"></i> +54 911 6900-7083</p>
            <p><a href="#" target="_blank" ><i class="fas fa-envelope"></i> verduleria@palta.com</a></p>
            <p><i class="fas fa-map"></i> Av. de los Lagos 345, Nordelta, Tigre</p>
+           <p><a href="faq.php" >Preguntas Frecuentes</a></p>
        </div>
 
          <div class="col-md-4 col-sm-12">
