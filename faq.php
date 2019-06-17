@@ -1,6 +1,6 @@
 <<?php require "includes/header.php"; ?>
 
-<div class="container">
+<div class="container-fluid">
 <div class="jumbotron jumbotron-fluid">
     <h1 class="display-4 text-center">Preguntas Frecuentes</h1>
 
