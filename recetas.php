@@ -18,7 +18,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/pie.jpg">
             <div class="card-body">
@@ -31,7 +31,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+
+        <div class="col-lg-4 col-md-6">
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/carrot-cake.jpg">
             <div class="card-body">
@@ -44,7 +45,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+
+        <div class="col-lg-4 col-md-6">
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/salad.jpg">
             <div class="card-body">
@@ -57,11 +59,8 @@
             </div>
           </div>
         </div>
-      </div>
 
-
-      <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/pie.jpg">
             <div class="card-body">
@@ -74,7 +73,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/carrot-cake.jpg">
             <div class="card-body">
@@ -87,7 +86,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/salad.jpg">
             <div class="card-body">
