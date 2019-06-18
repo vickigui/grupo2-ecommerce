@@ -1,7 +1,9 @@
     <?php require "includes/header.php"; ?>
 
       <div class="container form col-xs-8 col-lg-5 formSection">
-        <h1>¡ CONTACTANOS !</h1>
+        <div class="jumbotron">
+          <h1>¡ CONTACTANOS !</h1>
+        </div>
         <h4>Dejanos tu consulta y nos pondremos en contacto con vos</h4>
         <form action="index.php" method="post">
           <label for="name" id="name" class="items">

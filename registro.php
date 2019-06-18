@@ -1,7 +1,9 @@
 <?php require "includes/header.php"; ?>
 
   <div class="container form col-xs-8 col-lg-5 formSection">
-    <h1>¡ REGISTRATE !</h1>
+    <div class="jumbotron">
+      <h1>¡ REGISTRATE !</h1>
+    </div>
     <h4>Completá los siguientes datos para empezar.</h4>
     <form action="index.php" method="post">
       <label for="name" id="name" class="items">
