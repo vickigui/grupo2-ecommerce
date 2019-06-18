@@ -4,25 +4,22 @@
 
     <div class="jumbotron jumbotron-fluid">
 
-        <h1 class="display-4 text-center">Mi Carrito</h1>
+        <h1 class="display-4 text-center">Promos</h1>
       </div>
 
     <div class="text-right">
 
       <ul class="nav nav-pills success nav-fill">
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success" href="perfil-usuario.php">MI PERFIL</a>
+          <a class="nav-link btn btn-outline-success" href="#">Verduras</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success active" href="miCarrito.php">MI CARRITO</a>
+          <a class="nav-link btn btn-outline-success active" href="#">Frutas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-success" href="favoritos.php">FAVORITOS</a>
+          <a class="nav-link btn btn-outline-success" href="#">Almacen</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link btn btn-outline-success" href="#">CERRAR SESION</a>
-        </li>
-      </ul>
+
     </div>
     <br>
     <div class="main">
@@ -31,7 +28,7 @@
   <div class="card col-sm-12 col-md-6 col-lg-4">
   <img src="images/palta.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Compra Ejemplo</h5>
+    <h5 class="card-title">Canasta 1</h5>
     <div class="text-right">
       <select class="form-control" id="cantidad">
            <option>1</option>
@@ -48,7 +45,7 @@
 <div class="card col-sm-12 col-md-6 col-lg-4">
 <img src="images/palta.jpg" class="card-img-top" alt="...">
 <div class="card-body">
-  <h5 class="card-title">Compra Ejemplo</h5>
+  <h5 class="card-title">Canasta 2</h5>
   <div class="text-right">
     <select class="form-control" id="cantidad">
          <option>1</option>
@@ -65,7 +62,7 @@
 <div class="card col-sm-12 col-md-6 col-lg-4">
 <img src="images/palta.jpg" class="card-img-top" alt="...">
 <div class="card-body">
-  <h5 class="card-title">Compra Ejemplo</h5>
+  <h5 class="card-title">Canasta 3</h5>
   <div class="text-right">
     <select class="form-control" id="cantidad">
          <option>1</option>
@@ -82,7 +79,7 @@
 <div class="card col-sm-12 col-md-6 col-lg-4">
 <img src="images/palta.jpg" class="card-img-top" alt="...">
 <div class="card-body">
-  <h5 class="card-title">Compra Ejemplo</h5>
+  <h5 class="card-title">Canasta 4</h5>
   <div class="text-right">
     <select class="form-control" id="cantidad">
          <option>1</option>

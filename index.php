@@ -16,7 +16,7 @@
          <div class="carousel-caption text-left">
            <h1>Example headline.</h1>
            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-           <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+           <p><a class="btn btn-lg btn-primary" href="#" role="button">Registrate ahora!</a></p>
          </div>
        </div>
      </div>
@@ -24,9 +24,9 @@
        <img src="images/common/slider-home/picada.jpg">
        <div class="container">
          <div class="carousel-caption">
-           <h1>Another example headline.</h1>
+           <h1>Tenemos recetas para vos</h1>
            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-           <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+           <p><a class="btn btn-lg btn-primary" href="#" role="button">Conocé más</a></p>
          </div>
        </div>
      </div>
@@ -34,9 +34,9 @@
         <img src="images/common/slider-home/citrico.jpg">
         <div class="container">
          <div class="carousel-caption text-right">
-           <h1>One more for good measure.</h1>
+           <h1>Para combatir al invierno.</h1>
            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-           <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+           <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver Productos</a></p>
          </div>
        </div>
      </div>
@@ -59,28 +59,95 @@
  <div class="container marketing">
 
    <!-- Three columns of text below the carousel -->
+<h2 class="featurette-heading">Estos productos<br> <span class="text-muted">No te pueden faltar</span></h2>
+<hr class="featurette-divider">
+
    <div class="row">
-     <div class="col-lg-4">
-       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-       <h2>Heading</h2>
-       <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-       <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-     </div><!-- /.col-lg-4 -->
-     <div class="col-lg-4">
-       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-       <h2>Heading</h2>
-       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-       <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-     </div><!-- /.col-lg-4 -->
-     <div class="col-lg-4">
-       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-       <h2>Heading</h2>
-       <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-       <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-     </div><!-- /.col-lg-4 -->
-   </div><!-- /.row -->
-
-
+           <div class="col-md-4">
+             <div class="card mb-4 shadow-sm">
+               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/vegetables.jpg">
+               <div class="card-body">
+                 <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="col-md-4">
+             <div class="card mb-4 shadow-sm">
+               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/frutas.jpg">
+               <div class="card-body">
+                 <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="col-md-4">
+             <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/almacen.jpg">
+               <div class="card-body">
+                 <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="col-md-4">
+             <div class="card mb-4 shadow-sm">
+               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/vegetables.jpg">
+               <div class="card-body">
+                 <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="col-md-4">
+             <div class="card mb-4 shadow-sm">
+               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/frutas.jpg">
+               <div class="card-body">
+                 <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="col-md-4">
+             <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/almacen.jpg">
+               <div class="card-body">
+                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                 <div class="d-flex justify-content-between align-items-center">
+                   <div class="btn-group">
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
+                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
    <!-- START THE FEATURETTES -->
 
    <hr class="featurette-divider">
@@ -102,7 +169,7 @@
      <div class="col-md-5">
        <img src="images/nosotros.jpg" alt="">
      </div>
-     <div class="col-md-7">
+     <div class="col-md-7 bg-white">
        <h2 class="featurette-heading">Elegimos lo mejor. <span class="text-muted">Tenemos lo mejor.</span></h2>
        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
      </div>
