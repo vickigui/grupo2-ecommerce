@@ -50,9 +50,9 @@
                 </a>
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="verduras.php">Verduras</a>
-                  <a class="dropdown-item" href="fruta.php">Fruta</a>
-                  <a class="dropdown-item" href="almacen.php">Almacén</a>
+                  <a class="dropdown-item" href="productos.php">Verduras</a>
+                  <a class="dropdown-item" href="productos.php">Fruta</a>
+                  <a class="dropdown-item" href="productos.php">Almacén</a>
                 </div>
               </div>
        </li>
