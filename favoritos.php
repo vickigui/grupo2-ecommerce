@@ -27,9 +27,11 @@
 <br>
 <div class="main">
   <div class="card-group">
+<div class="row">
 
 
-  <div class="card col-sm-12 col-md-6 col-lg-4">
+
+  <div class="card col-lg-3 col-md-6">
   <img src="images/palta.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Favorito Ejemplo</h5>
@@ -40,7 +42,7 @@
     </div>
   </div>
 </div>
-<div class="card col-sm-12 col-md-6 col-lg-4">
+<div class="card col-lg-3 col-md-6">
 <img src="images/palta.jpg" class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">Favorito Ejemplo</h5>
@@ -51,7 +53,7 @@
   </div>
 </div>
 </div>
-<div class="card col-sm-12 col-md-6 col-lg-4">
+<div class="card col-lg-3 col-md-6">
 <img src="images/palta.jpg" class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">Favorito Ejemplo</h5>
@@ -62,7 +64,7 @@
   </div>
 </div>
 </div>
-<div class="card col-sm-12 col-md-6 col-lg-4">
+<div class="card col-lg-3 col-md-6">
 <img src="images/palta.jpg" class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">Favorito Ejemplo</h5>
@@ -73,7 +75,7 @@
   </div>
 </div>
 </div>
-
+</div>
 
 
 
