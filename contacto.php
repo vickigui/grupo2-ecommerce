@@ -1,7 +1,9 @@
     <?php require "includes/header.php"; ?>
 
-      <div class="jumbotron jumbotron-fluid">
-        <h1 class="display-4 text-center">¡ Contactanos !</h1>
+      <div class="sectionHeader">
+        <div class="jumbotron jumbotron-fluid">
+          <h1 class="display-4 text-center">Contactanos</h1>
+        </div>
       </div>
 
       <div class="container form col-xs-8 col-lg-5 formSection">
