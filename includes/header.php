@@ -67,7 +67,7 @@
          </form>
 
          <div class="user">
-           <a class="nav-link" data-toggle="tooltip" title="Iniciá sesión" href="registro.php">
+           <a class="nav-link" data-toggle="tooltip" title="Iniciá sesión" href="login.php">
              <i class="fas fa-user"></i>
            </a>
          </div>

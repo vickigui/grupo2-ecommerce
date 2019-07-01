@@ -210,10 +210,28 @@
   padding: 8px;
 }
 
+.createAccount {
+  display: flex;
+}
 /* RECIPES
 -------------------------------------------------- */
 .btn-recipes {
   margin-bottom: 18px;
+}
+
+/* FAQ
+-------------------------------------------------- */
+.pregunta {
+  margin-bottom: 35px;
+}
+
+.pregunta a {
+  color: grey;
+}
+
+.pregunta a:hover {
+  color: black;
+  text-decoration: none;
 }
 
   /* RESPONSIVE CSS
