@@ -7,7 +7,6 @@
     font-weight: 400;
     color: #5a5a5a;
     padding-top: 3rem;
-    padding-bottom: 3rem;
     font-size: 16px;
 
   }
@@ -69,10 +68,11 @@
 
   /* FOOTER
   -------------------------------------------------- */
-  footer section {padding: 30px 0px;}
+  footer section {padding: 30px 0px; }
   footer .main {
     background: var(--light-green);
     color: var(--font-text-grey);
+    
   }
   .copyright {
     background: var(--yellow);
@@ -124,10 +124,10 @@
 
   /* Declare heights because of positioning of img element */
   .carousel-item {
-    height: 32rem;
+    height: 28rem;
+    background-color:#000000;
   }
   .carousel-item > img {
-    background-color:rgba(50, 50, 50, 0.5);
     opacity:0.5;
     position: absolute;
     top: 0;
