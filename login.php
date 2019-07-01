@@ -1,11 +1,11 @@
 <?php require "includes/header.php"; ?>
 
 <main>
-  <div class="jumbotron jumbotron-fluid">
-    <h1 class="display-4 text-center">Iniciar sesión</h1>
+  <div class="container-fluid sectionHeader">
+    <h1 class="text-center">Iniciar Sesión</h1>
   </div>
+
   <div class="container form col-xs-8 col-lg-5 formSection">
-    <h4>Dejanos tu consulta y nos pondremos en contacto con vos</h4>
     <form action="index.php" method="post">
       <label for="mail" id="mail" class="items">
         <p>E-mail</p>
@@ -18,6 +18,11 @@
       <input type="password" name="password" value="">
 
       <button type="submit" name="button" class="btn btn-success btn-form">Ingresar</button>
+
+      <div class="createAccount">
+        <p>¿Aún no tienes cuenta?</p>
+        <a href="registro.php">¡Creala ahora!</a>
+      </div>
     </form>
   </div>
 </main>

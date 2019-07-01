@@ -1,14 +1,9 @@
 <?php require "includes/header.php"; ?>
 
 <main>
-
-
-
-
-    <div class="jumbotron jumbotron-fluid">
-
-        <h1 class="display-4 text-center">Mi Carrito</h1>
-      </div>
+  <div class="container-fluid sectionHeader">
+    <h1 class="text-center">Mi carrito</h1>
+  </div>
 <!-- tabla de productos comprados -->
 <div class="container">
 
@@ -16,7 +11,7 @@
       <table class="table table-hover table-bordered table-fixed">
       <thead>
         <tr>
-          <th scope="col"></th> .th-sm
+          <th scope="col"></th>
           <th scope="col">Producto</th>
           <th scope="col">Cantidad</th>
           <th scope="col">Precio Unitario</th>

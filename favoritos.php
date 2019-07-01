@@ -2,10 +2,9 @@
 
   <div class="container-fluid">
 
-    <div class="jumbotron jumbotron-fluid">
-
-        <h1 class="display-4 text-center">Favoritos</h1>
-      </div>
+    <div class="container-fluid sectionHeader">
+      <h1 class="text-center">Favoritos</h1>
+    </div>
 
     <div class="text-right">
 
