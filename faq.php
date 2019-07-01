@@ -63,7 +63,7 @@
     <h5>¿Cómo modifico el pedido?</h5>
   </a>
   <div class="collapse" id="respuesta7">
-    <p>El pedido puede ser modificado desde el Carrito de Compra. Allí podrás tanto eliminar como modificar cantidades de productos. Haciendo clic en el + o el - para subbir o bajar las cantidades y en el icono de basurero para eliminarlo.</p>
+    <p>El pedido puede ser modificado desde el Carrito de Compra.<br>Allí podrás tanto eliminar como modificar cantidades de productos.<br>Haciendo clic en el + o el - para subbir o bajar las cantidades y en el icono de basurero para eliminarlo.</p>
   </div>
 </div>
 
@@ -72,7 +72,7 @@
     <h5>¿Cómo finalizo el pedido?</h5>
   </a>
   <div class="collapse" id="respuesta8">
-    <p>Una vez que hayas seleccionado todos los productos que vas a adquirir, a través del Carrito de Compra seleccioná la opción “Finalizar Compra” y completá los datos.</p>
+    <p>Una vez que hayas seleccionado todos los productos que vas a adquirir, a través del Carrito de <br>Compra seleccioná la opción “Finalizar Compra” y completá los datos.</p>
   </div>
 </div>
 
@@ -90,7 +90,7 @@
     <h5>¿Qué hago si recibo el pedido incompleto?</h5>
   </a>
   <div class="collapse" id="respuesta10">
-    <p>Al momento de recibir el pedido de forma incompleta es muy probable que nosotros ya estemos al tanto de esto. De todas formas por favor comunícate con nosotros. Solo deberás abonar el valor de lo que recibas, los productos faltantes deberán ser descontados del total.</p>
+    <p>Al momento de recibir el pedido de forma incompleta es muy probable que nosotros ya estemos al tanto de esto.<br>De todas formas por favor comunícate con nosotros.<br>Solo deberás abonar el valor de lo que recibas, los productos faltantes deberán ser descontados del total.</p>
   </div>
 </div>
 
