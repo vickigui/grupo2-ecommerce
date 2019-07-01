@@ -61,10 +61,6 @@
            </li>
          </ul>
 
-         <form class="form-inline mt-2 mt-md-0">
-           <input class="form-control mr-sm-2" type="text" placeholder="Buscá tu producto" aria-label="Search">
-           <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
-         </form>
 
          <div class="user">
            <a class="nav-link" data-toggle="tooltip" title="Iniciá sesión" href="registro.php">

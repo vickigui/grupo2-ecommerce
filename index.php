@@ -10,33 +10,33 @@
    </ol>
    <div class="carousel-inner">
      <div class="carousel-item active">
-       <img src="images/common/slider-home/verduras.jpg">
+       <img class="img-responsive" src="images/common/slider-home/verduras.jpg">
 
        <div class="container">
          <div class="carousel-caption text-left">
            <h1>Example headline.</h1>
            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-           <p><a class="btn btn-lg btn-primary" href="#" role="button">Registrate ahora!</a></p>
+           <p><a class="btn btn-lg btn-primary" href="registro.php" role="button">Registrate ahora!</a></p>
          </div>
        </div>
      </div>
      <div class="carousel-item">
-       <img src="images/common/slider-home/picada.jpg">
+       <img class="img-responsive" src="images/common/slider-home/picada.jpg">
        <div class="container">
          <div class="carousel-caption">
            <h1>Tenemos recetas para vos</h1>
            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-           <p><a class="btn btn-lg btn-primary" href="#" role="button">Conocé más</a></p>
+           <p><a class="btn btn-lg btn-primary" href="recetas.php" role="button">Conocé más</a></p>
          </div>
        </div>
      </div>
      <div class="carousel-item">
-        <img src="images/common/slider-home/citrico.jpg">
+        <img class="img-responsive" src="images/common/slider-home/citrico.jpg">
         <div class="container">
          <div class="carousel-caption text-right">
            <h1>Para combatir al invierno.</h1>
            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-           <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver Productos</a></p>
+           <p><a class="btn btn-lg btn-primary" href="productos.php" role="button">Ver Productos</a></p>
          </div>
        </div>
      </div>
@@ -156,7 +156,7 @@
      <div class="col-md-7">
        <h2 class="featurette-heading">Recetas organicas.<br> <span class="text-muted">Para esta época.</span></h2>
        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-       <button type="button" class="btn btn-info ">Conocé Más</button>
+       <a href="recetas.php"><button type="button" class="btn btn-info ">Conocé Más</button></a>
      </div>
      <div class="col-md-5">
        <img src="images/recetas/pie.jpg" alt="">

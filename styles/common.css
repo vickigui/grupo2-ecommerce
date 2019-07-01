@@ -7,7 +7,6 @@
     font-weight: 400;
     color: #5a5a5a;
     padding-top: 3rem;
-    padding-bottom: 3rem;
     font-size: 16px;
 
   }
@@ -124,12 +123,11 @@
 
   /* Declare heights because of positioning of img element */
   .carousel-item {
-    height: 32rem;
+    height: 28rem;
+    background-color:#000000;
   }
   .carousel-item > img {
-    background-color:rgba(50, 50, 50, 0.5);
     opacity:0.5;
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
