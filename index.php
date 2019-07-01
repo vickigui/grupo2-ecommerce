@@ -59,8 +59,7 @@
  <div class="container marketing">
 
    <!-- Three columns of text below the carousel -->
-<h2 class="featurette-heading">Estos productos<br> <span class="text-muted">No te pueden faltar</span></h2>
-<hr class="featurette-divider">
+<h2 class="featurette-heading">Estas canastas<br> <span class="text-muted">No te pueden faltar</span></h2>
 
    <div class="row">
            <div class="col-md-4">
@@ -68,10 +67,10 @@
                <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/vegetables.jpg">
                <div class="card-body">
                  <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
-                 <div class="d-flex justify-content-between align-items-center">
+                 <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                     <button type="button" class="btn btn-sm btn-outline-success">Ver más</button>
+                     <button type="button" class="btn btn-sm btn-outline-success">Agregar</button>
                    </div>
                  </div>
                </div>
@@ -82,10 +81,10 @@
                <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/frutas.jpg">
                <div class="card-body">
                  <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
-                 <div class="d-flex justify-content-between align-items-center">
+                 <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                     <button type="button" class="btn btn-sm btn-outline-success">Ver más</button>
+                     <button type="button" class="btn btn-sm btn-outline-success">Agregar</button>
                    </div>
                  </div>
                </div>
@@ -96,57 +95,18 @@
               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/almacen.jpg">
                <div class="card-body">
                  <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
-                 <div class="d-flex justify-content-between align-items-center">
+                 <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
+                     <button type="button" class="btn btn-sm btn-outline-success">Ver más</button>
+                     <button type="button" class="btn btn-sm btn-outline-success">Agregar</button>
                    </div>
                  </div>
                </div>
              </div>
            </div>
-           <div class="col-md-4">
-             <div class="card mb-4 shadow-sm">
-               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/vegetables.jpg">
-               <div class="card-body">
-                 <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
-                 <div class="d-flex justify-content-between align-items-center">
-                   <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div class="col-md-4">
-             <div class="card mb-4 shadow-sm">
-               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/frutas.jpg">
-               <div class="card-body">
-                 <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
-                 <div class="d-flex justify-content-between align-items-center">
-                   <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           <div class="col-md-4">
-             <div class="card mb-4 shadow-sm">
-              <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/almacen.jpg">
-               <div class="card-body">
-                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                 <div class="d-flex justify-content-between align-items-center">
-                   <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Ver más</button>
-                     <button type="button" class="btn btn-sm btn-outline-secondary">Agregar</button>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
+
+
+
          </div>
    <!-- START THE FEATURETTES -->
 

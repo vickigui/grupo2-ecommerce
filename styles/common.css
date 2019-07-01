@@ -68,10 +68,11 @@
 
   /* FOOTER
   -------------------------------------------------- */
-  footer section {padding: 30px 0px;}
+  footer section {padding: 30px 0px; }
   footer .main {
     background: var(--light-green);
     color: var(--font-text-grey);
+    
   }
   .copyright {
     background: var(--yellow);
@@ -128,6 +129,7 @@
   }
   .carousel-item > img {
     opacity:0.5;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
