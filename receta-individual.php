@@ -1,7 +1,7 @@
 <?php require "includes/header.php"; ?>
 <main>
-  <div class="jumbotron jumbotron-fluid">
-    <h1 class="display-4 text-center">Carrot Cake</h1>
+  <div class="container-fluid sectionHeader">
+    <h1 class="text-center">Carrot Cake</h1>
   </div>
 
   <div class="container">

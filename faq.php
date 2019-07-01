@@ -1,12 +1,8 @@
 <<?php require "includes/header.php"; ?>
 
-<div class="container-fluid">
-<div class="jumbotron jumbotron-fluid">
-    <h1 class="display-4 text-center">Preguntas Frecuentes</h1>
-
-  </div>
-
-
+<div class="container-fluid sectionHeader">
+  <h1 class="text-center">Preguntas Frecuentes</h1>
+</div>
 
 <div class="card border-success">
   <div class="card-header bg-transparent border-success">

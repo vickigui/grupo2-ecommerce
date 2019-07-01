@@ -1,8 +1,9 @@
 <?php require "includes/header.php"; ?>
 
-<div class="jumbotron jumbotron-fluid">
-  <h1 class="display-4 text-center">¡ Registrate !</h1>
+<div class="container-fluid sectionHeader">
+  <h1 class="text-center">Registrate</h1>
 </div>
+
   <div class="container form col-xs-8 col-lg-5 formSection">
     <h4>Completá los siguientes datos para empezar.</h4>
     <form action="index.php" method="post">
