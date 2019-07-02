@@ -29,7 +29,7 @@
               <a class="nav-link btn btn-outline-success" href="#frutas">Frutas</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn btn-outline-success active" href="#verduras">Verduras</a>
+              <a class="nav-link btn btn-outline-success" href="#verduras">Verduras</a>
             </li>
             <li class="nav-item">
               <a class="nav-link btn btn-outline-success" href="#almacen">Almacen Orgánico</a>
