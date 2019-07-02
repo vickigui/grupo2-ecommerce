@@ -258,3 +258,19 @@
       margin-top: 7rem;
     }
   }
+
+/* PRODUCTOS
+-----------------------------------------------*/
+section ul li div {
+  overflow: hidden;
+
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
