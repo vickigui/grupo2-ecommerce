@@ -39,7 +39,9 @@
              <a class="nav-link" href="nosotros.php">NOSOTROS</a>
            </li>
            <li class="nav-item">
-             <div class="dropdown">
+             <a class="nav-link" href="productos.php">PRODUCTOS</a>
+
+             <!--div class="dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   PRODUCTOS
                 </a>
@@ -48,7 +50,7 @@
                   <a class="dropdown-item" href="productos.php">Fruta</a>
                   <a class="dropdown-item" href="productos.php">Almacén</a>
                 </div>
-              </div>
+              </div-->
            </li>
            <!--li class="nav-item">
              <a class="nav-link" href="promos.php">PROMOS</a>
