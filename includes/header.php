@@ -26,7 +26,7 @@
   <body>
     <header>
      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
-       <a class="navbar-brand" href="#"><img src="images/common/logo-palta.png" width=80px;></a>
+       <a class="navbar-brand" href="index.php"><img src="images/common/logo-palta.png" width=80px;></a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
@@ -50,9 +50,9 @@
                 </div>
               </div>
            </li>
-           <li class="nav-item">
+           <!--li class="nav-item">
              <a class="nav-link" href="promos.php">PROMOS</a>
-           </li>
+           </li-->
            <li class="nav-item">
              <a class="nav-link" href="recetas.php">RECETAS</a>
            </li>
@@ -63,9 +63,17 @@
 
 
          <div class="user">
-           <a class="nav-link" data-toggle="tooltip" title="Iniciá sesión" href="login.php">
-             <i class="fas fa-user"></i>
-           </a>
+           <div class="dropdown">
+              <a class="nav-link dropdown-toggle user" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user"></i>
+              </a>
+              <div class="dropdown-menu user-nav" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="login.php">Mi Perfil</a>
+                <a class="dropdown-item" href="registro.php">Cerrar Sesión</a>
+              </div>
+            </div>
+
+
          </div>
 
          <div class="carrito">

@@ -66,11 +66,32 @@
              <div class="card mb-4 shadow-sm">
                <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/vegetables.jpg">
                <div class="card-body">
-                 <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
+                 <h2>Canasta nº1</h2>
+                 <p class="card-text">
+                   <ul>
+                      <li>VERDURITAS PARA SOPA 1 paquete</li>
+                      <li>PAPA 1kg.</li>
+                      <li>BATATA 500 gr.</li>
+                      <li>ZAPALLO ANCO 1 unidad</li>
+                      <li>ZANAHORIA 600 gr.</li>
+                      <li>CEBOLLA 600 gr.</li>
+                      <li>MORRON ROJO 1 unidad</li>
+                      <li>TOMATES CHERRY 150 gr</li>
+                      <li>REPOLLITOS DE BRUCELAS 250 gr.</li>
+                      <li>ZAPALLITOS 600 gr</li>
+                      <li>TOMATE REDONDO 600 gr.</li>
+                      <li>REPOLLO COLORADO 1/4 unidad.</li>
+                      <li>REMOLACHA 500 gr</li>
+                      <li>PUERRO 250 gr</li>
+                      <li>LIMON 3 unidades</li>
+                      <li>MANDARINA NOVA 700 gr.</li>
+                      <li>PERAS 700 gr.</li>
+                   </ul>
+               </p>
                  <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-success">Ver más</button>
-                     <button type="button" class="btn btn-sm btn-outline-success">Agregar</button>
+                     <a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
+                    <a href="carrito.php"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
                    </div>
                  </div>
                </div>
@@ -80,11 +101,31 @@
              <div class="card mb-4 shadow-sm">
                <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/frutas.jpg">
                <div class="card-body">
-                 <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
+                 <h2>Canasta nº2</h2>
+                 <p class="card-text">
+                   <ul>
+                      <li>VERDURITAS PARA SOPA 1 paquete</li>
+                      <li>PAPA 1kg.</li>
+                      <li>BATATA 500 gr.</li>
+                      <li>ZAPALLO ANCO 1 unidad</li>
+                      <li>ZANAHORIA 600 gr.</li>
+                      <li>CEBOLLA 600 gr.</li>
+                      <li>MORRON ROJO 1 unidad</li>
+                      <li>TOMATES CHERRY 150 gr</li>
+                      <li>REPOLLITOS DE BRUCELAS 250 gr.</li>
+                      <li>ZAPALLITOS 600 gr</li>
+                      <li>TOMATE REDONDO 600 gr.</li>
+                      <li>REPOLLO COLORADO 1/4 unidad.</li>
+                      <li>REMOLACHA 500 gr</li>
+                      <li>PUERRO 250 gr</li>
+                      <li>LIMON 3 unidades</li>
+                      <li>MANDARINA NOVA 700 gr.</li>
+                      <li>PERAS 700 gr.</li>
+                   </ul></p>
                  <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-success">Ver más</button>
-                     <button type="button" class="btn btn-sm btn-outline-success">Agregar</button>
+                     <a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
+                    <a href="carrito.php"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
                    </div>
                  </div>
                </div>
@@ -94,11 +135,31 @@
              <div class="card mb-4 shadow-sm">
               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/almacen.jpg">
                <div class="card-body">
-                 <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
+                 <h2>Canasta nº3</h2>
+                 <p class="card-text">
+                   <ul>
+                      <li>VERDURITAS PARA SOPA 1 paquete</li>
+                      <li>PAPA 1kg.</li>
+                      <li>BATATA 500 gr.</li>
+                      <li>ZAPALLO ANCO 1 unidad</li>
+                      <li>ZANAHORIA 600 gr.</li>
+                      <li>CEBOLLA 600 gr.</li>
+                      <li>MORRON ROJO 1 unidad</li>
+                      <li>TOMATES CHERRY 150 gr</li>
+                      <li>REPOLLITOS DE BRUCELAS 250 gr.</li>
+                      <li>ZAPALLITOS 600 gr</li>
+                      <li>TOMATE REDONDO 600 gr.</li>
+                      <li>REPOLLO COLORADO 1/4 unidad.</li>
+                      <li>REMOLACHA 500 gr</li>
+                      <li>PUERRO 250 gr</li>
+                      <li>LIMON 3 unidades</li>
+                      <li>MANDARINA NOVA 700 gr.</li>
+                      <li>PERAS 700 gr.</li>
+                   </ul></p>
                  <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <button type="button" class="btn btn-sm btn-outline-success">Ver más</button>
-                     <button type="button" class="btn btn-sm btn-outline-success">Agregar</button>
+                     <a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
+                    <a href="carrito.php"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
                    </div>
                  </div>
                </div>

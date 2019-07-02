@@ -52,6 +52,9 @@
     margin-left:  20px;
     font-size: 1.5em;
   }
+  .user-nav a {font-size: 1em;
+    color: var(--gry);
+    margin-left:  0px;}
 
 
   .carrito a {color: var(--mid-green);
@@ -72,7 +75,7 @@
   footer .main {
     background: var(--light-green);
     color: var(--font-text-grey);
-    
+
   }
   .copyright {
     background: var(--yellow);
@@ -124,15 +127,15 @@
 
   /* Declare heights because of positioning of img element */
   .carousel-item {
-    height: 28rem;
+    height: 26rem;
     background-color:#000000;
   }
   .carousel-item > img {
     opacity:0.5;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
+    width: 130%;
 
   }
 
