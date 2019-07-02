@@ -113,20 +113,22 @@ Sábado 14hs. a 18hs.
   </div>
     </div>
 <!-- botoneras pago/cancelar/cont -->
-<div class="button-pantalla">
-
-  <div class="btn-group" role="group" aria-label="Basic example">
-    <a href="#"> <button type="button" class="btn btn-outline-success">Cancelar</button></a>
-    <a href="#"><button type="button" class="btn btn-success">Pagar</button></a>
-    <a href="#"><button type="button" class="btn btn-outline-success">Continuar Comprando</button></a>
+<div class="container">
+  <div class="button-pantalla">
+    <div class="row justify-content-end">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <a href="#"> <button type="button" class="btn btn-outline-success">Cancelar</button></a>
+        <a href="#"><button type="button" class="btn btn-success">Pagar</button></a>
+        <a href="#"><button type="button" class="btn btn-outline-success">Continuar Comprando</button></a>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="button-movil container-fluid">
-
-  <button type="button" class="btn btn-success btn-lg btn-block">PAGAR</button>
-  <button type="button" class="btn btn-outline-success btn-lg btn-block">CONTINUAR COMPRANDO</button>
-  <button type="button" class="btn btn-outline-success btn-lg btn-block">CANCELAR</button>
+  <div class="button-movil container-fluid">
+    <button type="button" class="btn btn-success btn-lg btn-block">PAGAR</button>
+    <button type="button" class="btn btn-outline-success btn-lg btn-block">CONTINUAR COMPRANDO</button>
+    <button type="button" class="btn btn-outline-success btn-lg btn-block">CANCELAR</button>
+  </div>
 </div>
 
 </main>
