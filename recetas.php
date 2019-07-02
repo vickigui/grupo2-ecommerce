@@ -22,6 +22,7 @@
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/pie.jpg">
             <div class="card-body">
+              <h2>Receta nº1</h2>
               <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -36,6 +37,7 @@
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/carrot-cake.jpg">
             <div class="card-body">
+              <h2>Receta nº2</h2>
               <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -50,6 +52,7 @@
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/salad.jpg">
             <div class="card-body">
+              <h2>Receta nº3</h2>
               <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -64,6 +67,7 @@
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/pie.jpg">
             <div class="card-body">
+              <h2>Receta nº4</h2>
               <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -77,6 +81,7 @@
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/carrot-cake.jpg">
             <div class="card-body">
+              <h2>Receta nº5</h2>
               <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
@@ -90,6 +95,7 @@
           <div class="card mb-4 shadow-sm">
             <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/recetas/salad.jpg">
             <div class="card-body">
+              <h2>Receta nº6</h2>
               <p class="card-text">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
