@@ -19,9 +19,9 @@
     </header>
     <main>
       <div class="container">
-        <h1>
-          Nuestros Productos
-        </h1>
+        <div class="container-fluid sectionHeader">
+    <h1 class="text-center">Nuestros Productos</h1>
+        </div>
         <div class="text-right">
           <ul class="nav nav-pills success nav-fill">
             <li class="nav-item">
