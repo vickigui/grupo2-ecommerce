@@ -146,8 +146,8 @@
         </ul>
         </section>
         <section>
-          <ul>
           <h2 id="verduras"> Verduras</h2>
+          <ul>
           <li class="d-inline">
             <div>
                 <img src="images/productos/lechuga.jpg" alt="foto lechuga">
@@ -339,8 +339,8 @@
 </ul>
 </section>
 <section>
+  <h2 id="almacen"> Almacén orgánico </h2>
   <ul>
-    <h2 id="almacen"> Almacén orgánico </h2>
     <br>
     <li class="d-inline">
       <div>
