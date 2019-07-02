@@ -171,8 +171,9 @@
                          </select>
                       <a href="#" class="btn btn-secondary">Quitar</a>
                       <a href="#" class="btn btn-success">Agregar</a>
+                     </div>
                     </div>
-                  </div>
+                   </div>    
                   <div class="col-lg-4 col-md-6">
                     <div class="card mb-4 shadow-sm">
                       <img src="images/productos/batata.jpg" alt="foto batata">
