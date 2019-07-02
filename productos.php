@@ -18,6 +18,7 @@
       <?php require "includes/header.php"; ?>
     </header>
     <main>
+      <br>
       <div class="container">
         <div class="container-fluid sectionHeader">
     <h1 class="text-center">Nuestros Productos</h1>
