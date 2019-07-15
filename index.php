@@ -14,8 +14,8 @@
 
        <div class="container">
          <div class="carousel-caption text-left">
-           <h1>Example headline.</h1>
-           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+           <h1>Bienvenido!</h1>
+           <p>Hacé tu vida más saludable y práctica armando tu canasta semanal.</p>
            <p><a class="btn btn-lg btn-primary" href="registro.php" role="button">Registrate ahora!</a></p>
          </div>
        </div>
@@ -25,7 +25,7 @@
        <div class="container">
          <div class="carousel-caption">
            <h1>Tenemos recetas para vos</h1>
-           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+           <p>Descargá de nuestra sección las recetas más ricas para hacer con los ingredientes mas sanos.</p>
            <p><a class="btn btn-lg btn-primary" href="recetas.php" role="button">Conocé más</a></p>
          </div>
        </div>
@@ -35,7 +35,7 @@
         <div class="container">
          <div class="carousel-caption text-right">
            <h1>Para combatir al invierno.</h1>
-           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+           <p>Preparate todos los días 1 vaso de jugo cítrico para mejorar tu sistema inmunológico!.</p>
            <p><a class="btn btn-lg btn-primary" href="productos.php" role="button">Ver Productos</a></p>
          </div>
        </div>
@@ -43,11 +43,11 @@
    </div>
    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-     <span class="sr-only">Previous</span>
+     <span class="sr-only">Anterior</span>
    </a>
    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-     <span class="sr-only">Next</span>
+     <span class="sr-only">Siguiente</span>
    </a>
  </div>
 
