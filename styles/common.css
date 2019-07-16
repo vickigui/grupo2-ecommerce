@@ -222,6 +222,49 @@
   margin-bottom: 18px;
 }
 
+/* Productos
+-------------------------------------------------- */
+
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+
+.thumb{
+  animation: winanim 0.5s ;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0px 0px 23px -4px rgba(207,207,207,1);
+  -moz-box-shadow: 0px 0px 23px -4px rgba(207,207,207,1);
+  box-shadow: 0px 0px 23px -4px rgba(207,207,207,1);
+
+}
+
+.selector-cantidad{
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+.selector-cantidad select{
+  width: 40%;
+  float: left;
+}
+.selector-cantidad label{
+  width: 60%;
+  line-height: 40px;
+  text-align: right;
+  padding: 0px 10px;
+
+}
+.botones-productos{
+  margin: 15px 0px;
+
+
+
+}
+
 /* FAQ
 -------------------------------------------------- */
 .pregunta {
