@@ -77,15 +77,7 @@
                       <li>CEBOLLA 600 gr.</li>
                       <li>MORRON ROJO 1 unidad</li>
                       <li>TOMATES CHERRY 150 gr</li>
-                      <li>REPOLLITOS DE BRUCELAS 250 gr.</li>
-                      <li>ZAPALLITOS 600 gr</li>
-                      <li>TOMATE REDONDO 600 gr.</li>
-                      <li>REPOLLO COLORADO 1/4 unidad.</li>
-                      <li>REMOLACHA 500 gr</li>
-                      <li>PUERRO 250 gr</li>
-                      <li>LIMON 3 unidades</li>
-                      <li>MANDARINA NOVA 700 gr.</li>
-                      <li>PERAS 700 gr.</li>
+                      <li>y más!</li>
                    </ul>
                </p>
                  <div class="d-flex justify-content-between align-items-center float-right">

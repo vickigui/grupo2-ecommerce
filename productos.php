@@ -1,374 +1,368 @@
+
 <?php require "includes/header.php"; ?>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script
-      src="https://code.jquery.com/jquery-1.12.4.js"
-      integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
-      crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/common.css">
 
-    <title> Verduleria Online</title>
-  </head>
-  <body>
-    <header>
-      <?php require "includes/header.php"; ?>
-    </header>
-    <main>
-      <br>
-      <div class="container-fluid sectionHeader">
-    <h1 class="text-center">Nuestros Productos</h1>
-        </div>
-      <div class="container">
-        <div class="text-right">
-          <ul class="nav nav-pills success nav-fill">
-            <li class="nav-item">
-              <a class="nav-link btn btn-outline-success" href="#frutas">Frutas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-outline-success" href="#verduras">Verduras</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link btn btn-outline-success" href="#almacen">Almacen Orgánico</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-        <br>
-        <section>
-          <ul>
-            <li class="d-inline">
-              <div class="container">
-                <h2 id="frutas">Frutas</h2>
-              <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img src="images/productos/limon.jpg" alt="foto limón">
-                  <a href="">
-                    <h4> Limón </h4>
-                  </a>
-                  Descripción/Precio por cantidad
-                    <div class="text-right">
-                      <select class="form-control" id="cantidad">
-                           <option>1</option>
-                           <option>2</option>
-                           <option>3</option>
-                           <option>4</option>
-                           <option>5</option>
-                         </select>
-                      <a href="#" class="btn btn-secondary">Quitar</a>
-                      <a href="#" class="btn btn-success">Agregar</a>
-                    </div>
-                    </div>
-                  </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img src="images/productos/banana.jpg" alt="foto banana">
-                    <a href="#">
-                      <h4> Banana </h4>
-                    </a>
-                    Descripción/Precio por cantidad
-                    <div class="text-right">
-                      <select class="form-control" id="cantidad">
-                           <option>1</option>
-                           <option>2</option>
-                           <option>3</option>
-                           <option>4</option>
-                           <option>5</option>
-                         </select>
-                      <a href="#" class="btn btn-secondary">Quitar</a>
-                      <a href="#" class="btn btn-success">Agregar</a>
-                    </div>
-                    </div>
-                  </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img src="images/productos/manzana.jpg" alt="foto manzana">
-                    <a href="#">
-                      <h4> Manzana </h4>
-                    </a>
-                  Descripción/Precio por cantidad
-                    <div class="text-right">
-                      <select class="form-control" id="cantidad">
-                           <option>1</option>
-                           <option>2</option>
-                           <option>3</option>
-                           <option>4</option>
-                           <option>5</option>
-                         </select>
-                      <a href="#" class="btn btn-secondary">Quitar</a>
-                      <a href="#" class="btn btn-success">Agregar</a>
-                    </div>
-                    </div>
-                  </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img src="images/productos/mandarina.jpg" alt="foto mandarina">
-                  <a href="#">
-                    <h4> Mandarina </h4>
-                  </a>
-                  Descripción/Precio por cantidad
-                  <div class="text-right">
-                    <select class="form-control" id="cantidad">
-                         <option>1</option>
-                         <option>2</option>
-                         <option>3</option>
-                         <option>4</option>
-                         <option>5</option>
-                       </select>
-                    <a href="#" class="btn btn-secondary">Quitar</a>
-                    <a href="#" class="btn btn-success">Agregar</a>
-                  </div>
-                    </div>
-                  </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img src="images/productos/pera.jpg" alt="foto pera">
-                  <a href="#">
-                    <h4> Pera </h4>
-                  </a>
-                  Descripción/Precio por cantidad
-                  <div class="text-right">
-                    <select class="form-control" id="cantidad">
-                         <option>1</option>
-                         <option>2</option>
-                         <option>3</option>
-                         <option>4</option>
-                         <option>5</option>
-                       </select>
-                    <a href="#" class="btn btn-secondary">Quitar</a>
-                    <a href="#" class="btn btn-success">Agregar</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          </li>
-        </section>
-        <section>
-          <ul>
-            <li class="d-inline">
-              <div class="container">
-                <h2 id="verduras"> Verduras</h2>
-                  <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                      <div class="card mb-4 shadow-sm">
-                      <img src="images/productos/lechuga.jpg" alt="foto lechuga">
-                    <a href="#">
-                      <h4> Lechuga </h4>
-                    </a>
-                    Descripción/Precio por cantidad
-                    <div class=" text-right">
-                      <select class="form-control" id="cantidad">
-                           <option>1</option>
-                           <option>2</option>
-                           <option>3</option>
-                           <option>4</option>
-                           <option>5</option>
-                         </select>
-                      <a href="#" class="btn btn-secondary">Quitar</a>
-                      <a href="#" class="btn btn-success">Agregar</a>
-                     </div>
-                    </div>
-                   </div>    
-                  <div class="col-lg-4 col-md-6">
-                    <div class="card mb-4 shadow-sm">
-                      <img src="images/productos/batata.jpg" alt="foto batata">
-                    <a href="#">
-                      <h4> Batata </h4>
-                    </a>
-                    Descripción/Precio por cantidad
-                      <div class="text-right">
-                        <select class="form-control" id="cantidad">
-                             <option>1</option>
-                             <option>2</option>
-                             <option>3</option>
-                             <option>4</option>
-                             <option>5</option>
-                           </select>
-                        <a href="#" class="btn btn-secondary">Quitar</a>
-                        <a href="#" class="btn btn-success">Agregar</a>
-                      </div>
-                    </div>
-                  </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="card mb-4 shadow-sm">
-                <img src="images/productos/cebolla.jpg" alt="foto cebolla">
-                <a href="#">
-                  <h4> Cebolla </h4>
-                </a>
-                Descripción/Precio por cantidad
-                <div class="text-right">
-                  <select class="form-control" id="cantidad">
-                       <option>1</option>
-                       <option>2</option>
-                       <option>3</option>
-                       <option>4</option>
-                       <option>5</option>
-                     </select>
-                  <a href="#" class="btn btn-secondary">Quitar</a>
-                  <a href="#" class="btn btn-success">Agregar</a>
-                </div>
-                </div>
-              </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="card mb-4 shadow-sm">
-                <img src="images/productos/morron.jpg" alt="foto morron">
-                <a href="#">
-                  <h4> Morrón </h4>
-                </a>
-                Descripción/Precio por cantidad
-                <div class="text-right">
-                  <select class="form-control" id="cantidad">
-                       <option>1</option>
-                       <option>2</option>
-                       <option>3</option>
-                       <option>4</option>
-                       <option>5</option>
-                     </select>
-                  <a href="#" class="btn btn-secondary">Quitar</a>
-                  <a href="#" class="btn btn-success">Agregar</a>
-                </div>
-                </div>
-              </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="card mb-4 shadow-sm">
-                <img src="images/productos/papa.jpg" alt="foto papa">
-                <a href="#">
-                  <h4> Papa </h4>
-                </a>
-                Descripción/Precio por cantidad
-                <div class="text-right">
-                  <select class="form-control" id="cantidad">
-                       <option>1</option>
-                       <option>2</option>
-                       <option>3</option>
-                       <option>4</option>
-                       <option>5</option>
-                     </select>
-                  <a href="#" class="btn btn-secondary">Quitar</a>
-                  <a href="#" class="btn btn-success">Agregar</a>
-              </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card mb-4 shadow-sm">
-                  <img src="images/productos/tomate.jpg" alt="foto tomate">
-                  <a href="#">
-                    <h4> Tomate </h4>
-                  </a>
-                  Descripción/Precio por cantidad
-                  <div class="text-right">
-                    <select class="form-control" id="cantidad">
-                         <option>1</option>
-                         <option>2</option>
-                         <option>3</option>
-                         <option>4</option>
-                         <option>5</option>
-                       </select>
-                    <a href="#" class="btn btn-secondary">Quitar</a>
-                    <a href="#" class="btn btn-success">Agregar</a>
-                </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img src="images/productos/zanahoria.jpg" alt="foto zanahoria">
-                    <a href="#">
-                      <h4> Zanahoria </h4>
-                    </a>
-                    Descripción/Precio por cantidad
-                    <div class="text-right">
-                      <select class="form-control" id="cantidad">
-                           <option>1</option>
-                           <option>2</option>
-                           <option>3</option>
-                           <option>4</option>
-                           <option>5</option>
-                         </select>
-                      <a href="#" class="btn btn-secondary">Quitar</a>
-                      <a href="#" class="btn btn-success">Agregar</a>
-                  </div>
-                    </div>
-                  </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img src="images/productos/zapallo.jpg" alt="foto zapallo">
-                    <a href="#">
-                      <h4> Zapallo </h4>
-                    </a>
-                    Descripción/Precio por cantidad
-                    <div class="text-right">
-                      <select class="form-control" id="cantidad">
-                           <option>1</option>
-                           <option>2</option>
-                           <option>3</option>
-                           <option>4</option>
-                           <option>5</option>
-                         </select>
-                      <a href="#" class="btn btn-secondary">Quitar</a>
-                      <a href="#" class="btn btn-success">Agregar</a>
-                  </div>
-                    </div>
-                  </div>
-                <div class="col-lg-4 col-md-6">
-                  <div class="card mb-4 shadow-sm">
-                    <img src="images/productos/zucchini.jpg" alt="foto zucchini">
-                    <a href="#">
-                      <h4> Zucchini </h4>
-                    </a>
-                    Descripción/Precio por cantidad
-                    <div class="text-right">
-                      <select class="form-control" id="cantidad">
-                           <option>1</option>
-                           <option>2</option>
-                           <option>3</option>
-                           <option>4</option>
-                           <option>5</option>
-                         </select>
-                      <a href="#" class="btn btn-secondary">Quitar</a>
-                      <a href="#" class="btn btn-success">Agregar</a>
-                    </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-</section>
-<section>
+  <div class="container-fluid sectionHeader">
+    <h1 class="text-center">Nuestros productos</h1>
+  </div>
+
   <div class="container">
-    <h2 id="almacen"> Almacén orgánico </h2>
-    <div class="row">
-    <div class="col-lg-4 col-md-6">
-      <div class="card mb-4 shadow-sm">
-        <img src="images/productos/huevos.jpg" alt="foto huevos">
-        <a href="#">
-          <h4> Huevos </h4>
-        </a>
-        Descripción/Precio por cantidad
-        <div class="text-right">
-          <select class="form-control" id="cantidad">
-               <option>1</option>
-               <option>2</option>
-               <option>3</option>
-               <option>4</option>
-               <option>5</option>
-             </select>
-          <a href="#" class="btn btn-secondary">Quitar</a>
-          <a href="#" class="btn btn-success">Agregar</a>
-      </div>
-                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </main>
-  </body>
-</html>
+  	  	<div class="row">
+  	  		<div class="col-sm-12">
+
+  	  			<div align="center">
+  				    <button class="btn btn-secondary active filter-button" data-filter="todo">Todo</button>
+  				    <button class="btn btn-secondary filter-button" data-filter="frutas">Frutas</button>
+  				    <button class="btn btn-secondary filter-button " data-filter="verduras">Verduras</button>
+  				    <button class="btn btn-secondary filter-button" data-filter="almacen">Almacen Orgánico</button>
+
+  						<div class="row">
+  							<div class="row">
+                  <div class="col-lg-3 col-md-4 col-xs-6 thumb filter frutas ">
+                      <img class="img-thumbnail" src="images/productos/canasta1.jpg" alt="Canasta">
+                          <div class="selector-cantidad">
+                            <select class="form-control" id="cantidad">
+                                <option>1</option>
+                                 <option>2</option>
+                             </select>
+                            <label>Canasta</label>
+                          </div>
+                           <div class="botones-productos">
+                             <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                             <a href="#" class="btn btn-success">Agregar</a>
+                           </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-4 col-xs-6 thumb filter frutas ">
+                      <img class="img-thumbnail" src="images/productos/canasta2.jpg" alt="Canasta">
+                          <div class="selector-cantidad">
+                            <select class="form-control" id="cantidad">
+                                <option>1</option>
+                                 <option>2</option>
+                             </select>
+                            <label>Canasta</label>
+                          </div>
+                           <div class="botones-productos">
+                             <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                             <a href="#" class="btn btn-success">Agregar</a>
+                           </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-4 col-xs-6 thumb filter frutas ">
+                      <img class="img-thumbnail" src="images/productos/canasta3.jpg" alt="Canasta">
+                          <div class="selector-cantidad">
+                            <select class="form-control" id="cantidad">
+                                <option>1</option>
+                                 <option>2</option>
+                             </select>
+                            <label>Canasta</label>
+                          </div>
+                           <div class="botones-productos">
+                             <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                             <a href="#" class="btn btn-success">Agregar</a>
+                           </div>
+                  </div>
 
 
-<?php require "includes/footer.php"; ?>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb filter frutas ">
+                            <img class="img-thumbnail" src="images/productos/limon.jpg" alt="Limón">
+                                <div class="selector-cantidad">
+                                  <select class="form-control" id="cantidad">
+                                       <option>0,25</option>
+                                       <option>0,50</option>
+                                       <option>0,75</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                   </select>
+                                  <label>Kilogramos</label>
+                                </div>
+                                 <div class="botones-productos">
+                                   <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                                   <a href="#" class="btn btn-success">Agregar</a>
+                                 </div>
+  					            </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb filter frutas ">
+                            <img class="img-thumbnail" src="images/productos/banana.jpg" alt="Banana">
+                                <div class="selector-cantidad">
+                                  <select class="form-control" id="cantidad">
+                                       <option>0,25</option>
+                                       <option>0,50</option>
+                                       <option>0,75</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                   </select>
+                                  <label>Kilogramos</label>
+                                </div>
+                                 <div class="botones-productos">
+                                   <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                                   <a href="#" class="btn btn-success">Agregar</a>
+                                 </div>
+  					            </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb filter frutas ">
+                            <img class="img-thumbnail" src="images/productos/manzana.jpg" alt="Manzana">
+                                <div class="selector-cantidad">
+                                  <select class="form-control" id="cantidad">
+                                       <option>0,25</option>
+                                       <option>0,50</option>
+                                       <option>0,75</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                   </select>
+                                  <label>Kilogramos</label>
+                                </div>
+                                 <div class="botones-productos">
+                                   <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                                   <a href="#" class="btn btn-success">Agregar</a>
+                                 </div>
+  					            </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb filter frutas ">
+                            <img class="img-thumbnail" src="images/productos/mandarina.jpg" alt="Mandarina">
+                                <div class="selector-cantidad">
+                                  <select class="form-control" id="cantidad">
+                                       <option>0,25</option>
+                                       <option>0,50</option>
+                                       <option>0,75</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                   </select>
+                                  <label>Kilogramos</label>
+                                </div>
+                                 <div class="botones-productos">
+                                   <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                                   <a href="#" class="btn btn-success">Agregar</a>
+                                 </div>
+  					            </div>
 
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb filter verduras ">
+                            <img class="img-thumbnail" src="images/productos/lechuga.jpg" alt="Lechuga">
+                                <div class="selector-cantidad">
+                                  <select class="form-control" id="cantidad">
+                                       <option>0,25</option>
+                                       <option>0,50</option>
+                                       <option>0,75</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                   </select>
+                                  <label>Kilogramos</label>
+                                </div>
+                                 <div class="botones-productos">
+                                   <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                                   <a href="#" class="btn btn-success">Agregar</a>
+                                 </div>
+  					            </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb filter verduras ">
+                            <img class="img-thumbnail" src="images/productos/batata.jpg" alt="Batata">
+                                <div class="selector-cantidad">
+                                  <select class="form-control" id="cantidad">
+                                       <option>0,25</option>
+                                       <option>0,50</option>
+                                       <option>0,75</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                   </select>
+                                  <label>Kilogramos</label>
+                                </div>
+                                 <div class="botones-productos">
+                                   <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                                   <a href="#" class="btn btn-success">Agregar</a>
+                                 </div>
+  					            </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb filter verduras ">
+                            <img class="img-thumbnail" src="images/productos/cebolla.jpg" alt="cebolla">
+                                <div class="selector-cantidad">
+                                  <select class="form-control" id="cantidad">
+                                       <option>0,25</option>
+                                       <option>0,50</option>
+                                       <option>0,75</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                   </select>
+                                  <label>Kilogramos</label>
+                                </div>
+                                 <div class="botones-productos">
+                                   <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                                   <a href="#" class="btn btn-success">Agregar</a>
+                                 </div>
+  					            </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb filter verduras ">
+                            <img class="img-thumbnail" src="images/productos/morron.jpg" alt="morron">
+                                <div class="selector-cantidad">
+                                  <select class="form-control" id="cantidad">
+                                       <option>0,25</option>
+                                       <option>0,50</option>
+                                       <option>0,75</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                   </select>
+                                  <label>Kilogramos</label>
+                                </div>
+                                 <div class="botones-productos">
+                                   <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                                   <a href="#" class="btn btn-success">Agregar</a>
+                                 </div>
+  					            </div>
+
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb filter almacen ">
+                            <img class="img-thumbnail" src="images/productos/huevos.jpg" alt="huevos">
+                                <div class="selector-cantidad">
+                                  <select class="form-control" id="cantidad">
+                                       <option>1/2</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                   </select>
+                                  <label>Docena</label>
+                                </div>
+                                 <div class="botones-productos">
+                                   <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                                   <a href="#" class="btn btn-success">Agregar</a>
+                                 </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-xs-6 thumb filter almacen ">
+                            <img class="img-thumbnail" src="images/productos/limon.jpg" alt="Limón">
+                                <div class="selector-cantidad">
+                                  <select class="form-control" id="cantidad">
+                                       <option>0,25</option>
+                                       <option>0,50</option>
+                                       <option>0,75</option>
+                                       <option>1</option>
+                                       <option>2</option>
+                                   </select>
+                                  <label>Kilogramos</label>
+                                </div>
+                                 <div class="botones-productos">
+                                   <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                                   <a href="#" class="btn btn-success">Agregar</a>
+                                 </div>
+                        </div>
+
+
+
+
+  					        </div>
+
+
+  						</div>
+  					</div>
+  		    </div>
+  		  </div>
+  		</div>
+<script>
+let modalId = $('#image-gallery');
+
+$(document)
+.ready(function () {
+
+  loadGallery(true, 'a.thumbnail');
+
+  //This function disables buttons when needed
+  function disableButtons(counter_max, counter_current) {
+    $('#show-previous-image, #show-next-image')
+      .show();
+    if (counter_max === counter_current) {
+      $('#show-next-image')
+        .hide();
+    } else if (counter_current === 1) {
+      $('#show-previous-image')
+        .hide();
+    }
+  }
+
+  /**
+   *
+   * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+   * @param setClickAttr  Sets the attribute for the click handler.
+   */
+
+  function loadGallery(setIDs, setClickAttr) {
+    let current_image,
+      selector,
+      counter = 0;
+
+    $('#show-next-image, #show-previous-image')
+      .click(function () {
+        if ($(this)
+          .attr('id') === 'show-previous-image') {
+          current_image--;
+        } else {
+          current_image++;
+        }
+
+        selector = $('[data-image-id="' + current_image + '"]');
+        updateGallery(selector);
+      });
+
+    function updateGallery(selector) {
+      let $sel = selector;
+      current_image = $sel.data('image-id');
+      $('#image-gallery-title')
+        .text($sel.data('title'));
+      $('#image-gallery-image')
+        .attr('src', $sel.data('image'));
+      disableButtons(counter, $sel.data('image-id'));
+    }
+
+    if (setIDs == true) {
+      $('[data-image-id]')
+        .each(function () {
+          counter++;
+          $(this)
+            .attr('data-image-id', counter);
+        });
+    }
+    $(setClickAttr)
+      .on('click', function () {
+        updateGallery($(this));
+      });
+  }
+});
+
+// build key actions
+$(document)
+.keydown(function (e) {
+  switch (e.which) {
+    case 37: // left
+      if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+        $('#show-previous-image')
+          .click();
+      }
+      break;
+
+    case 39: // right
+      if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+        $('#show-next-image')
+          .click();
+      }
+      break;
+
+    default:
+      return; // exit this handler for other keys
+  }
+  e.preventDefault(); // prevent the default action (scroll / move caret)
+});
+
+//Filter Button
+
+$(document).ready(function(){
+
+$(".filter-button").click(function(){
+    var value = $(this).attr('data-filter');
+
+    if(value == "todo")
+    {
+        //$('.filter').removeClass('hidden');
+        $('.filter').show('1000');
+    }
+    else
+    {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+        $(".filter").not('.'+value).hide('3000');
+        $('.filter').filter('.'+value).show('3000');
+
+    }
+});
+
+});
+</script>
+
+  <?php require "includes/footer.php"; ?>

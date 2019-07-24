@@ -70,8 +70,10 @@
                 <i class="fas fa-user"></i>
               </a>
               <div class="dropdown-menu user-nav" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="login.php">Mi Perfil</a>
-                <a class="dropdown-item" href="registro.php">Cerrar Sesión</a>
+                <a class="dropdown-item" href="perfil-usuario.php">Mi Perfil</a>
+                <a class="dropdown-item" href="login.php">Login</a>
+                <a class="dropdown-item" href="registro.php">Registrate</a>
+                <a class="dropdown-item" href="#">Cerrar Sesión</a>
               </div>
             </div>
 
