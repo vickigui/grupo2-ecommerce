@@ -216,6 +216,13 @@
 .createAccount {
   display: flex;
 }
+
+.errors {
+  padding: 12px;
+  border-radius: red;
+  color: red;
+  font-size: 12px;
+}
 /* RECIPES
 -------------------------------------------------- */
 .btn-recipes {
@@ -229,7 +236,7 @@
 .btn:focus, .btn:active, button:focus, button:active {
   outline: none !important;
   box-shadow: none !important;
-  
+
 
 }
 
