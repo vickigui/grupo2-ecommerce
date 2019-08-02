@@ -1,0 +1,312 @@
+  /* GLOBAL STYLES
+  -------------------------------------------------- */
+  * { box-sizing: border-box; }
+
+  body {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400;
+    color: #5a5a5a;
+    padding-top: 3rem;
+    font-size: 16px;
+
+  }
+
+  :root {
+    --light-green: #b7d29c;
+    --mid-green: #5FAD56;
+    --dark-green: #709255;
+    --yellow:#F2C14D;
+    --orange:#F68254;
+    --font-text-grey: #5a5a5a;
+  }
+
+  .bg-white {
+    background-color: #ffffff;
+    color:var(--font-text-grey);
+  }
+  .bg-yellow {
+    background-color: var(--yellow);
+  }
+
+  .bg-orange {
+    background-color: var(--orange);
+  }
+
+  .bg-dark-green {
+    background-color: var(--dark-green);
+  }
+
+  .bg-mid-green {
+    background-color: var(--mid-green);
+  }
+
+  .bg-light-green {
+    background-color: var(--light-green);
+  }
+
+
+  /* NAV
+  -------------------------------------------------- */
+  .user a {
+    color: var(--orange);
+    margin-left:  20px;
+    font-size: 1.5em;
+  }
+  .user-nav a {font-size: 1em;
+    color: var(--gry);
+    margin-left:  0px;}
+
+
+  .carrito a {color: var(--mid-green);
+    margin-left: 10px;
+    font-size: 1.5em;}
+
+    .user a:hover,
+    .carrito a:hover {color: var(--yellow);}
+
+
+  /* Titles
+  -------------------------------------------------- */
+
+
+  /* FOOTER
+  -------------------------------------------------- */
+  footer section {padding: 30px 0px; }
+  footer .main {
+    background: var(--light-green);
+    color: var(--font-text-grey);
+
+  }
+  .copyright {
+    background: var(--yellow);
+    color: #ffffff;
+  }
+  footer h1.title {
+    font-size: 2.5em;
+  	line-height: 40px;
+  	margin: 1em 0 .6em 0;
+  	font-weight: normal;
+  	color: white;
+  	color: var(--dark-green);
+    text-transform: uppercase;
+  }
+
+  footer h1.title:after {
+      content: " ";
+      width: 2.5em;
+      display: block;
+      margin: .3em 0 .5em;
+      border-bottom: 2px solid var(--dark-green);
+      text-align: left;
+    }
+
+  footer p {font-size: 0.9em;}
+  footer a {color: var(--dark-green); }
+  footer a:hover { color: var(--orange); text-decoration: none}
+  .footer-logo {
+    height: 80px;
+    float: right;
+    margin: 5px;
+  }
+
+
+
+  /* CUSTOMIZE THE CAROUSEL
+  -------------------------------------------------- */
+
+  /* Carousel base class */
+  .carousel {
+    margin-bottom: 4rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+
+  }
+
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 26rem;
+    background-color:#000000;
+  }
+  .carousel-item > img {
+    opacity:0.5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 130%;
+
+  }
+
+
+  /* MARKETING CONTENT
+  -------------------------------------------------- */
+
+  /* Center align the text within the three columns below the carousel */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  .marketing h2 {
+    font-weight: 400;
+  }
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+
+
+  /* Featurettes
+  ------------------------- */
+
+  .featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+
+  /* Thin out the marketing headings */
+  .featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+  }
+
+/*Section Header*/
+  .sectionHeader {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    background-image: url(../images/section_header.jpg);
+    background-size: cover;
+    padding: 3rem;
+  }
+
+  .sectionHeader h1 {
+    color: white;
+    letter-spacing: 0.3rem;
+    font-size: 4rem;
+  }
+
+  /* FORMS
+  -------------------------------------------------- */
+.formSection h1{
+  padding-bottom: 15px;
+}
+
+.formSection label {
+  padding-top: 30px;
+}
+
+.formSection input {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.formSection textarea {
+  display: block;
+  width: 100%;
+}
+
+.btn-form {
+  margin: 30px 0;
+  padding: 8px;
+}
+
+.createAccount {
+  display: flex;
+}
+
+.errors {
+  padding: 12px;
+  border-radius: red;
+  color: red;
+  font-size: 12px;
+}
+/* RECIPES
+-------------------------------------------------- */
+.btn-recipes {
+  margin-bottom: 18px;
+}
+
+/* Productos
+-------------------------------------------------- */
+
+
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+
+
+}
+
+
+.thumb{
+  animation: winanim 0.5s ;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0px 0px 23px -4px rgba(207,207,207,1);
+  -moz-box-shadow: 0px 0px 23px -4px rgba(207,207,207,1);
+  box-shadow: 0px 0px 23px -4px rgba(207,207,207,1);
+
+}
+
+.selector-cantidad{
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+.selector-cantidad select{
+  width: 40%;
+  float: left;
+}
+.selector-cantidad label{
+  width: 60%;
+  line-height: 40px;
+  text-align: right;
+  padding: 0px 10px;
+
+}
+.botones-productos{
+  margin: 15px 0px;
+
+
+
+}
+
+/* FAQ
+-------------------------------------------------- */
+.pregunta {
+  margin-bottom: 35px;
+}
+
+.pregunta a {
+  color: grey;
+}
+
+.pregunta a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+
+  @media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
