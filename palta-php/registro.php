@@ -2,19 +2,28 @@
 
   $errors = [];
 
-  $user = isset($_POST['user']) ? $_POST['user'] : "";
+  $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
+  $apellido = isset($_POST['apellido']) ? $_POST['apellido'] : "";
   $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
   $address = isset($_POST['address']) ? $_POST['address'] : "";
+  $localidad = isset($_POST['localidad']) ? $_POST['localidad'] : "";
   $tel = isset($_POST['tel']) ? $_POST['tel'] : "";
   $password = isset($_POST['password']) ? $_POST['password'] : "";
   $confirm = isset($_POST['confirm']) ? $_POST['confirm'] : "";
 
   if ($_POST) {
     /* Nombre 3 o más caracteres */
-    if (!$user) {
-      $errors['user'] = "Debes ingresar un nombre.";
-    } elseif (strlen($user) < 3) {
-      $errors['user'] = "El nombre debe tener al menos 3 caracteres";
+    if (!$nombre) {
+      $errors['nombre'] = "Debes ingresar un nombre.";
+    } elseif (strlen($nombre) < 3) {
+      $errors['nombre'] = "El nombre debe tener al menos 3 caracteres";
+    }
+
+    /* Apellido 3 o más caracteres */
+    if (!$apellido) {
+      $errors['apellido'] = "Debes ingresar un apellido.";
+    } elseif (strlen($apellido) < 3) {
+      $errors['apellido'] = "El apellido debe tener al menos 3 caracteres";
     }
 
     /* Email en formato válido */
@@ -30,6 +39,14 @@
     } elseif (strlen($address) < 5) {
       $errors['address'] = "Hay un error en la dirección";
     }
+
+    /* Localidad 5 o más caracteres */
+    if (!$localidad) {
+      $errors['localidad'] = "Debes ingresar una localidad.";
+    } elseif (strlen($localidad) < 5) {
+      $errors['localidad'] = "Hay un error en la localidad";
+    }
+
 
     /* Teléfono 8 o más caracteres */
     if (!$tel) {
@@ -65,6 +82,22 @@
   </div>
   -->
 
+  <?php
+  $datos = $db->prepare('INSERT INTO usuarios values (0, :nombre, :apellido, :mail, :address, :localidad, :tel, :password)');
+
+  $datos->bindValue(":nombre", $nombre);
+  $datos->bindValue(":apellido", $apellido);
+  $datos->bindValue(":mail", $mail);
+  $datos->bindValue(":address", $address);
+  $datos->bindValue(":localidad", $localidad);
+  $datos->bindValue(":tel", $tel);
+  $datos->bindValue(":password", $password);
+
+  $datos->execute();
+   ?>
+
+
+
 <div class="container-fluid sectionHeader">
   <h1 class="text-center">Registrate</h1>
 </div>
@@ -72,12 +105,20 @@
   <div class="container form col-xs-8 col-lg-5 formSection">
     <h4>Completá los siguientes datos para empezar.</h4>
     <form action="" method="post">
-      <label for="user" id="user" class="items">
-        <p>Nombre y apellido</p>
+      <label for="nombre" id="nombre" class="items">
+        <p>Nombre</p>
       </label>
-      <input type="text" name="user" value="<?php echo $user ?>">
-      <?php if (isset($errors['user'])) : ?>
-        <p class="errors"><?php echo $errors['user'] ?></p>
+      <input type="text" name="nombre" value="<?php echo $nombre ?>">
+      <?php if (isset($errors['nombre'])) : ?>
+        <p class="errors"><?php echo $errors['nombre'] ?></p>
+      <?php endif; ?>
+
+      <label for="apellido" id="apellido" class="items">
+        <p>Apellido</p>
+      </label>
+      <input type="text" name="apellido" value="<?php echo $apellido ?>">
+      <?php if (isset($errors['apellido'])) : ?>
+        <p class="errors"><?php echo $errors['apellido'] ?></p>
       <?php endif; ?>
 
       <label for="mail" id="mail" class="items">
@@ -94,6 +135,14 @@
       <input type="text" name="address" value="<?php echo $address ?>">
       <?php if (isset($errors['address'])) : ?>
         <p class="errors"><?php echo $errors['address'] ?></p>
+      <?php endif; ?>
+
+      <label for="localidad" id="localidad" class="items">
+        <p>Localidad</p>
+      </label>
+      <input type="text" name="localidad" value="<?php echo $localidad ?>">
+      <?php if (isset($errors['localidad'])) : ?>
+        <p class="errors"><?php echo $errors['localidad'] ?></p>
       <?php endif; ?>
 
       <label for="tel" id="tel" class="items">
