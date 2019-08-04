@@ -11,6 +11,7 @@
   $password = isset($_POST['password']) ? $_POST['password'] : "";
   $confirm = isset($_POST['confirm']) ? $_POST['confirm'] : "";
 
+
   if ($_POST) {
     /* Nombre 3 o más caracteres */
     if (!$nombre) {
@@ -47,7 +48,6 @@
       $errors['localidad'] = "Hay un error en la localidad";
     }
 
-
     /* Teléfono 8 o más caracteres */
     if (!$tel) {
       $errors['tel'] = "Debes ingresar un teléfono.";
@@ -65,35 +65,29 @@
     /*Validar password*/
     if (!$confirm) {
         $errors['confirm'] =  "Confirma la contraseña";
-    } else if ($_POST["password"] !== $_POST["confirm"]) {
+    } else if ($password != $confirm) {
       $errors['confirm'] =  "Las contraseñas no coinciden";
     }
   }
 
-?>
+  //Password verify
+  $passVerify = password_verify($confirm,$password);
+  $passHash = password_hash($password,PASSWORD_DEFAULT);
 
-<!--
-  <div class="errors">
-    <ul>
-      <?php foreach ($errors as $field => $error) : ?>
-        <li><?php echo $error ?></li>
-      <?php endforeach ?>
-    </ul>
-  </div>
-  -->
+  if ($password == $confirm) {
+    $datos = $db->prepare('INSERT INTO usuarios values (0, :nombre, :apellido, :mail, :address, :localidad, :tel, :password)');
 
-  <?php
-  $datos = $db->prepare('INSERT INTO usuarios values (0, :nombre, :apellido, :mail, :address, :localidad, :tel, :password)');
+    $datos->bindValue(":nombre", $nombre);
+    $datos->bindValue(":apellido", $apellido);
+    $datos->bindValue(":mail", $mail);
+    $datos->bindValue(":address", $address);
+    $datos->bindValue(":localidad", $localidad);
+    $datos->bindValue(":tel", $tel);
+    $datos->bindValue(":password", $passHash);
 
-  $datos->bindValue(":nombre", $nombre);
-  $datos->bindValue(":apellido", $apellido);
-  $datos->bindValue(":mail", $mail);
-  $datos->bindValue(":address", $address);
-  $datos->bindValue(":localidad", $localidad);
-  $datos->bindValue(":tel", $tel);
-  $datos->bindValue(":password", $password);
+    $datos->execute();
+  }
 
-  $datos->execute();
    ?>
 
 
