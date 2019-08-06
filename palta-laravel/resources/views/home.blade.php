@@ -1,99 +1,207 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('plantilla')
+@section('titulo')
+  PALTA - 100% Productos Orgánicos
+@endsection
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+@section('contenido')
 
-        <!-- Styles-->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
 
-            .full-height {
-                height: 100vh;
-            }
+<main role="main">
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
+   <ol class="carousel-indicators">
+     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+     <li data-target="#myCarousel" data-slide-to="1"></li>
+     <li data-target="#myCarousel" data-slide-to="2"></li>
+   </ol>
+   <div class="carousel-inner">
+     <div class="carousel-item active">
+       <img class="img-responsive" src="images/common/slider-home/verduras.jpg">
 
-            .position-ref {
-                position: relative;
-            }
+       <div class="container">
+         <div class="carousel-caption text-left">
+           <h1>Bienvenido!</h1>
+           <p>Hacé tu vida más saludable y práctica armando tu canasta semanal.</p>
+           <p><a class="btn btn-lg btn-primary" href="registro.php" role="button">Registrate ahora!</a></p>
+         </div>
+       </div>
+     </div>
+     <div class="carousel-item">
+       <img class="img-responsive" src="images/common/slider-home/picada.jpg">
+       <div class="container">
+         <div class="carousel-caption">
+           <h1>Tenemos recetas para vos</h1>
+           <p>Descargá de nuestra sección las recetas más ricas para hacer con los ingredientes mas sanos.</p>
+           <p><a class="btn btn-lg btn-primary" href="recetas.php" role="button">Conocé más</a></p>
+         </div>
+       </div>
+     </div>
+     <div class="carousel-item">
+        <img class="img-responsive" src="images/common/slider-home/citrico.jpg">
+        <div class="container">
+         <div class="carousel-caption text-right">
+           <h1>Para combatir al invierno.</h1>
+           <p>Preparate todos los días 1 vaso de jugo cítrico para mejorar tu sistema inmunológico!.</p>
+           <p><a class="btn btn-lg btn-primary" href="productos.php" role="button">Ver Productos</a></p>
+         </div>
+       </div>
+     </div>
+   </div>
+   <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="sr-only">Anterior</span>
+   </a>
+   <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="sr-only">Siguiente</span>
+   </a>
+ </div>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
 
-            .content {
-                text-align: center;
-            }
+ <!-- Marketing messaging and featurettes
+ ================================================== -->
+ <!-- Wrap the rest of the page in another container to center all the content. -->
 
-            .title {
-                font-size: 84px;
-            }
+ <div class="container marketing">
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+   <!-- Three columns of text below the carousel -->
+<h2 class="featurette-heading">Estas canastas<br> <span class="text-muted">No te pueden faltar</span></h2>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+   <div class="row">
+           <div class="col-md-4">
+             <div class="card mb-4 shadow-sm">
+               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/vegetables.jpg">
+               <div class="card-body">
+                 <h2>Canasta nº1</h2>
+                 <p class="card-text">
+                   <ul>
+                      <li>VERDURITAS PARA SOPA 1 paquete</li>
+                      <li>PAPA 1kg.</li>
+                      <li>BATATA 500 gr.</li>
+                      <li>ZAPALLO ANCO 1 unidad</li>
+                      <li>ZANAHORIA 600 gr.</li>
+                      <li>CEBOLLA 600 gr.</li>
+                      <li>MORRON ROJO 1 unidad</li>
+                      <li>TOMATES CHERRY 150 gr</li>
+                      <li>y más!</li>
+                   </ul>
+               </p>
+                 <div class="d-flex justify-content-between align-items-center float-right">
+                   <div class="btn-group">
+                     <a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
+                    <a href="carrito.php"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="col-md-4">
+             <div class="card mb-4 shadow-sm">
+               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/frutas.jpg">
+               <div class="card-body">
+                 <h2>Canasta nº2</h2>
+                 <p class="card-text">
+                   <ul>
+                      <li>VERDURITAS PARA SOPA 1 paquete</li>
+                      <li>PAPA 1kg.</li>
+                      <li>BATATA 500 gr.</li>
+                      <li>ZAPALLO ANCO 1 unidad</li>
+                      <li>ZANAHORIA 600 gr.</li>
+                      <li>CEBOLLA 600 gr.</li>
+                      <li>MORRON ROJO 1 unidad</li>
+                      <li>TOMATES CHERRY 150 gr</li>
+                      <li>REPOLLITOS DE BRUCELAS 250 gr.</li>
+                      <li>ZAPALLITOS 600 gr</li>
+                      <li>TOMATE REDONDO 600 gr.</li>
+                      <li>REPOLLO COLORADO 1/4 unidad.</li>
+                      <li>REMOLACHA 500 gr</li>
+                      <li>PUERRO 250 gr</li>
+                      <li>LIMON 3 unidades</li>
+                      <li>MANDARINA NOVA 700 gr.</li>
+                      <li>PERAS 700 gr.</li>
+                   </ul></p>
+                 <div class="d-flex justify-content-between align-items-center float-right">
+                   <div class="btn-group">
+                     <a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
+                    <a href="carrito.php"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="col-md-4">
+             <div class="card mb-4 shadow-sm">
+              <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/almacen.jpg">
+               <div class="card-body">
+                 <h2>Canasta nº3</h2>
+                 <p class="card-text">
+                   <ul>
+                      <li>VERDURITAS PARA SOPA 1 paquete</li>
+                      <li>PAPA 1kg.</li>
+                      <li>BATATA 500 gr.</li>
+                      <li>ZAPALLO ANCO 1 unidad</li>
+                      <li>ZANAHORIA 600 gr.</li>
+                      <li>CEBOLLA 600 gr.</li>
+                      <li>MORRON ROJO 1 unidad</li>
+                      <li>TOMATES CHERRY 150 gr</li>
+                      <li>REPOLLITOS DE BRUCELAS 250 gr.</li>
+                      <li>ZAPALLITOS 600 gr</li>
+                      <li>TOMATE REDONDO 600 gr.</li>
+                      <li>REPOLLO COLORADO 1/4 unidad.</li>
+                      <li>REMOLACHA 500 gr</li>
+                      <li>PUERRO 250 gr</li>
+                      <li>LIMON 3 unidades</li>
+                      <li>MANDARINA NOVA 700 gr.</li>
+                      <li>PERAS 700 gr.</li>
+                   </ul></p>
+                 <div class="d-flex justify-content-between align-items-center float-right">
+                   <div class="btn-group">
+                     <a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
+                    <a href="carrito.php"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+         </div>
+   <!-- START THE FEATURETTES -->
+
+   <hr class="featurette-divider">
+
+   <div class="row featurette">
+     <div class="col-md-7">
+       <h2 class="featurette-heading">Recetas organicas.<br> <span class="text-muted">Para esta época.</span></h2>
+       <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+       <a href="recetas.php"><button type="button" class="btn btn-info ">Conocé Más</button></a>
+     </div>
+     <div class="col-md-5">
+       <img src="images/recetas/pie.jpg" alt="">
+     </div>
+   </div>
+
+   <hr class="featurette-divider">
+
+   <div class="row featurette">
+     <div class="col-md-5">
+       <img src="images/nosotros.jpg" alt="">
+     </div>
+     <div class="col-md-7 bg-white">
+       <h2 class="featurette-heading">Elegimos lo mejor. <span class="text-muted">Tenemos lo mejor.</span></h2>
+       <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+     </div>
+
+   </div>
+
+   <hr class="featurette-divider">
+
+   <!-- /END THE FEATURETTES -->
+
+ </div><!-- /.container -->
+</main>
+
+
+@endsection

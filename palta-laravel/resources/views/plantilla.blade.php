@@ -35,19 +35,19 @@
        <div class="collapse navbar-collapse" id="navbarCollapse">
          <ul class="navbar-nav mr-auto">
            <li class="nav-item active">
-             <a class="nav-link" href="index.php">HOME <span class="sr-only">(current)</span></a>
+             <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="nosotros.php">NOSOTROS</a>
+             <a class="nav-link" href="/nosotros">NOSOTROS</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="productos.php">PRODUCTOS</a>
+             <a class="nav-link" href="/productos">PRODUCTOS</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="recetas.php">RECETAS</a>
+             <a class="nav-link" href="/recetas">RECETAS</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="contacto.php">CONTACTO</a>
+             <a class="nav-link" href="/contacto">CONTACTO</a>
            </li>
          </ul>
 
@@ -58,10 +58,10 @@
                 <i class="fas fa-user"></i>
               </a>
               <div class="dropdown-menu user-nav" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="perfil-usuario.php">Mi Perfil</a>
-                <a class="dropdown-item" href="login.php">Login</a>
-                <a class="dropdown-item" href="registro.php">Registrate</a>
-                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                <a class="dropdown-item" href="/perfil">Mi Perfil</a>
+                <a class="dropdown-item" href="/login">Login</a>
+                <a class="dropdown-item" href="/registro">Registrate</a>
+                <a class="dropdown-item" href="/">Cerrar Sesión</a>
               </div>
             </div>
 
@@ -69,7 +69,7 @@
          </div>
 
          <div class="carrito">
-           <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="miCarrito.php">
+           <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="/carrito">
              <i class="fas fa-shopping-cart"></i>
            </a>
          </div>

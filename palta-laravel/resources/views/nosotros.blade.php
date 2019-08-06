@@ -1,6 +1,6 @@
 @extends('plantilla')
 @section('titulo')
-  PALTA - 100% Productos Orgánicos
+  PALTA - Sobre nosotros
 @endsection
 
 
