@@ -28,7 +28,7 @@ Route::get('/perfil', function () {
     return view('perfil');
 });
 
-Route::get('/perfil/carrito', function () {
+Route::get('/carrito', function () {
     return view('carrito');
 });
 
@@ -46,6 +46,10 @@ Route::get('/nosotros', function () {
 
 Route::get('/contacto', function () {
     return view('contacto');
+});
+
+Route::get('/faq', function () {
+    return view('faq');
 });
 
 Route::get('/admin', function () {
