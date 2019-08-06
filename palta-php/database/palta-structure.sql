@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 02-08-2019 a las 02:33:42
--- Versión del servidor: 10.1.40-MariaDB
--- Versión de PHP: 7.3.5
+-- Servidor: localhost:8889
+-- Tiempo de generación: 06-08-2019 a las 23:02:12
+-- Versión del servidor: 5.7.23
+-- Versión de PHP: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `palta`
+-- Base de datos: `Palta`
 --
 
 -- --------------------------------------------------------
@@ -82,15 +80,41 @@ CREATE TABLE `productos` (
 
 CREATE TABLE `usuarios` (
   `id_usuarios` int(11) NOT NULL,
-  `nombre` int(11) NOT NULL,
-  `apellido` int(11) NOT NULL,
-  `email` int(11) NOT NULL,
+  `nombre` varchar(11) NOT NULL,
+  `apellido` varchar(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `direccion` varchar(100) NOT NULL,
+  `localidad` varchar(100) NOT NULL,
   `celular` int(11) NOT NULL,
-  `pass` int(11) NOT NULL,
-  `direccion` int(11) NOT NULL,
-  `localidad` int(11) NOT NULL
+  `pass` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-COMMIT;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuarios`, `nombre`, `apellido`, `email`, `direccion`, `localidad`, `celular`, `pass`) VALUES
+(30, 'Victoria', 'Guiñazu', 'askdja@ajsl.com', 'Juan Pedro Echeverría 850', 'General Pacheco', 21627903, '$2y$10$MalMB1/3byzajeY2JvFHeuWsYFk/LHJ9gg2pfhhfWE7N3RdqKVlJa');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id_usuarios`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id_usuarios` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
