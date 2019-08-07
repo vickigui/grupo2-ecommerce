@@ -16,25 +16,17 @@ Route::get('/', function () {
 });
 
 
-Route::get('/registro', function () {
-    return view('registro');
-});
+Route::get('/registro', 'RegistroController@registro');
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', 'LoginController@login');
 
-Route::get('/perfil', function () {
-    return view('perfil');
-});
+Route::get('/perfil', 'PerfilController@perfil');
 
-Route::get('/carrito', function () {
-    return view('carrito');
-});
+Route::get('/carrito', 'CarritoController@carrito');
 
-Route::get('/productos', function () {
-    return view('productos');
-});
+Route::get('/productos', 'ProductosController@productos');
+
+Route::get('/contacto', 'ContactoController@contacto');
 
 Route::get('/recetas', function () {
     return view('recetas');
@@ -44,14 +36,8 @@ Route::get('/nosotros', function () {
     return view('nosotros');
 });
 
-Route::get('/contacto', function () {
-    return view('contacto');
-});
-
 Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/admin', function () {
-    return view('admin');
-});
+Route::get('/admin', 'AdminController@admin');
