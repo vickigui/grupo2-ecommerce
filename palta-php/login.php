@@ -21,16 +21,17 @@ if ($_POST) {
   }
 }
 
+  $passHash = password_hash($password,PASSWORD_DEFAULT);
+
+
+  //Traer usuario con el mail y confirmar pass
+    $logIn = $db->prepare("SELECT * FROM usuario WHERE mail IS :mail AND password IS :password");
+    $logIn->bindValue(":mail", $mail);
+    $logIn->bindValue(":password", $passHash);
+    $logIn->execute();
+    $usuario = $logIn->fetch(PDO::FETCH_ASSOC);
 ?>
-<!--
-  <div class="errors">
-    <ul>
-      <?php foreach ($errors as $field => $error) : ?>
-        <li><?php echo $error ?></li>
-      <?php endforeach ?>
-    </ul>
-  </div>
-  -->
+
 
 
 <main>
