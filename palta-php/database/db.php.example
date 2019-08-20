@@ -1,8 +1,8 @@
 <?php
 
-$dsn = 'mysql:host=localhost;dbname=paltafinal;port=3306';
+$dsn = 'mysql:host=localhost;dbname=palta;port=3306';
 $user = 'root';
-$pass = '';
+$pass = 'root';
 
 
 try {
