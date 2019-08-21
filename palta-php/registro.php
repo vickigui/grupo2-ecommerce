@@ -2,6 +2,7 @@
 
   $errors = [];
 
+
   $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
   $apellido = isset($_POST['apellido']) ? $_POST['apellido'] : "";
   $mail = isset($_POST['mail']) ? $_POST['mail'] : "";
@@ -70,6 +71,7 @@
     }
   }
 
+
   //Password verify
   $passVerify = password_verify($confirm,$password);
   $passHash = password_hash($password,PASSWORD_DEFAULT);
@@ -88,6 +90,12 @@
 
     $datos->execute();
   }
+
+  //Si no hay errores avanza al login
+  if (count($errors) == 0 ) {
+  header("Location:login.php"); exit;
+  }
+
 
    ?>
 
