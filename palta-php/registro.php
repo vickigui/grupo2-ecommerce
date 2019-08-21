@@ -70,6 +70,9 @@
     }
   }
 
+
+
+
   //Password verify
   $passVerify = password_verify($confirm,$password);
   $passHash = password_hash($password,PASSWORD_DEFAULT);
@@ -87,6 +90,8 @@
 
     $datos->execute();
   }
+
+
 
    ?>
 
