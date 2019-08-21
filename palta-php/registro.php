@@ -73,6 +73,7 @@
   //Password verify
   $passVerify = password_verify($confirm,$password);
   $passHash = password_hash($password,PASSWORD_DEFAULT);
+  
 
   if ($password == $confirm && strlen($password) >= 8) {
     $datos = $db->prepare('INSERT INTO usuarios values (0, :nombre, :apellido, :mail, :address, :localidad, :tel, :password)');

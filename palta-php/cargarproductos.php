@@ -1,7 +1,7 @@
 
 <?php
-require "includes/header.php";
-	require_once 'autoload.php';
+//require "includes/header.php";
+require_once 'autoload.php';
 
 ?>
 

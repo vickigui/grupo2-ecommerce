@@ -1,6 +1,7 @@
 <?php
-  include_once "./db.php";
+  include_once "database/db.php";
  ?>
+ 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

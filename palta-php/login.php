@@ -23,13 +23,23 @@ if ($_POST) {
 
   $passHash = password_hash($password,PASSWORD_DEFAULT);
 
-
   //Traer usuario con el mail y confirmar pass
-    $logIn = $db->prepare("SELECT * FROM usuario WHERE mail IS :mail AND password IS :password");
-    $logIn->bindValue(":mail", $mail);
-    $logIn->bindValue(":password", $passHash);
-    $logIn->execute();
-    $usuario = $logIn->fetch(PDO::FETCH_ASSOC);
+
+  $logIn = $db->prepare("SELECT * FROM usuario WHERE mail IS :mail AND password IS :password");
+  $logIn->bindValue(":mail", $mail);
+  $logIn->bindValue(":password", $password);
+  $logIn->execute();
+  $usuario = $logIn->fetch(PDO::FETCH_ASSOC);
+
+
+function redirect () {
+  if (password_verify($passHash, $usuario["password"])) {
+    echo "index.php";
+  } else {
+    echo "recetas.php";
+  }
+}
+
 ?>
 
 
@@ -40,7 +50,7 @@ if ($_POST) {
   </div>
 
   <div class="container form col-xs-8 col-lg-5 formSection">
-    <form action="" method="post">
+    <form action="<?php echo redirect(); ?>" method="post">
       <label for="mail" id="mail" class="items">
         <p>E-mail</p>
       </label>
