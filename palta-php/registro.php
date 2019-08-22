@@ -69,34 +69,33 @@
     } else if ($password != $confirm) {
       $errors['confirm'] =  "Las contraseñas no coinciden";
     }
+
+    //Si no hay errores avanza al login
+    if (count($errors) == 0 ) {
+
+      $passHash = password_hash($password,PASSWORD_DEFAULT);
+
+      if ($password == $confirm && strlen($password) >= 8) {
+        $datos = $db->prepare('INSERT INTO usuarios
+          values (0, :nombre, :apellido, :mail, :address, :localidad, :tel, :password)');
+
+        $datos->bindValue(":nombre", $nombre);
+        $datos->bindValue(":apellido", $apellido);
+        $datos->bindValue(":mail", $mail);
+        $datos->bindValue(":address", $address);
+        $datos->bindValue(":localidad", $localidad);
+        $datos->bindValue(":tel", $tel);
+        $datos->bindValue(":password", $passHash);
+
+        $datos->execute();
+      }
+
+      header("Location:index.php"); exit;
   }
 
+}
 
-  //Password verify
-  $passVerify = password_verify($confirm,$password);
-  $passHash = password_hash($password,PASSWORD_DEFAULT);
-
-  if ($password == $confirm && strlen($password) >= 8) {
-    $datos = $db->prepare('INSERT INTO usuarios values (0, :nombre, :apellido, :mail, :address, :localidad, :tel, :password)');
-
-    $datos->bindValue(":nombre", $nombre);
-    $datos->bindValue(":apellido", $apellido);
-    $datos->bindValue(":mail", $mail);
-    $datos->bindValue(":address", $address);
-    $datos->bindValue(":localidad", $localidad);
-    $datos->bindValue(":tel", $tel);
-    $datos->bindValue(":password", $passHash);
-
-    $datos->execute();
-  }
-
-  //Si no hay errores avanza al login
-  if (count($errors) == 0 ) {
-  header("Location:login.php"); exit;
-  }
-
-
-   ?>
+?>
 
 
 
@@ -175,4 +174,4 @@
     </form>
   </div>
 
-<?php require "includes/footer.php"; ?>
+  <?php require "includes/footer.php"; ?>
