@@ -12,6 +12,8 @@
   $password = isset($_POST['password']) ? $_POST['password'] : "";
   $confirm = isset($_POST['confirm']) ? $_POST['confirm'] : "";
 
+  $redirect = "";
+
 
   if ($_POST) {
     /* Nombre 3 o más caracteres */
@@ -72,34 +74,24 @@
   }
 
 
-  //Password verify
-  $passVerify = password_verify($confirm,$password);
-  $passHash = password_hash($password,PASSWORD_DEFAULT);
-  
-
-  if ($password == $confirm && strlen($password) >= 8) {
+  if (!$errors && !empty($_POST)) {
     $datos = $db->prepare('INSERT INTO usuarios values (0, :nombre, :apellido, :mail, :address, :localidad, :tel, :password)');
 
-    $datos->bindValue(":nombre", $nombre);
-    $datos->bindValue(":apellido", $apellido);
-    $datos->bindValue(":mail", $mail);
-    $datos->bindValue(":address", $address);
-    $datos->bindValue(":localidad", $localidad);
-    $datos->bindValue(":tel", $tel);
+    $datos->bindValue(":nombre", $_POST['nombre']);
+    $datos->bindValue(":apellido", $_POST['apellido']);
+    $datos->bindValue(":mail", $_POST['mail']);
+    $datos->bindValue(":address", $_POST['address']);
+    $datos->bindValue(":localidad", $_POST['localidad']);
+    $datos->bindValue(":tel", $_POST['tel']);
+    $passHash = password_hash($_POST['password'],PASSWORD_DEFAULT);
     $datos->bindValue(":password", $passHash);
 
-    $datos->execute();
+    if($datos->execute()){
+      $redirect = "index.php";
+    };
   }
-
-  //Si no hay errores avanza al login
-  if (count($errors) == 0 ) {
-  header("Location:login.php"); exit;
-  }
-
 
    ?>
-
-
 
 <div class="container-fluid sectionHeader">
   <h1 class="text-center">Registrate</h1>
@@ -107,7 +99,7 @@
 
   <div class="container form col-xs-8 col-lg-5 formSection">
     <h4>Completá los siguientes datos para empezar.</h4>
-    <form action="" method="post">
+    <form action="<?php if (!empty($redirect)): echo $redirect; endif; ?>" method="post">
       <label for="nombre" id="nombre" class="items">
         <p>Nombre</p>
       </label>

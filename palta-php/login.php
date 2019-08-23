@@ -1,48 +1,26 @@
 <?php require "includes/header.php";
-
-$errors = [];
-
-$mail = isset($_POST['mail']) ? $_POST['mail'] : "";
-$password = isset($_POST['password']) ? $_POST['password'] : "";
-
-if ($_POST) {
-  /* Email en formato válido */
-  if (!$mail) {
-    $errors['mail'] = "Debes ingresar un email.";
-  } elseif (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-    $errors['mail'] = "El email no tiene un formato válido.";
-  }
-
-  /* Password 8 o más caracteres */
-  if (!$password) {
-    $errors['password'] = "Debes ingresar una contraseña.";
-  } elseif (strlen($password) < 8) {
-    $errors['password'] = "La contraseña no es correcta";
-  }
-}
-
-  $passHash = password_hash($password,PASSWORD_DEFAULT);
+  session_start();
 
   //Traer usuario con el mail y confirmar pass
 
-  $logIn = $db->prepare("SELECT * FROM usuario WHERE mail IS :mail AND password IS :password");
-  $logIn->bindValue(":mail", $mail);
-  $logIn->bindValue(":password", $password);
+if (!empty($_POST['mail']) && !empty($_POST['password'])) {
+  $logIn = $db->prepare("SELECT id_usuarios, email, password FROM usuarios WHERE email IS :email");
+  $logIn->bindValue(":email", $_POST['mail']);
   $logIn->execute();
   $usuario = $logIn->fetch(PDO::FETCH_ASSOC);
 
+  $redirect = " ";
 
-function redirect () {
-  if (password_verify($passHash, $usuario["password"])) {
-    echo "index.php";
+  if (count($usuario) > 0 && password_verify($_POST["password"], $usuario["pass"])) {
+    $_SESSION["usuario_id"] = $usuario["id"];
+    $redirect = "index.php";
   } else {
-    echo "recetas.php";
+    $redirect = "login.php";
   }
 }
 
+
 ?>
-
-
 
 <main>
   <div class="container-fluid sectionHeader">
@@ -50,22 +28,16 @@ function redirect () {
   </div>
 
   <div class="container form col-xs-8 col-lg-5 formSection">
-    <form action="<?php echo redirect(); ?>" method="post">
+    <form action="<?php if (!empty($redirect)): echo $redirect; endif; ?>" method="post">
       <label for="mail" id="mail" class="items">
         <p>E-mail</p>
       </label>
       <input type="mail" name="mail" value="">
-      <?php if (isset($errors['mail'])) : ?>
-        <p class="errors"><?php echo $errors['mail'] ?></p>
-      <?php endif; ?>
 
       <label for="password" id="password" class="items">
         <p>Contraseña</p>
       </label>
       <input type="password" name="password" value="">
-      <?php if (isset($errors['password'])) : ?>
-        <p class="errors"><?php echo $errors['password'] ?></p>
-      <?php endif; ?>
 
       <button type="submit" name="button" class="btn btn-success btn-form">Ingresar</button>
 

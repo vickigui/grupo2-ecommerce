@@ -1,7 +1,6 @@
 <?php
   include_once "database/db.php";
  ?>
- 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -20,8 +19,6 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </head>
-
-
 
   <body>
     <header>

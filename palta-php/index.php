@@ -1,4 +1,21 @@
-<?php require "includes/header.php"; ?>
+<?php require "includes/header.php";
+  session_start();
+
+  if(isset($_SESSION["usuario_id"])) {
+    $login = $db->prepare("SELECT id_usuarios, email, password FROM usuarios WHERE id_usuarios IS :id");
+    $login->bindValue(":id", $_SESSION["usuario_id"]);
+    $login->execute();
+    $usuario = $logIn->fetch(PDO::FETCH_ASSOC);
+
+    $user = null;
+
+    if(count($usuario) > 0) {
+      $user = $usuario;
+    }
+
+  }
+
+?>
 
 <main role="main">
 
