@@ -1,5 +1,19 @@
 <?php
+  session_start();
   include_once "database/db.php";
+
+  // if(isset($_SESSION['usuario_id'])) {
+  //   $login = $db->prepare('SELECT * FROM usuarios WHERE id_usuarios = :id');
+  //   $login->bindValue(":id", $_SESSION['usuario_id']);
+  //   $login->execute();
+  //   $usuario = $login->fetch(PDO::FETCH_ASSOC);
+  //
+  //   $user = null;
+  //
+  //   if(count($usuario) > 0) {
+  //     $user = $usuario;
+  //   }
+  // }
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -67,10 +81,13 @@
                 <i class="fas fa-user"></i>
               </a>
               <div class="dropdown-menu user-nav" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="perfil-usuario.php">Mi Perfil</a>
-                <a class="dropdown-item" href="login.php">Login</a>
-                <a class="dropdown-item" href="registro.php">Registrate</a>
-                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                <?php if(isset($_SESSION['usuario_id'])): ?>
+                  <a class="dropdown-item" href="perfil-usuario.php">Mi Perfil</a>
+                  <a class="dropdown-item" href="logout.php">Cerrar Sesión</a>
+                <?php else: ?>
+                  <a class="dropdown-item" href="login.php">Login</a>
+                  <a class="dropdown-item" href="registro.php">Registrate</a>
+              <?php endif; ?>
               </div>
             </div>
 

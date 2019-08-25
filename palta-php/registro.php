@@ -87,7 +87,8 @@
     $datos->bindValue(":password", $passHash);
 
     if($datos->execute()){
-      $redirect = "index.php";
+      header("Location: login.php");
+      exit();
     };
   }
 
@@ -99,7 +100,7 @@
 
   <div class="container form col-xs-8 col-lg-5 formSection">
     <h4>Completá los siguientes datos para empezar.</h4>
-    <form action="<?php if (!empty($redirect)): echo $redirect; endif; ?>" method="post">
+    <form action="" method="post">
       <label for="nombre" id="nombre" class="items">
         <p>Nombre</p>
       </label>
