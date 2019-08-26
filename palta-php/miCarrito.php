@@ -1,4 +1,4 @@
-<?php require "includes/header.php"; ?>
+<?php require "includes/header.php";?>
 
 <main>
   <div class="container-fluid sectionHeader">
@@ -16,8 +16,6 @@
           <th scope="col">Cantidad</th>
           <th scope="col">Precio Unitario</th>
           <th scope="col">Total</th>
-
-
         </tr>
       </thead>
       <tbody>

@@ -2,18 +2,18 @@
   session_start();
   include_once "database/db.php";
 
-  // if(isset($_SESSION['usuario_id'])) {
-  //   $login = $db->prepare('SELECT * FROM usuarios WHERE id_usuarios = :id');
-  //   $login->bindValue(":id", $_SESSION['usuario_id']);
-  //   $login->execute();
-  //   $usuario = $login->fetch(PDO::FETCH_ASSOC);
-  //
-  //   $user = null;
-  //
-  //   if(count($usuario) > 0) {
-  //     $user = $usuario;
-  //   }
-  // }
+  if(isset($_SESSION['usuario_id'])) {
+    $login = $db->prepare('SELECT * FROM usuarios WHERE id_usuarios = :id');
+    $login->bindValue(":id", $_SESSION['usuario_id']);
+    $login->execute();
+    $usuario = $login->fetch(PDO::FETCH_ASSOC);
+
+    $user = null;
+
+    if(count($usuario) > 0) {
+      $user = $usuario;
+    }
+  }
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
