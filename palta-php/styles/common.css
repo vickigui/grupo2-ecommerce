@@ -236,9 +236,8 @@
 .btn:focus, .btn:active, button:focus, button:active {
   outline: none !important;
   box-shadow: none !important;
-
-
 }
+
 
 
 .thumb{
@@ -267,11 +266,17 @@
   padding: 0px 10px;
 
 }
+
 .botones-productos{
   margin: 15px 0px;
+}
+/* BUTTON SUCCESS INGRESAR PRODUCTO
+-------------------------------------------------- */
 
-
-
+.itemCargado {
+display: block;
+margin: 0 auto;
+color: green;
 }
 
 /* FAQ
