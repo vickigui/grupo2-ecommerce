@@ -63,7 +63,7 @@ if (!$errors && !empty($_POST)) {
 </div>
 
 <?php if (!empty($mensaje)): ?>
-  <div class="itemCargado">
+  <div class="alert alert-success text-center" role="alert">
     <p><?= $mensaje ?></p>
   </div>
 <?php endif; ?>
@@ -72,7 +72,7 @@ if (!$errors && !empty($_POST)) {
     <h4>Completá los siguientes datos para cargar tu producto.</h4>
     <form action="" method="post">
       <label for="nombre" id="nombre" class="items">
-        <p>Nombre</p>
+        <p>Nombre del producto</p>
       </label>
       <input type="text" name="nombre" value="<?php echo $nombre ?>">
       <?php if (isset($errors['nombre'])) : ?>

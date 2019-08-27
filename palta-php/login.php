@@ -15,7 +15,7 @@ if (!empty($_POST['mail']) && !empty($_POST['password'])) {
       header("Location: index.php");
       exit();
   } else {
-      $mensaje = "Disculpa, los datos no son correctos";
+      $mensaje = "Los datos no son correctos";
   }
 }
 ?>
