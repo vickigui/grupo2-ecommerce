@@ -1,6 +1,10 @@
-<?php require "includes/header.php";
-$errors = [];
+<?php
+require_once "database/db.php";
+require_once "database/productos.php";
 
+$mensaje = "";
+$errors = [];
+$redirect = "";
 
 $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
 $cantidad = isset($_POST['cantidad']) ? $_POST['cantidad'] : "";
@@ -8,7 +12,6 @@ $id_categorias = isset($_POST['id_categorias']) ? $_POST['id_categorias'] : "";
 $precio = isset($_POST['precio']) ? $_POST['precio'] : "";
 $stock = isset($_POST['stock']) ? $_POST['stock'] : "";
 
-$redirect = "";
 
 
 if ($_POST) {
@@ -40,17 +43,8 @@ if ($_POST) {
 
 
 if (!$errors && !empty($_POST)) {
-  $datos = $db->prepare('INSERT INTO productos values (0, :nombre, :cantidad, :categoria, :precio, :stock)');
 
-  $datos->bindValue(":nombre", $_POST['nombre']);
-  $datos->bindValue(":cantidad", $_POST['cantidad']);
-  $datos->bindValue(":categoria", $_POST['id_categorias']);
-  $datos->bindValue(":precio", $_POST['precio']);
-  $datos->bindValue(":stock", $_POST['stock']);
-
-  $mensaje = " ";
-
-  if($datos->execute()){
+  if(addProduct($db, $_POST)){
     $mensaje = "El producto se cargó correctamente";
   };
 }
@@ -58,6 +52,7 @@ if (!$errors && !empty($_POST)) {
 
 
 
+<?php require "includes/header.php"; ?>
 <div class="container-fluid sectionHeader">
   <h1 class="text-center">Cargar Producto</h1>
 </div>
