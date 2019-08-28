@@ -71,15 +71,26 @@
     } else if ($password != $confirm) {
       $errors['confirm'] =  "Las contraseñas no coinciden";
     }
+  }
 
-    //Si no hay errores avanza al login
-    if (count($errors) == 0 ) {
 
   if (!$errors && !empty($_POST)) {
+    $datos = $db->prepare('INSERT INTO usuarios values (0, :nombre, :apellido, :mail, :address, :localidad, :tel, :password)');
 
+    $datos->bindValue(":nombre", $_POST['nombre']);
     $datos->bindValue(":apellido", $_POST['apellido']);
+    $datos->bindValue(":mail", $_POST['mail']);
+    $datos->bindValue(":address", $_POST['address']);
+    $datos->bindValue(":localidad", $_POST['localidad']);
+    $datos->bindValue(":tel", $_POST['tel']);
+    $passHash = password_hash($_POST['password'],PASSWORD_DEFAULT);
+    $datos->bindValue(":password", $passHash);
 
     if($datos->execute()){
+      header("Location: login.php");
+      exit();
+    };
+  }
 
    ?>
 
@@ -158,4 +169,4 @@
     </form>
   </div>
 
-  <?php require "includes/footer.php"; ?>
+<?php require "includes/footer.php"; ?>
