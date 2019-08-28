@@ -1,6 +1,6 @@
 <?php
 
-$dsn = 'mysql:host=localhost;dbname=palta;port=3306';
+$dsn = 'mysql:host=localhost;dbname=Palta';
 $user = 'root';
 $pass = 'root';
 

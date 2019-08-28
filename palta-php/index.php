@@ -1,4 +1,5 @@
-<?php require "includes/header.php"; ?>
+<?php require "includes/header.php";
+?>
 
 <main role="main">
 

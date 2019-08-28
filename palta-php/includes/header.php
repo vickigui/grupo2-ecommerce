@@ -1,6 +1,21 @@
 <?php
+  session_start();
   include_once "database/db.php";
+
+  if(isset($_SESSION['usuario_id'])) {
+    $login = $db->prepare('SELECT * FROM usuarios WHERE id_usuarios = :id');
+    $login->bindValue(":id", $_SESSION['usuario_id']);
+    $login->execute();
+    $usuario = $login->fetch(PDO::FETCH_ASSOC);
+
+    $user = null;
+
+    if(count($usuario) > 0) {
+      $user = $usuario;
+    }
+  }
  ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -10,17 +25,15 @@
 
     <link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/common2.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="styles/fontawesome/css/all.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </head>
-
-
 
   <body>
     <header>
@@ -69,21 +82,24 @@
                 <i class="fas fa-user"></i>
               </a>
               <div class="dropdown-menu user-nav" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="perfil-usuario.php">Mi Perfil</a>
-                <a class="dropdown-item" href="login.php">Login</a>
-                <a class="dropdown-item" href="registro.php">Registrate</a>
-                <a class="dropdown-item" href="#">Cerrar Sesión</a>
+                <?php if(isset($_SESSION['usuario_id'])): ?>
+                  <a class="dropdown-item" href="perfil-usuario.php">Mi Perfil</a>
+                  <a class="dropdown-item" href="logout.php">Cerrar Sesión</a>
+                <?php else: ?>
+                  <a class="dropdown-item" href="login.php">Login</a>
+                  <a class="dropdown-item" href="registro.php">Registrate</a>
+              <?php endif; ?>
               </div>
             </div>
-
-
          </div>
 
+         <?php if(isset($_SESSION['usuario_id'])): ?>
          <div class="carrito">
            <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="miCarrito.php">
              <i class="fas fa-shopping-cart"></i>
            </a>
          </div>
+       <?php endif; ?>
        </div>
      </nav>
    </header>

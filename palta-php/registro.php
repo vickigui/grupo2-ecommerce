@@ -12,6 +12,8 @@
   $password = isset($_POST['password']) ? $_POST['password'] : "";
   $confirm = isset($_POST['confirm']) ? $_POST['confirm'] : "";
 
+  $redirect = "";
+
 
   if ($_POST) {
     /* Nombre 3 o más caracteres */
@@ -73,31 +75,13 @@
     //Si no hay errores avanza al login
     if (count($errors) == 0 ) {
 
-      $passHash = password_hash($password,PASSWORD_DEFAULT);
+  if (!$errors && !empty($_POST)) {
 
-      if ($password == $confirm && strlen($password) >= 8) {
-        $datos = $db->prepare('INSERT INTO usuarios
-          values (0, :nombre, :apellido, :mail, :address, :localidad, :tel, :password)');
+    $datos->bindValue(":apellido", $_POST['apellido']);
 
-        $datos->bindValue(":nombre", $nombre);
-        $datos->bindValue(":apellido", $apellido);
-        $datos->bindValue(":mail", $mail);
-        $datos->bindValue(":address", $address);
-        $datos->bindValue(":localidad", $localidad);
-        $datos->bindValue(":tel", $tel);
-        $datos->bindValue(":password", $passHash);
+    if($datos->execute()){
 
-        $datos->execute();
-      }
-
-      header("Location:index.php"); exit;
-  }
-
-}
-
-?>
-
-
+   ?>
 
 <div class="container-fluid sectionHeader">
   <h1 class="text-center">Registrate</h1>

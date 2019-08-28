@@ -1,38 +1,24 @@
 <?php require "includes/header.php";
 
-$errors = [];
+  //Traer usuario con el mail y confirmar pass
 
-$mail = isset($_POST['mail']) ? $_POST['mail'] : "";
-$password = isset($_POST['password']) ? $_POST['password'] : "";
+if (!empty($_POST['mail']) && !empty($_POST['password'])) {
+  $logIn = $db->prepare('SELECT * FROM usuarios WHERE email = :email');
+  $logIn->bindValue(":email", $_POST['mail']);
+  $logIn->execute();
+  $usuario = $logIn->fetch(PDO::FETCH_ASSOC);
 
-if ($_POST) {
-  /* Email en formato válido */
-  if (!$mail) {
-    $errors['mail'] = "Debes ingresar un email.";
-  } elseif (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-    $errors['mail'] = "El email no tiene un formato válido.";
-  }
+  $mensaje = "";
 
-  /* Password 8 o más caracteres */
-  if (!$password) {
-    $errors['password'] = "Debes ingresar una contraseña.";
-  } elseif (strlen($password) < 8) {
-    $errors['password'] = "La contraseña no es correcta";
+  if (count($usuario) > 0 && password_verify($_POST["password"], $usuario["pass"])) {
+      $_SESSION["usuario_id"] = $usuario["id_usuarios"];
+      header("Location: index.php");
+      exit();
+  } else {
+      $mensaje = "Los datos no son correctos";
   }
 }
-
-  $passHash = password_hash($password,PASSWORD_DEFAULT);
-
-
-  //Traer usuario con el mail y confirmar pass
-    $logIn = $db->prepare("SELECT * FROM usuario WHERE mail IS :mail AND password IS :password");
-    $logIn->bindValue(":mail", $mail);
-    $logIn->bindValue(":password", $passHash);
-    $logIn->execute();
-    $usuario = $logIn->fetch(PDO::FETCH_ASSOC);
 ?>
-
-
 
 <main>
   <div class="container-fluid sectionHeader">
@@ -45,25 +31,24 @@ if ($_POST) {
         <p>E-mail</p>
       </label>
       <input type="mail" name="mail" value="">
-      <?php if (isset($errors['mail'])) : ?>
-        <p class="errors"><?php echo $errors['mail'] ?></p>
-      <?php endif; ?>
 
       <label for="password" id="password" class="items">
         <p>Contraseña</p>
       </label>
       <input type="password" name="password" value="">
-      <?php if (isset($errors['password'])) : ?>
-        <p class="errors"><?php echo $errors['password'] ?></p>
-      <?php endif; ?>
 
       <button type="submit" name="button" class="btn btn-success btn-form">Ingresar</button>
+
+      <?php if (!empty($mensaje)) :?>
+        <p class="errors"><?= $mensaje ?></p>
+      <?php endif; ?>
 
       <div class="createAccount">
         <p>¿Aún no tienes cuenta?</p>
         <a href="registro.php">¡Creala ahora!</a>
       </div>
     </form>
+
   </div>
 </main>
 

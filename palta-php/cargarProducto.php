@@ -1,66 +1,59 @@
 <?php require "includes/header.php";
-
-  $errors = [];
-
-  $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
-
-  $cantidad = isset($_POST['cantidad']) ? $_POST['cantidad'] : "";
-
-  $id_categoria = isset($_POST['id_categoria']) ? $_POST['id_categoria'] : "";
-
-  $confirm = isset($_POST['confirm']) ? $_POST['confirm'] : "";
+$errors = [];
 
 
-  if ($_POST) {
-    /* Nombre 3 o más caracteres */
-    if (!$nombre) {
-      $errors['nombre'] = "Debes ingresar un nombre.";
-    } elseif (strlen($nombre) < 3) {
-      $errors['nombre'] = "El nombre debe tener al menos 3 caracteres";
-    }
+$nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
+$cantidad = isset($_POST['cantidad']) ? $_POST['cantidad'] : "";
+$id_categorias = isset($_POST['id_categorias']) ? $_POST['id_categorias'] : "";
+$precio = isset($_POST['precio']) ? $_POST['precio'] : "";
+$stock = isset($_POST['stock']) ? $_POST['stock'] : "";
+
+$redirect = "";
 
 
-    /* cantidad mas de 1 kg */
-    if (!$cantidad) {
-      $errors['cantidad'] = "Debes ingresar cantidad.";
-    } elseif (strlen($cantidad) < 0) {
-      $errors['cantidad'] = "Debe haber mas de un 1 kg";
-    }
+if ($_POST) {
+  /* Nombre 3 o más caracteres */
+  if (!$nombre) {
+    $errors['nombre'] = "Debes ingresar un nombre.";
+  }
 
-    /* categoria */
-    if (!$id_categoria) {
-      $errors['id_categoria'] = "Debes ingresar una categoria.";
-    } elseif (strlen($id_categoria) < 0) {
-      $errors['cantidad'] = "Debe ingrasar una categoria";
-    }
+  /* Apellido 3 o más caracteres */
+  if (!$cantidad) {
+    $errors['cantidad'] = "Debes ingresar una cantidad.";
+  }
 
-    /* precio mayor a 0*/
-    if (!$precio) {
-      $errors['precio'] = "Debes ingresar precio.";
-    } elseif (strlen($precio) < 0) {
-      $errors['precio'] = "Debe valer mas de 0";
-    }
-    /* stock mayor a 0*/
-    if (!$stock) {
-      $errors['stock'] = "Debes ingresar stock.";
-    } elseif (strlen($stock) < 0) {
-      $errors['stock'] = "Debe valer mas de 0";
-    }
+  /* Email en formato válido */
+  if (!$id_categorias) {
+    $errors['id_categorias'] = "Debes ingresar una categoria.";
+  }
 
+  /* Dirección 5 o más caracteres */
+  if (!$precio) {
+    $errors['precio'] = "Debes ingresar un precio.";
+  }
 
-
-    $datos = $db->prepare('INSERT INTO productos values (0, :nombre, :cantidad, :id_categorias, :precio, :stock)');
-
-    $datos->bindValue(":nombre", $nombre);
-    $datos->bindValue(":cantidad", $cantidad);
-    $datos->bindValue(":id_categorias", $id_categorias);
-    $datos->bindValue(":precio", $precio);
-    $datos->bindValue(":stock", $stock);
+  /* Localidad 5 o más caracteres */
+  if (!$stock) {
+    $errors['stock'] = "Debes ingresar stock.";
+  }
+}
 
 
-    $datos->execute();
+if (!$errors && !empty($_POST)) {
+  $datos = $db->prepare('INSERT INTO productos values (0, :nombre, :cantidad, :categoria, :precio, :stock)');
 
+  $datos->bindValue(":nombre", $_POST['nombre']);
+  $datos->bindValue(":cantidad", $_POST['cantidad']);
+  $datos->bindValue(":categoria", $_POST['id_categorias']);
+  $datos->bindValue(":precio", $_POST['precio']);
+  $datos->bindValue(":stock", $_POST['stock']);
 
+  $mensaje = " ";
+
+  if($datos->execute()){
+    $mensaje = "El producto se cargó correctamente";
+  };
+}
    ?>
 
 
@@ -69,11 +62,17 @@
   <h1 class="text-center">Cargar Producto</h1>
 </div>
 
+<?php if (!empty($mensaje)): ?>
+  <div class="alert alert-success text-center" role="alert">
+    <p><?= $mensaje ?></p>
+  </div>
+<?php endif; ?>
+
   <div class="container form col-xs-8 col-lg-5 formSection">
     <h4>Completá los siguientes datos para cargar tu producto.</h4>
     <form action="" method="post">
       <label for="nombre" id="nombre" class="items">
-        <p>Nombre</p>
+        <p>Nombre del producto</p>
       </label>
       <input type="text" name="nombre" value="<?php echo $nombre ?>">
       <?php if (isset($errors['nombre'])) : ?>
@@ -88,16 +87,21 @@
         <p class="errors"><?php echo $errors['cantidad'] ?></p>
       <?php endif; ?>
 
-      <label for="id_categoias" id="id_categorias" class="items">
-        <p>Categorias</p>
+      <label for="id_categorias" id="id_categorias" class="items">
+        <p>Categoria</p>
+        <select class="" name="id_categorias">
+          <option value="fruta">Fruta</option>
+          <option value="verdura">Verdura</option>
+          <option value="almacen">Almacén</option>
+          <?php if (isset($errors['id_categorias'])) : ?>
+            <p class="errors"><?php echo $errors['id_categorias'] ?></p>
+          <?php endif; ?>
+        </select>
       </label>
-      <input type="id_categorias" name="id_categorias" value="<?php echo $id_categorias ?>">
-      <?php if (isset($errors['id_categorias'])) : ?>
-        <p class="errors"><?php echo $errors['id_categorias'] ?></p>
-      <?php endif; ?>
+      <br>
 
       <label for="precio" id="precio" class="items">
-        <p>Precio</p>
+        <p>Precio por kilo</p>
       </label>
       <input type="text" name="precio" value="<?php echo $precio ?>">
       <?php if (isset($errors['precio'])) : ?>
@@ -115,5 +119,5 @@
       <button type="submit" name="button" class="btn btn-success btn-form">Guardar</button>
     </form>
   </div>
-
+</main>
 <?php require "includes/footer.php"; ?>
