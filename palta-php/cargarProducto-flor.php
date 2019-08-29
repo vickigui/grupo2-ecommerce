@@ -2,6 +2,8 @@
 require_once("php/config.php");
 
 $errors = [];
+$redirect = "";
+$mensaje = "";
 
 
 $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
@@ -10,7 +12,6 @@ $precio = isset($_POST['precio']) ? $_POST['precio'] : "";
 $stock = isset($_POST['stock']) ? $_POST['stock'] : "";
 $imagen = isset($_FILES['imagen']) ? $_FILES['imagen'] : "";
 
-$redirect = "";
 
 
 if ($_POST) {
@@ -66,8 +67,6 @@ if (!$errors && !empty($_POST)) {
   $datos->bindValue(":stock", $_POST['stock']);
   $datos->bindValue(":imagen", $newName);
 
-
-  $mensaje = "";
 
   if($datos->execute()){
     $mensaje = "El producto se cargó correctamente";
