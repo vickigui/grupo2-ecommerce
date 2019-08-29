@@ -1,7 +1,6 @@
 <?php require "includes/header.php";
 $errors = [];
 
-
 $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
 $cantidad = isset($_POST['cantidad']) ? $_POST['cantidad'] : "";
 $id_categorias = isset($_POST['id_categorias']) ? $_POST['id_categorias'] : "";
@@ -12,27 +11,27 @@ $redirect = "";
 
 
 if ($_POST) {
-  /* Nombre 3 o más caracteres */
+  /* Nombre*/
   if (!$nombre) {
     $errors['nombre'] = "Debes ingresar un nombre.";
   }
 
-  /* Apellido 3 o más caracteres */
+  /* Cantidad*/
   if (!$cantidad) {
     $errors['cantidad'] = "Debes ingresar una cantidad.";
   }
 
-  /* Email en formato válido */
+  /* Categorías*/
   if (!$id_categorias) {
     $errors['id_categorias'] = "Debes ingresar una categoria.";
   }
 
-  /* Dirección 5 o más caracteres */
+  /* Precio */
   if (!$precio) {
     $errors['precio'] = "Debes ingresar un precio.";
   }
 
-  /* Localidad 5 o más caracteres */
+  /* Stock¡ */
   if (!$stock) {
     $errors['stock'] = "Debes ingresar stock.";
   }
@@ -74,7 +73,7 @@ if (!$errors && !empty($_POST)) {
       <label for="nombre" id="nombre" class="items">
         <p>Nombre del producto</p>
       </label>
-      <input type="text" name="nombre" value="<?php echo $nombre ?>">
+      <input type="text" name="nombre" value="">
       <?php if (isset($errors['nombre'])) : ?>
         <p class="errors"><?php echo $errors['nombre'] ?></p>
       <?php endif; ?>
@@ -82,7 +81,7 @@ if (!$errors && !empty($_POST)) {
       <label for="cantidad" id="cantidad" class="items">
         <p>Cantidad</p>
       </label>
-      <input type="text" name="cantidad" value="<?php echo $cantidad ?>">
+      <input type="text" name="cantidad" value="">
       <?php if (isset($errors['cantidad'])) : ?>
         <p class="errors"><?php echo $errors['cantidad'] ?></p>
       <?php endif; ?>
@@ -103,7 +102,7 @@ if (!$errors && !empty($_POST)) {
       <label for="precio" id="precio" class="items">
         <p>Precio por kilo</p>
       </label>
-      <input type="text" name="precio" value="<?php echo $precio ?>">
+      <input type="text" name="precio" value="">
       <?php if (isset($errors['precio'])) : ?>
         <p class="errors"><?php echo $errors['precio'] ?></p>
       <?php endif; ?>
@@ -111,7 +110,7 @@ if (!$errors && !empty($_POST)) {
       <label for="stock" id="stock" class="items">
         <p>Stock</p>
       </label>
-      <input type="text" name="stock" value="<?php echo $stock ?>">
+      <input type="text" name="stock" value="">
       <?php if (isset($errors['stock'])) : ?>
         <p class="errors"><?php echo $errors['stock'] ?></p>
       <?php endif; ?>

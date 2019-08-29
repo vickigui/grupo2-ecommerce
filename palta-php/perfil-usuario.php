@@ -6,17 +6,7 @@
   </div>
 <!-- tabla de productos comprados -->
 <div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <div align="center">
-        <button class="btn btn-secondary">Mi perfil</button>
-        <button class="btn btn-secondary">Favoritos</button>
-        <a href="logout.php"><button class="btn btn-secondary" type="button">Cerrar sesión</button></a>
-      </div>
-    </div>
-  </div>
-
-  <br>
+  
 
   <div class="text-center">
     <h4 class="card-title strog"><?= $usuario['nombre'] . " " . $usuario['apellido']?></h4>
