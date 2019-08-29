@@ -1,4 +1,6 @@
 <?php require "includes/header.php";
+require_once("php/config.php");
+
 $errors = [];
 
 
@@ -6,7 +8,7 @@ $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
 $id_categorias = isset($_POST['id_categorias']) ? $_POST['id_categorias'] : "";
 $precio = isset($_POST['precio']) ? $_POST['precio'] : "";
 $stock = isset($_POST['stock']) ? $_POST['stock'] : "";
-$productImage = isset($_FILES['productImage']) ? $_FILES['productImage'] : "";
+$imagen = isset($_FILES['imagen']) ? $_FILES['imagen'] : "";
 
 $redirect = "";
 
@@ -17,10 +19,6 @@ if ($_POST) {
     $errors['nombre'] = "Debes ingresar un nombre.";
   }
 
-  /* Apellido 3 o más caracteres */
-  if (!$cantidad) {
-    $errors['cantidad'] = "Debes ingresar una cantidad.";
-  }
 
   /* Email en formato válido */
   if (!$id_categorias) {
@@ -38,23 +36,38 @@ if ($_POST) {
   }
 
   // Imagen del proyecto, es obligatoria.
-  if (!$productImage) {
-    $errors['productImage'] = "Debes subir una imagen para tu producto.";
-  } elseif ($productImage["error"] != UPLOAD_ERR_OK) {
-    $errors['productImage'] = "Ocurrió un error al subir la imagen del producto.";
+  if (!$imagen) {
+    $errors['imagen'] = "Debes subir una imagen para tu producto.";
+  } elseif ($imagen["error"] != UPLOAD_ERR_OK) {
+    $errors['imagen'] = "Ocurrió un error al subir la imagen del producto.";
   }
 }
 
 
 if (!$errors && !empty($_POST)) {
-  $datos = $db->prepare('INSERT INTO productos values (0, :nombre, :categoria, :precio, :stock)');
+  // Tomamos los datos originales de la imagen.
+  $oldPath = $imagen["tmp_name"];
+  $oldName = $imagen["name"];
+  $extension = pathinfo($oldName, PATHINFO_EXTENSION);
+
+  // Formamos el nuevo nombre y el nuevo path a donde quedará guardada.
+  $newName = uniqid('product-img-') . "." . $extension;
+  $newPath = IMAGE_DIR . $newName;
+
+  // Guardamos la imagen en su path final y la agregamos al array de usuario.
+  move_uploaded_file($oldPath, $newPath);
+
+  $datos = $db->prepare('INSERT INTO productos values (NULL, :nombre, :cantidad, :categoria, :precio, :stock, :imagen)');
 
   $datos->bindValue(":nombre", $_POST['nombre']);
+  $datos->bindValue(":cantidad", 0);
   $datos->bindValue(":categoria", $_POST['id_categorias']);
   $datos->bindValue(":precio", $_POST['precio']);
   $datos->bindValue(":stock", $_POST['stock']);
+  $datos->bindValue(":imagen", $newName);
 
-  $mensaje = " ";
+
+  $mensaje = "";
 
   if($datos->execute()){
     $mensaje = "El producto se cargó correctamente";
@@ -115,11 +128,11 @@ if (!$errors && !empty($_POST)) {
       <?php endif; ?>
 
       <label> Imagen
-        <input type="file" name="productImage">
+        <input type="file" name="imagen">
       </label>
 
-      <?php if (isset($errors['productImage'])) : ?>
-        <p class="errors"><?php echo $errors['productImage'] ?></p>
+      <?php if (isset($errors['imagen'])) : ?>
+        <p class="errors"><?php echo $errors['imagen'] ?></p>
       <?php endif; ?>
 
       <button type="submit" name="button" class="btn btn-success btn-form">Guardar</button>
