@@ -14,6 +14,12 @@
       $user = $usuario;
     }
   }
+
+  function isLoggedIn() {
+    return isset($_SESSION['usuario_id']);
+  }
+
+
  ?>
 
 <!DOCTYPE html>
@@ -82,7 +88,7 @@
                 <i class="fas fa-user"></i>
               </a>
               <div class="dropdown-menu user-nav" aria-labelledby="dropdownMenuLink">
-                <?php if(isset($_SESSION['usuario_id'])): ?>
+                <?php if (isLoggedIn()): ?>
                   <a class="dropdown-item" href="perfil-usuario.php">Mi Perfil</a>
                   <a class="dropdown-item" href="logout.php">Cerrar Sesión</a>
                 <?php else: ?>
@@ -93,7 +99,7 @@
             </div>
          </div>
 
-         <?php if(isset($_SESSION['usuario_id'])): ?>
+         <?php if (isLoggedIn()): ?>
          <div class="carrito">
            <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="miCarrito.php">
              <i class="fas fa-shopping-cart"></i>
