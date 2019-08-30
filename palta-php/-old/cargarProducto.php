@@ -1,74 +1,46 @@
-<?php require "includes/header.php";
-require_once("php/config.php");
-
-$errors = [];
-$redirect = "";
-$mensaje = "";
-
+<?php
+require_once "database/db.php";
+require_once "database/productos.php";
 
 $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
+$cantidad = isset($_POST['cantidad']) ? $_POST['cantidad'] : "";
 $id_categorias = isset($_POST['id_categorias']) ? $_POST['id_categorias'] : "";
 $precio = isset($_POST['precio']) ? $_POST['precio'] : "";
 $stock = isset($_POST['stock']) ? $_POST['stock'] : "";
-$imagen = isset($_FILES['imagen']) ? $_FILES['imagen'] : "";
 
 
 
 if ($_POST) {
-  /* Nombre 3 o más caracteres */
+  /* Nombre*/
   if (!$nombre) {
     $errors['nombre'] = "Debes ingresar un nombre.";
   }
 
+  /* Cantidad*/
+  if (!$cantidad) {
+    $errors['cantidad'] = "Debes ingresar una cantidad.";
+  }
 
-  /* Email en formato válido */
+  /* Categorías*/
   if (!$id_categorias) {
     $errors['id_categorias'] = "Debes ingresar una categoria.";
   }
 
-  /* Dirección 5 o más caracteres */
+  /* Precio */
   if (!$precio) {
     $errors['precio'] = "Debes ingresar un precio.";
   }
 
-  /* Localidad 5 o más caracteres */
+  /* Stock¡ */
   if (!$stock) {
     $errors['stock'] = "Debes ingresar stock.";
-  }
-
-  // Imagen del proyecto, es obligatoria.
-  if (!$imagen) {
-    $errors['imagen'] = "Debes subir una imagen para tu producto.";
-  } elseif ($imagen["error"] != UPLOAD_ERR_OK) {
-    $errors['imagen'] = "Ocurrió un error al subir la imagen del producto.";
   }
 }
 
 
 if (!$errors && !empty($_POST)) {
-  // Tomamos los datos originales de la imagen.
-  $oldPath = $imagen["tmp_name"];
-  $oldName = $imagen["name"];
-  $extension = pathinfo($oldName, PATHINFO_EXTENSION);
 
-  // Formamos el nuevo nombre y el nuevo path a donde quedará guardada.
-  $newName = uniqid('product-img-') . "." . $extension;
-  $newPath = IMAGE_DIR . $newName;
-
-  // Guardamos la imagen en su path final y la agregamos al array de usuario.
-  move_uploaded_file($oldPath, $newPath);
-
-  $datos = $db->prepare('INSERT INTO productos values (NULL, :nombre, :cantidad, :categoria, :precio, :stock, :imagen)');
-
-  $datos->bindValue(":nombre", $_POST['nombre']);
-  $datos->bindValue(":cantidad", 0);
-  $datos->bindValue(":categoria", $_POST['id_categorias']);
-  $datos->bindValue(":precio", $_POST['precio']);
-  $datos->bindValue(":stock", $_POST['stock']);
-  $datos->bindValue(":imagen", $newName);
-
-
-  if($datos->execute()){
+  if(addProduct($db, $_POST)){
     $mensaje = "El producto se cargó correctamente";
   };
 }
@@ -76,6 +48,7 @@ if (!$errors && !empty($_POST)) {
 
 
 
+<?php require "includes/header.php"; ?>
 <div class="container-fluid sectionHeader">
   <h1 class="text-center">Cargar Producto</h1>
 </div>
@@ -88,13 +61,21 @@ if (!$errors && !empty($_POST)) {
 
   <div class="container form col-xs-8 col-lg-5 formSection">
     <h4>Completá los siguientes datos para cargar tu producto.</h4>
-    <form enctype="multipart/form-data" action="" method="post">
+    <form action="" method="post">
       <label for="nombre" id="nombre" class="items">
         <p>Nombre del producto</p>
       </label>
-      <input type="text" name="nombre" value="<?php echo $nombre ?>">
+      <input type="text" name="nombre" value="">
       <?php if (isset($errors['nombre'])) : ?>
         <p class="errors"><?php echo $errors['nombre'] ?></p>
+      <?php endif; ?>
+
+      <label for="cantidad" id="cantidad" class="items">
+        <p>Cantidad</p>
+      </label>
+      <input type="text" name="cantidad" value="">
+      <?php if (isset($errors['cantidad'])) : ?>
+        <p class="errors"><?php echo $errors['cantidad'] ?></p>
       <?php endif; ?>
 
       <label for="id_categorias" id="id_categorias" class="items">
@@ -113,7 +94,7 @@ if (!$errors && !empty($_POST)) {
       <label for="precio" id="precio" class="items">
         <p>Precio por kilo</p>
       </label>
-      <input type="text" name="precio" value="<?php echo $precio ?>">
+      <input type="text" name="precio" value="">
       <?php if (isset($errors['precio'])) : ?>
         <p class="errors"><?php echo $errors['precio'] ?></p>
       <?php endif; ?>
@@ -121,17 +102,9 @@ if (!$errors && !empty($_POST)) {
       <label for="stock" id="stock" class="items">
         <p>Stock</p>
       </label>
-      <input type="text" name="stock" value="<?php echo $stock ?>">
+      <input type="text" name="stock" value="">
       <?php if (isset($errors['stock'])) : ?>
         <p class="errors"><?php echo $errors['stock'] ?></p>
-      <?php endif; ?>
-
-      <label> Imagen
-        <input type="file" name="imagen">
-      </label>
-
-      <?php if (isset($errors['imagen'])) : ?>
-        <p class="errors"><?php echo $errors['imagen'] ?></p>
       <?php endif; ?>
 
       <button type="submit" name="button" class="btn btn-success btn-form">Guardar</button>

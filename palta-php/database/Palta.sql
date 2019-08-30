@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 29-08-2019 a las 23:46:11
--- Versión del servidor: 5.7.23
--- Versión de PHP: 7.2.10
+-- Tiempo de generación: 30-08-2019 a las 00:08:47
+-- Versión del servidor: 5.7.25
+-- Versión de PHP: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `Palta`
+-- Base de datos: `palta`
 --
 
 -- --------------------------------------------------------
@@ -73,6 +73,28 @@ CREATE TABLE `productos` (
   `imagen` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id_productos`, `nombre`, `cantidad`, `id_categorias`, `precio`, `stock`, `imagen`) VALUES
+(1, 'Limon', 0, 'fruta', 20, 30, 'product-img-5d68654559477.jpg'),
+(2, 'Banana', 0, 'fruta', 30, 40, 'product-img-5d6867aaac80f.jpg'),
+(3, 'Batata', 0, 'verdura', 20, 60, 'product-img-5d6867c210fbf.jpg'),
+(4, 'Cebolla', 0, 'fruta', 30, 30, 'product-img-5d6867e64792a.jpg'),
+(5, 'Huevos', 0, 'almacen', 150, 30, 'product-img-5d6867fe26f52.jpg'),
+(6, 'Lechuga', 0, 'verdura', 90, 30, 'product-img-5d68681a93e26.jpg'),
+(7, 'Mandarina', 0, 'fruta', 20, 30, 'product-img-5d686835c1039.jpg'),
+(8, 'Manzana', 0, 'fruta', 60, 30, 'product-img-5d6868443d381.jpg'),
+(9, 'Morron', 0, 'verdura', 120, 30, 'product-img-5d68685398d1a.jpg'),
+(10, 'Naranja', 0, 'fruta', 20, 30, 'product-img-5d68685ec21fe.jpg'),
+(11, 'Papa', 0, 'verdura', 15, 30, 'product-img-5d68686b7ddd6.jpg'),
+(12, 'Pera', 0, 'fruta', 50, 30, 'product-img-5d68687d1a685.jpg'),
+(13, 'Tomate', 0, 'verdura', 70, 30, 'product-img-5d6868909ea29.jpg'),
+(14, 'Zanahoria', 0, 'verdura', 60, 30, 'product-img-5d6868a032daa.jpg'),
+(15, 'Zapallo', 0, 'verdura', 70, 30, 'product-img-5d6868af9baa6.jpg'),
+(16, 'Zucchini', 0, 'verdura', 40, 30, 'product-img-5d6868d46bc29.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -125,7 +147,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_productos` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_productos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
