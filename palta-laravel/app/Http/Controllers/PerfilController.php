@@ -11,4 +11,6 @@ class PerfilController extends Controller
   public function perfil () {
       return view('perfil');
     }
+
+  
 }

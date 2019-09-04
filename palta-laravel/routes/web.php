@@ -41,3 +41,7 @@ Route::get('/faq', function () {
 });
 
 Route::get('/admin', 'AdminController@admin');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
