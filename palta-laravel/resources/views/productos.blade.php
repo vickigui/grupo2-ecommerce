@@ -1,22 +1,44 @@
-@extends('plantilla')
-@section('titulo')
-  PALTA - Producto
-@endsection
+@extends('layouts/plantilla')
 
+@php
+  $title="PALTA-Produtos";
+@endphp
 
 @section('contenido')
-<h1>Productos</h1>
-<ul>
+  <div class="container-fluid sectionHeader">
+  <h1 class="text-center">Nuestros productos</h1>
+</div>
+
+
+<div class="container">
+  <div class="row">
   @forelse ($productos as $producto)
-    <li>
-      {{$producto["nombre"]}}
-    </li>
+ <div class="col-lg-3 col-md-4 col-xs-6 thumb filter {{$producto['id_categorias'] }} ">
+
+      <h4>{{$producto["nombre"]}}</h4>
+          <img class="img-thumbnail" src="uploads/{{$producto['imagen'] }}">
+              <div class="selector-cantidad">
+                <select class="form-control" id="cantidad">
+                     <option>0,25</option>
+                     <option>0,50</option>
+                     <option>0,75</option>
+                     <option>1</option>
+                     <option>2</option>
+                 </select>
+                <label>Kilogramos</label>
+              </div>
+               <div class="botones-productos">
+                 <a href="#" class="btn btn-outline-secondary">Quitar</a>
+                 <a href="#" class="btn btn-success">Agregar</a>
+               </div>
+      </div>
 
   @empty
-    <p>NO hay productos disponibles</p>
+    <p>No hay productos disponibles</p>
   @endforelse
-</ul>
 
+        </div>
+      </div>
 
 
 @endsection
