@@ -20,7 +20,10 @@ Route::get('/', function () {
 
 Route::get('/perfil', 'PerfilController@perfil');
 
-Route::get('/carrito', 'CarritoController@carrito');
+Route::get('/changuitos/{id}', 'CarritoController@show')->name('carritos.show');
+Route::get('/changuitos', 'CarritoController@index');
+
+
 
 Route::get('/productos', 'ProductosController@productos');
 
