@@ -1,7 +1,5 @@
 @extends('layouts/plantilla')
-
-<?php $title = "PALTA - Recetas"; ?>
-
+@section('title', 'PALTA - Recetas')
 
 @section('contenido')
 

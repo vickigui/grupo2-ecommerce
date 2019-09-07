@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
     <!-- Site Title -->
-    <title>{{ $title }}</title> //dynamic title
+    <title>@yield('title')</title>
     <link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/common.css">
@@ -20,9 +20,9 @@
 </head>
 
 <body>
-    @include('/layouts/header')//include header
-    @yield('contenido')//include content
-    @include('/layouts/footer') //include footer
+    @include('/layouts/header')
+    @yield('contenido')
+    @include('/layouts/footer')
     <!-- start footer Area -->
     <!-- End footer Area -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

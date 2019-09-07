@@ -1,7 +1,7 @@
 
     <header>
      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
-       <a class="navbar-brand" href="index.php"><img src="images/common/logo-palta.png" width=80px;></a>
+       <a class="navbar-brand" href="index.php"><img src="/images/common/logo-palta.png" width=80px;></a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
@@ -42,7 +42,7 @@
          </div>
 
          <div class="carrito">
-           <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="/carrito">
+           <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="/carritos">
              <i class="fas fa-shopping-cart"></i>
            </a>
          </div>

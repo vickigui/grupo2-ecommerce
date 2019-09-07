@@ -1,14 +1,10 @@
 @extends('layouts/plantilla')
-
-
-<?php $title = "PALTA - Mi Carrito"; ?>
-
-
+@section('title', 'PALTA - Mi Carrito')
 @section('contenido')
 
   <main>
     <div class="container-fluid sectionHeader">
-      <h1 class="text-center">Mi carrito</h1>
+      <h1 class="text-center">Mis carritos</h1>
     </div>
   <!-- tabla de productos comprados -->
   <div class="container">
@@ -27,33 +23,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row"><a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
-              <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i></th>
-            <th scope="row">Tomate</th>
-            <td>1</td>
-            <td>20</td>
-            <td>20</td>
+            <tr>
+              <th scope="row"><a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
+                <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i></th>
+              <th scope="row">{{ $carrito->medioDePago }}</th>
+              <td>1</td>
+              <td>20</td>
+              <td>20</td>
 
-          </tr>
-          <tr>
-            <th scope="row"><a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
-              <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i></th>
-            <th scope="row">Lechuga</th>
-            <td>1</td>
-            <td>50</td>
-            <td>50</td>
-
-          </tr>
-          <tr>
-            <th scope="row"><a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
-              <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i></th>
-            <th scope="row">Papa</th>
-            <td>2</td>
-            <td>15</td>
-            <td>30</td>
-
-          </tr>
+            </tr>
         </tbody>
         <thead>
           <tr>
