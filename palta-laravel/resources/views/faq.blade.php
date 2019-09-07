@@ -1,6 +1,5 @@
 @extends('layouts/plantilla')
-
-<?php $title = "PALTA - Preguntas Frecuentes"; ?>
+@section('title', 'PALTA - Preguntas Frecuentes')
 
 
 @section('contenido')

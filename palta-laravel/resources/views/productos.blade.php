@@ -1,8 +1,5 @@
 @extends('layouts/plantilla')
-
-@php
-  $title="PALTA-Produtos";
-@endphp
+@section('title', 'PALTA - Productos')
 
 @section('contenido')
   <div class="container-fluid sectionHeader">
