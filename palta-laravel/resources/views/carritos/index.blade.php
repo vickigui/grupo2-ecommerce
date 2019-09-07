@@ -24,18 +24,17 @@
           </tr>
         </thead>
         <tbody>
-          @foreach ($carritos as $carrito)
-
+          @foreach ($carritos->productos as $producto)
             <tr>
               <th scope="row">
-                <a href="{{ route('carritos.show', $carrito->id) }}"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
-                <a href="{{ route('carritos.borrar',$carrito->id) }}"><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></a></i>
+                <a href="{{ route('carritos.show') }}"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
+                <a href="{{ route('carritos.borrar') }}"><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></a></i>
               </th>
 
-              <td>{{ $carrito->fecha }}</td>
-              <td>{{ $carrito->medioDePago }}</td>
-              <td>{{ $carrito->cantItems }}</td>
-              <td>${{ $carrito->monto }}</td>
+              <td>{{ $producto->nombre }}</td>
+              <td>{{ $producto->cantidad }}</td>
+              <!-- <td>{{ $carrito->cantItems }}</td>
+              <td>${{ $carrito->monto }}</td> -->
 
 
 
