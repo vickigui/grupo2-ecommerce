@@ -20,8 +20,8 @@ Route::get('/', function () {
 
 Route::get('/perfil', 'PerfilController@perfil');
 
-Route::get('/changuitos/{id}', 'CarritoController@show')->name('carritos.show');
-Route::get('/changuitos', 'CarritoController@index');
+Route::get('/carritos/{id}', 'CarritoController@show')->name('carritos.show');
+Route::get('/carritos', 'CarritoController@index');
 
 
 
