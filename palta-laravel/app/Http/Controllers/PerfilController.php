@@ -12,5 +12,10 @@ class PerfilController extends Controller
       return view('perfil');
     }
 
-  
+    public function index () {
+      $users = User::all();
+
+      return view('perfil.index', compact('users'));
+    }
+
 }

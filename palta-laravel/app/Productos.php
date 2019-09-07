@@ -10,5 +10,5 @@ class Productos extends Model
     public $primaryKey = "id";
     public $timestamps = false;
     public $guarded = [];
-    
+
 }
