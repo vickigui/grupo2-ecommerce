@@ -10,8 +10,8 @@ use App\Productos;
 class ProductosController extends Controller
 {
   public function listaProductos () {
-      $productos = Producto::all();
+      $productos = Productos::all();
 
-      return view('productos', compact('listaProductos'));
+      return view('productos', compact('productos'));
     }
 }

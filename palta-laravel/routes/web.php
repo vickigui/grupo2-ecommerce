@@ -25,7 +25,7 @@ Route::get('/changuitos', 'CarritoController@index');
 
 
 
-Route::get('/productos', 'ProductosController@productos');
+Route::get('/productos', 'ProductosController@listaProductos');
 
 Route::get('/contacto', 'ContactoController@contacto');
 
