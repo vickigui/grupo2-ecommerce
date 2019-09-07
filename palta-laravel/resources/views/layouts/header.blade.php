@@ -34,7 +34,7 @@
                 <a class="dropdown-item" href="/perfil">Mi Perfil</a>
                 <a class="dropdown-item" href="/login">Login</a>
                 <a class="dropdown-item" href="/register">Registrate</a>
-                <a class="dropdown-item" href="/">Cerrar Sesión</a>
+                <a class="dropdown-item" href="/logout">Cerrar Sesión</a>
               </div>
             </div>
 
