@@ -42,7 +42,7 @@
          </div>
 
          <div class="carrito">
-           <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="/carrito">
+           <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="/carritos/">
              <i class="fas fa-shopping-cart"></i>
            </a>
          </div>

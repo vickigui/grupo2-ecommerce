@@ -1,5 +1,5 @@
 @extends('layouts/plantilla')
-
+  
 <?php $title = "PALTA - Recetas"; ?>
 
 
