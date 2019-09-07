@@ -3,16 +3,21 @@
 <?php $title = "PALTA - Producto"; ?>
 
 @section('contenido')
+<h1>Productos</h1>
+<ul>
+  @forelse ($productos as $producto)
+    <li>
+      {{$producto["nombre"]}}
+    </li>
+
+  @empty
+    <p>NO hay productos disponibles</p>
+  @endforelse
+</ul>
 
 
-    <div class="container-fluid sectionHeader">
-      <h1 class="text-center">Nuestros productos</h1>
-    </div>
 
-    <div class="container">
-    	  	<div class="row">
-    	  		<div class="col-sm-12">
-
+<<<<<<< HEAD
     	  			<div align="center">
     				    <button class="btn btn-secondary active filter-button" data-filter="todo">Todo</button>
     				    <button class="btn btn-secondary filter-button" data-filter="frutas">Frutas</button>
@@ -369,4 +374,6 @@
   </script>
 
 
+=======
+>>>>>>> 70524d8c5a88b378648f541d4314f5965f05f426
 @endsection
