@@ -11,16 +11,16 @@
              <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="{{ asset('/nosotros') }}">NOSOTROS</a>
+             <a class="nav-link" href="{{ url('/nosotros') }}">NOSOTROS</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="{{ asset('/productos') }}">PRODUCTOS</a>
+             <a class="nav-link" href="{{ url('/productos') }}">PRODUCTOS</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="{{ asset('/recetas') }}">RECETAS</a>
+             <a class="nav-link" href="{{ url('/recetas') }}">RECETAS</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="{{ asset('/contacto') }}">CONTACTO</a>
+             <a class="nav-link" href="{{ url('/contacto') }}">CONTACTO</a>
            </li>
          </ul>
 
@@ -32,11 +32,11 @@
               </a>
               <div class="dropdown-menu user-nav" aria-labelledby="dropdownMenuLink">
                 @if($user = Auth::user())
-                <a class="dropdown-item" href="{{ asset('/perfil') }}">Mi Perfil</a>
-                <a class="dropdown-item" href="{{ asset('/logout') }}">Cerrar Sesión</a>
+                <a class="dropdown-item" href="{{ url('/perfil') }}">Mi Perfil</a>
+                <a class="dropdown-item" href="{{ url('/logout') }}">Cerrar Sesión</a>
                 @else
-                <a class="dropdown-item" href="{{ asset('/register') }}">Registrate</a>
-                <a class="dropdown-item" href="{{ asset('/login') }}">Login</a>
+                <a class="dropdown-item" href="{{ url('/register') }}">Registrate</a>
+                <a class="dropdown-item" href="{{ url('/login') }}">Login</a>
 
               @endif
               </div>
