@@ -15,14 +15,11 @@ Route::get('/', function () {
     return view('home');
 });
 
-
-
-
 Route::get('/perfil', 'PerfilController@perfil');
 
 Route::get('/carrito', 'CarritoController@carrito');
 
-Route::get('/productos', 'ProductosController@productos');
+Route::get('/productos', 'ProductosController@listaProductos');
 
 Route::get('/contacto', 'ContactoController@contacto');
 
@@ -41,5 +38,7 @@ Route::get('/faq', function () {
 Route::get('/admin', 'AdminController@admin');
 
 Auth::routes();
+// 
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', 'Auth\LoginController@logout');

@@ -48,15 +48,26 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+      $messages = [
+        'required' => 'El campo :attribute es obligatorio.',
+        'string' => 'El campo :attribute debe ser texto.',
+        'max' => 'El campo :attribute tiene más caracteres que los permitidos.',
+        'min' => 'El campo :attribute es muy corto.',
+        'mail' => 'El campo :attribute debe ser un e-mail.',
+        'unique' => 'El campo :attribute ya está en nuestra base de datos.',
+        'numeric' => 'El formato del campo :attribute es incorrecto.',
+        'confirmed' => 'Las contraseñas no coinciden.',
+
+      ];
         return Validator::make($data, [
-            'nombre' => ['required', 'string', 'max:255'],
-            'apellido' => ['required', 'string', 'max:255'],
+            'nombre' => ['required', 'string', 'min:3', 'max:255'],
+            'apellido' => ['required', 'string', 'min:3', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'direccion' => ['required', 'string', 'max:255'],
-            'localidad' => ['required', 'string', 'max:255'],
-            'telefono' => ['required', 'numeric', 'max:255'],
+            'direccion' => ['required', 'string', 'min:7', 'max:255'],
+            'localidad' => ['required', 'string', 'min:7', 'max:255'],
+            'telefono' => ['required', 'numeric'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+        ], $messages);
     }
 
     /**
