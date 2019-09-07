@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('layouts/plantilla')
 @section('titulo')
   PALTA - Producto
 @endsection
@@ -370,5 +370,5 @@
   });
   </script>
 
-  
+
 @endsection

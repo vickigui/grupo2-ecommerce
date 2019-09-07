@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('/layouts/plantilla')
 @section('titulo')
   PALTA - 100% Productos Orgánicos
 @endsection

@@ -1,4 +1,4 @@
-@extends('plantilla')
+@extends('layouts/plantilla')
 @section('titulo')
   PALTA - Recetas
 @endsection
@@ -114,5 +114,5 @@
         </div>
       </div>
   </main>
-  
+
 @endsection

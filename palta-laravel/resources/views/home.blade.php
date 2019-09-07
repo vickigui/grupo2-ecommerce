@@ -23,7 +23,7 @@
          <div class="carousel-caption text-left">
            <h1>Bienvenido!</h1>
            <p>Hacé tu vida más saludable y práctica armando tu canasta semanal.</p>
-           <p><a class="btn btn-lg btn-primary" href="registro.php" role="button">Registrate ahora!</a></p>
+           <p><a class="btn btn-lg btn-primary" href="/register" role="button">Registrate ahora!</a></p>
          </div>
        </div>
      </div>
@@ -33,7 +33,7 @@
          <div class="carousel-caption">
            <h1>Tenemos recetas para vos</h1>
            <p>Descargá de nuestra sección las recetas más ricas para hacer con los ingredientes mas sanos.</p>
-           <p><a class="btn btn-lg btn-primary" href="recetas.php" role="button">Conocé más</a></p>
+           <p><a class="btn btn-lg btn-primary" href="/recetas" role="button">Conocé más</a></p>
          </div>
        </div>
      </div>
@@ -43,7 +43,7 @@
          <div class="carousel-caption text-right">
            <h1>Para combatir al invierno.</h1>
            <p>Preparate todos los días 1 vaso de jugo cítrico para mejorar tu sistema inmunológico!.</p>
-           <p><a class="btn btn-lg btn-primary" href="productos.php" role="button">Ver Productos</a></p>
+           <p><a class="btn btn-lg btn-primary" href="/productos" role="button">Ver Productos</a></p>
          </div>
        </div>
      </div>
@@ -89,8 +89,8 @@
                </p>
                  <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
-                    <a href="carrito.php"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
+                     <a href="/productos"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
+                    <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
                    </div>
                  </div>
                </div>
@@ -123,8 +123,8 @@
                    </ul></p>
                  <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
-                    <a href="carrito.php"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
+                     <a href="/productos"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
+                    <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
                    </div>
                  </div>
                </div>
@@ -157,8 +157,8 @@
                    </ul></p>
                  <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
-                    <a href="carrito.php"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
+                     <a href="/productos"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
+                    <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
                    </div>
                  </div>
                </div>
@@ -176,7 +176,7 @@
      <div class="col-md-7">
        <h2 class="featurette-heading">Recetas organicas.<br> <span class="text-muted">Para esta época.</span></h2>
        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-       <a href="recetas.php"><button type="button" class="btn btn-info ">Conocé Más</button></a>
+       <a href="/recetas"><button type="button" class="btn btn-info ">Conocé Más</button></a>
      </div>
      <div class="col-md-5">
        <img src="images/recetas/pie.jpg" alt="">

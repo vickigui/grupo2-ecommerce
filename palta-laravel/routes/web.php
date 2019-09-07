@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/registro', 'RegistroController@registro');
 
-Route::get('/login', 'LoginController@login');
 
 Route::get('/perfil', 'PerfilController@perfil');
 
