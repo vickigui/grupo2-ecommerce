@@ -24,7 +24,7 @@ Route::get('/perfil', 'PerfilController@perfil');
 
 Route::get('/carrito', 'CarritoController@carrito');
 
-Route::get('/productos', 'ProductosController@productos');
+Route::get('/productos', 'ProductosController@listaProductos');
 
 Route::get('/contacto', 'ContactoController@contacto');
 
