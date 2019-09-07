@@ -15,9 +15,9 @@
         <thead>
           <tr>
             <th scope="col"></th>
-            <th scope="col">Producto</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Precio Unitario</th>
+            <th scope="col">Fecha de compra</th>
+            <th scope="col">Medio de pago</th>
+            <th scope="col">Cantidad de Items </th>
             <th scope="col">Total</th>
 
 
@@ -27,17 +27,17 @@
           @foreach ($carritos as $carrito)
 
             <tr>
-              <th scope="row"><a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
-                <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i></th>
-              <th scope="row">{{ $carrito->medioDePago }}</th>
-              <td>
-                {{ url('carritos', $carrito->id) }}
-              </td>
-              <td>
-                {{ route('carritos.show', $carrito->id) }}
+              <th scope="row">
+                <a href="{{ route('carritos.show', $carrito->id) }}"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
+                <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i>
+              </th>
 
-              </td>
-              <td>20</td>
+              <td>{{ $carrito->fecha }}</td>
+              <td>{{ $carrito->medioDePago }}</td>
+              <td>{{ $carrito->cantItems }}</td>
+              <td>${{ $carrito->monto }}</td>
+
+
 
             </tr>
           @endforeach

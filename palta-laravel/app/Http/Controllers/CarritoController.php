@@ -24,4 +24,8 @@ class CarritoController extends Controller
 
     return view('carritos.show', compact('carrito'));
   }
+  public function borrarCarrito () 
+  {
+    // code...
+  }
 }
