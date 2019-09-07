@@ -27,6 +27,10 @@
                <div class="botones-productos">
                  <a href="#" class="btn btn-outline-secondary">Quitar</a>
                  <a href="#" class="btn btn-success">Agregar</a>
+
+
+
+
                </div>
       </div>
 

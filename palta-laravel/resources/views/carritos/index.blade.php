@@ -29,7 +29,7 @@
             <tr>
               <th scope="row">
                 <a href="{{ route('carritos.show', $carrito->id) }}"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
-                <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i>
+                <a href="{{ route('carritos.borrar',$carrito->id) }}"><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></a></i>
               </th>
 
               <td>{{ $carrito->fecha }}</td>
