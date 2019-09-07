@@ -1,7 +1,5 @@
 @extends('layouts/plantilla')
-@section('titulo')
-  PALTA - 100% Productos Orgánicos
-@endsection
+<?php $title = "PALTA - 100% Productos Orgánicos"; ?>
 
 
 @section('contenido')
