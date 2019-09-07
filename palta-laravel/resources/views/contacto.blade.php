@@ -1,8 +1,6 @@
 @extends('layouts/plantilla')
-@section('titulo')
-  PALTA - Contacto
-@endsection
 
+<?php $title = "PALTA - Contacto"; ?>
 
 @section('contenido')
 
