@@ -38,17 +38,22 @@ class ProductosController extends Controller
         "max"=>"El campo :attribute tiene un maximo de :max",
         "numeric"=> "El campo :attribute debe ser un numero",
         "unique"=>"El campo :attribute se encuentra repetido",
+        "imagen"=>"file",
 
       ];
 
        $this->validate($form,$reglas,$mensaje);
 
       $producto = new Productos();
+
+      $ruta=$form ->file("imagen")->store("public");
+      $nombreArchivo= basename($ruta);
+
       $producto->nombre=$form["nombre"];
       $producto->stock=$form["stock"];
       $producto->precio=$form["precio"];
       $producto->id_categorias=$form["id_categorias"];
-      $producto->imagen=$form["imagen"];
+      $producto->imagen=$nombreArchivo;
 
       $producto->save();
 
