@@ -1,5 +1,8 @@
 @extends('layouts/plantilla')
-@section('title', 'PALTA - Productos')
+
+@php
+  $title="PALTA-Produtos";
+@endphp
 
 @section('contenido')
   <div class="container-fluid sectionHeader">
@@ -10,10 +13,10 @@
 <div class="container">
   <div class="row">
   @forelse ($productos as $producto)
- <div class="col-lg-3 col-md-4 col-xs-6 thumb filter {{$productos['id_categorias'] }} ">
+ <div class="col-lg-3 col-md-4 col-xs-6 thumb filter {{$producto['id_categorias'] }} ">
 
       <h4>{{$producto["nombre"]}}</h4>
-          <img class="img-thumbnail" src="uploads/{{$producto['imagen'] }}">
+          <img class="img-thumbnail" src="{{ asset('storage/productos/' . $producto->imagen) }}">
               <div class="selector-cantidad">
                 <select class="form-control" id="cantidad">
                      <option>0,25</option>
@@ -27,10 +30,6 @@
                <div class="botones-productos">
                  <a href="#" class="btn btn-outline-secondary">Quitar</a>
                  <a href="#" class="btn btn-success">Agregar</a>
-
-
-
-
                </div>
       </div>
 
