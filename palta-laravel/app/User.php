@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Carrito;
 
 class User extends Authenticatable
 {
@@ -38,4 +39,8 @@ class User extends Authenticatable
     ];
 
     public $timestamps = false;
+
+    public function carrito () {
+      return $this->hasOne(Carrito::class, "user_id");
+     }
 }

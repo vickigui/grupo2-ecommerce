@@ -5,7 +5,7 @@
 
   <main>
     <div class="container-fluid sectionHeader">
-      <h1 class="text-center">Mis carritos</h1>
+      <h1 class="text-center">Mi carrito</h1>
     </div>
   <!-- tabla de productos comprados -->
   <div class="container">
@@ -13,33 +13,20 @@
   <div class="table-responsive">
         <table class="table table-hover table-bordered table-fixed">
         <thead>
-          <tr>
+          <!-- <tr>
             <th scope="col"></th>
             <th scope="col">Fecha de compra</th>
             <th scope="col">Medio de pago</th>
             <th scope="col">Cantidad de Items </th>
             <th scope="col">Total</th>
-
-
-          </tr>
+          </tr> -->
         </thead>
         <tbody>
-          @foreach ($carritos->productos as $producto)
-            <tr>
-              <th scope="row">
-                <a href="{{ route('carritos.show') }}"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
-                <a href="{{ route('carritos.borrar') }}"><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></a></i>
-              </th>
-
-              <td>{{ $producto->nombre }}</td>
-              <td>{{ $producto->cantidad }}</td>
-              <!-- <td>{{ $carrito->cantItems }}</td>
-              <td>${{ $carrito->monto }}</td> -->
-
-
-
-            </tr>
-          @endforeach
+          @foreach ($productos as $producto)
+          <h2>{{$producto->nombre}}</h2>
+          <p>Cantidad: {{$producto->cantidad}}</p>
+          <img src="{{$producto->imagen}}" alt="">
+          @endforeach
 
         </tbody>
         <thead>

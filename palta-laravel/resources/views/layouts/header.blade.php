@@ -1,7 +1,7 @@
 
     <header>
      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
-       <a class="navbar-brand" href="index.php"><img src="/images/common/logo-palta.png" width=80px;></a>
+       <a class="navbar-brand" href="/"><img src="/images/common/logo-palta.png" width=80px;></a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
@@ -11,16 +11,16 @@
              <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="/nosotros">NOSOTROS</a>
+             <a class="nav-link" href="{{ url('/nosotros') }}">NOSOTROS</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="/productos">PRODUCTOS</a>
+             <a class="nav-link" href="{{ url('/productos') }}">PRODUCTOS</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="/recetas">RECETAS</a>
+             <a class="nav-link" href="{{ url('/recetas') }}">RECETAS</a>
            </li>
            <li class="nav-item">
-             <a class="nav-link" href="/contacto">CONTACTO</a>
+             <a class="nav-link" href="{{ url('/contacto') }}">CONTACTO</a>
            </li>
          </ul>
 
@@ -31,10 +31,14 @@
                 <i class="fas fa-user"></i>
               </a>
               <div class="dropdown-menu user-nav" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="/perfil">Mi Perfil</a>
-                <a class="dropdown-item" href="/login">Login</a>
-                <a class="dropdown-item" href="/register">Registrate</a>
-                <a class="dropdown-item" href="/logout">Cerrar Sesión</a>
+                @if($user = Auth::user())
+                <a class="dropdown-item" href="{{ url('/perfil') }}">Mi Perfil</a>
+                <a class="dropdown-item" href="{{ url('/logout') }}">Cerrar Sesión</a>
+                @else
+                <a class="dropdown-item" href="{{ url('/register') }}">Registrate</a>
+                <a class="dropdown-item" href="{{ url('/login') }}">Login</a>
+
+              @endif
               </div>
             </div>
 

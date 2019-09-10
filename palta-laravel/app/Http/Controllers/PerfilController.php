@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Http\Controllers\PerfilController;
+use App\Carrito;
 
 
 class PerfilController extends Controller
@@ -12,5 +13,10 @@ class PerfilController extends Controller
       return view('perfil');
     }
 
-  
+    public function index () {
+      $users = User::all();
+
+      return view('perfil.index', compact('users'));
+    }
+
 }

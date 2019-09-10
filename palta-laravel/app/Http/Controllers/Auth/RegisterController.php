@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Carrito;
 
 class RegisterController extends Controller
 {
@@ -87,5 +88,15 @@ class RegisterController extends Controller
             'telefono' => $data['telefono'],
             'password' => Hash::make($data['password']),
         ]);
+    }
+
+    public function userCarrito () {
+      $carritoUser = Carrito::create([
+        'user_id' => Auth::id(),
+        'fecha' => now(),
+        'medioDePago' => null,
+        'cantItems' => null,
+        'monto' => null
+      ]);
     }
 }

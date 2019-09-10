@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Http\Controllers\CarritoController;
 use App\Carrito;
+use App\Producto;
+use Auth;
 
 
 class CarritoController extends Controller
@@ -13,19 +15,44 @@ class CarritoController extends Controller
       return view('carrito');
     }
 
+  // public function index () {
+  //   $productos = Carrito::find(72)->user->direccion;
+  //   return view('carritos.index', compact('productos'));
+  // }
+
   public function index () {
-    $carritos = Carrito::all();
-
-    return view('carritos.index', compact('carritos'));
+    $productos = Carrito::find(Auth::id())->productos;
+    return view('carritos.index', compact('productos'));
   }
 
-  public function listadoCarrito () {
+  // public function crearCarrito () {
+  //   $carrito = new Carrito;
+  //   $carrito = [
+  //     'user_id' => Auth::id(),
+  //     'fecha' => now(),
+  //     'medioDePago' => null,
+  //     'cantItems' => null,
+  //     'monto' => null
+  //   ];
+  //   return view('carritos.micarrito', compact('carrito'));
+  // }
 
-  }
 
-  public function listaCarrito () {
-      return view('carritos.index', compact('listaProductos'));
-    }
+  //
+  // public function () {
+  //
+  // }
+
+
+  //
+  // public function listadoCarrito () {
+  //
+  // }
+
+  // public function listaCarrito () {
+  //
+  //     return view('carritos.index', compact('listaProductos'));
+  //   }
 
 //   public function show ($id) {
 //     $carrito = Carrito::findOrFail($id);
