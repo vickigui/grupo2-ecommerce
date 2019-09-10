@@ -13,20 +13,32 @@
   <div class="table-responsive">
         <table class="table table-hover table-bordered table-fixed">
         <thead>
-          <!-- <tr>
+          <tr>
             <th scope="col"></th>
             <th scope="col">Fecha de compra</th>
             <th scope="col">Medio de pago</th>
             <th scope="col">Cantidad de Items </th>
             <th scope="col">Total</th>
-          </tr> -->
+          </tr>
         </thead>
         <tbody>
-          @foreach ($productos as $producto)
-          <h2>{{$producto->nombre}}</h2>
-          <p>Cantidad: {{$producto->cantidad}}</p>
-          <img src="{{$producto->imagen}}" alt="">
-          @endforeach
+          @foreach ($carritos as $carrito)
+
+            <tr>
+              <th scope="row">
+                <a href="{{ route('carritos.show', $carrito->id) }}"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
+                <a href=""><button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button></a></i>
+              </th>
+
+              <td>{{ $carrito->fecha }}</td>
+              <td>{{ $carrito->medioDePago }}</td>
+              <td>{{ $carrito->cantItems }}</td>
+              <td>${{ $carrito->monto }}</td>
+
+
+
+            </tr>
+          @endforeach
 
         </tbody>
         <thead>

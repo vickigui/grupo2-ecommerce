@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Producto;
+use App\Productos;
 use App\User;
 
 class Carrito extends Model
@@ -13,7 +13,7 @@ class Carrito extends Model
   public $guarded = [];
 
   public function productos () {
-    return $this->belongsToMany(Producto::class, "carritos_productos", "carritos_id", "productos_id");
+    return $this->belongsToMany(Productos::class, "carritos_productos", "carritos_id", "productos_id")->withPivot("cantidad");
    }
 
  public function user () {

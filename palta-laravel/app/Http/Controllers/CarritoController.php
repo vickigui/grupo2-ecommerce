@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Http\Controllers\CarritoController;
 use App\Carrito;
-use App\Producto;
+use App\Productos;
 use Auth;
 
 
@@ -15,15 +15,41 @@ class CarritoController extends Controller
       return view('carrito');
     }
 
+    public function index () {
+    $carritos = Carrito::all();
+
+    return view('carritos.index', compact('carritos'));
+  }
+
+  public function show ($id) {
+    $carrito = Carrito::with("productos")->findOrFail($id);
+    return view('carritos.show', compact('carrito'));
+  }
+
+// // borra carrito
+//   public function borrar ($id){
+//     $carrito = Carrito::findOrFail($id);
+//     $carrito->delete();
+//
+//     return view('carritos.index', compact('carrito'));
+// }
+
   // public function index () {
   //   $productos = Carrito::find(72)->user->direccion;
   //   return view('carritos.index', compact('productos'));
   // }
 
-  public function index () {
-    $productos = Carrito::find(Auth::id())->productos;
-    return view('carritos.index', compact('productos'));
-  }
+  // public function index () {
+  //   $productos = Carrito::find(Auth::id())->productos;
+  //   return view('carritos.index', compact('productos'));
+  // }
+
+  // public function productoAlCarrito() {
+  //   $carrito = new Carrito();
+  //   $productos = Productos::all();
+  //
+  //   return $carrito->productos_id = $productos->id;
+  // }
 
   // public function crearCarrito () {
   //   $carrito = new Carrito;
@@ -54,11 +80,7 @@ class CarritoController extends Controller
   //     return view('carritos.index', compact('listaProductos'));
   //   }
 
-//   public function show ($id) {
-//     $carrito = Carrito::findOrFail($id);
-//
-//     return view('carritos.show', compact('carrito'));
-//   }
+
 //
 // // borra carrito
 //   public function borrar ($id){

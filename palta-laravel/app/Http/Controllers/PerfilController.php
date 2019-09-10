@@ -10,7 +10,7 @@ use App\Carrito;
 class PerfilController extends Controller
 {
   public function perfil () {
-      return view('perfil');
+      return view('perfil.index');
     }
 
     public function index () {

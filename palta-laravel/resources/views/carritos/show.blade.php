@@ -9,6 +9,13 @@
   <!-- tabla de productos comprados -->
   <div class="container">
 
+<div class="">
+  <p>Fecha: {{ $carrito->fecha }}</p>
+  <p>Medio de pago: {{ $carrito->medioDePago }}</p>
+  <p>Cantidad de items: {{ $carrito->cantItems }}</p>
+  <p>Monto: {{ $carrito->monto }}</p>
+
+</div>
   <div class="table-responsive">
         <table class="table table-hover table-bordered table-fixed">
         <thead>
@@ -23,15 +30,16 @@
           </tr>
         </thead>
         <tbody>
+          @foreach ($carrito->productos as $producto)
             <tr>
               <th scope="row"><a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
                 <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i></th>
-              <th scope="row">{{ $carrito->medioDePago }}</th>
-              <td>1</td>
-              <td>20</td>
-              <td>20</td>
-
+              <th scope="row">{{ $producto->nombre }}</th>
+              <td>{{ $producto->pivot->cantidad }}</td>
+              <td>{{ $producto->precio }}</td>
+              <td>{{ $producto->pivot->cantidad * $producto->precio }}</td>
             </tr>
+          @endforeach
         </tbody>
         <thead>
           <tr>

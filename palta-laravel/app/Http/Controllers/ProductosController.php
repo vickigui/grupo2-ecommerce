@@ -12,7 +12,6 @@ class ProductosController extends Controller
 {
   public function listaProductos () {
       $productos = Productos::all();
-
       return view('productos', compact('productos'));
     }
 
@@ -21,8 +20,6 @@ class ProductosController extends Controller
   }
 
   public function cargarProductos(Request $form ){
-
-
     $reglas=[
         "nombre"=>"required|string|max:255|unique:productos",
         "stock"=>"numeric|required|min:0|max:10",
@@ -42,7 +39,7 @@ class ProductosController extends Controller
 
       ];
 
-       $this->validate($form,$reglas,$mensaje);
+      $this->validate($form,$reglas,$mensaje);
 
       $producto = new Productos();
 
@@ -60,5 +57,6 @@ class ProductosController extends Controller
 
       return redirect("/productos");
     }
+
 
 }
