@@ -15,14 +15,14 @@ Route::get('/', function () {
     return view('home');
 });
 
-
+Route::get('/perfil', 'PerfilController@perfil');
 
 Route::get('/carritos/{id}', 'CarritoController@show')->name('carritos.show');
-Route::get('/carritos/borrar/{id}', 'CarritoController@borrar')->name('carritos.borrar');
 Route::get('/carritos', 'CarritoController@index');
 
-
 Route::get('/productos', 'ProductosController@listaProductos');
+Route::get('/cargarProducto', 'ProductosController@nuevoProducto');
+Route::post('/cargarProducto', 'ProductosController@cargarProductos');
 
 Route::get('/contacto', 'ContactoController@contacto');
 
@@ -43,7 +43,3 @@ Route::get('/admin', 'AdminController@admin');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/logout', 'Auth\LoginController@logout');
-
-Route::get('/perfil', 'PerfilController@index')->name('perfil');
