@@ -1,9 +1,9 @@
-@extends('layouts/plantilla')
+@extends('layouts/admin')
 @section('title', 'PALTA - Administrador')
 @section('contenido')
 
 {{--Acá va contenido--}}
-<div class="container-fluid sectionHeader">
+<div class="container-fluid sectionHeaderAdmin">
 <h1 class="text-center">Nuevo Producto</h1>
 </div>
 <ul class="errores">

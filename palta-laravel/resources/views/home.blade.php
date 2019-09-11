@@ -13,33 +13,38 @@
    </ol>
    <div class="carousel-inner">
      <div class="carousel-item active">
-       <img class="img-responsive" src="images/common/slider-home/verduras.jpg">
+       <img class="img-responsive" src="{{ asset('/images/common/slider-home/verduras.jpg') }}">
 
        <div class="container">
          <div class="carousel-caption text-left">
-           <h1>Bienvenido!</h1>
-           <p>Hacé tu vida más saludable y práctica armando tu canasta semanal.</p>
-           <p><a class="btn btn-lg btn-primary" href="/register" role="button">Registrate ahora!</a></p>
+           <h1>@if($user = Auth::user()) ¡Bienvenido {{ Auth::user()->nombre }}! </h1>
+           <p>Hacé tu vida más saludable y práctica<br> armando tu canasta semanal.</p>
+<br><br>
+           @else
+            <h1>¡Bienvenido!</h1>
+            <p>Registrate y hacé tu vida más saludable y práctica armando tu canasta semanal.</p>
+            <p><a class="btn btn-lg btn-primary" href="{{ url('/register') }}" role="button">Registrate ahora!</a></p>
+           @endif
          </div>
        </div>
      </div>
      <div class="carousel-item">
-       <img class="img-responsive" src="images/common/slider-home/picada.jpg">
+       <img class="img-responsive" src="{{ asset('/images/common/slider-home/picada.jpg') }}">
        <div class="container">
          <div class="carousel-caption">
            <h1>Tenemos recetas para vos</h1>
            <p>Descargá de nuestra sección las recetas más ricas para hacer con los ingredientes mas sanos.</p>
-           <p><a class="btn btn-lg btn-primary" href="/recetas" role="button">Conocé más</a></p>
+           <p><a class="btn btn-lg btn-primary" href="{{ url('/recetas') }}" role="button">Conocé más</a></p>
          </div>
        </div>
      </div>
      <div class="carousel-item">
-        <img class="img-responsive" src="images/common/slider-home/citrico.jpg">
+        <img class="img-responsive" src="{{ asset('/images/common/slider-home/citrico.jpg') }}">
         <div class="container">
          <div class="carousel-caption text-right">
            <h1>Para combatir al invierno.</h1>
            <p>Preparate todos los días 1 vaso de jugo cítrico para mejorar tu sistema inmunológico!.</p>
-           <p><a class="btn btn-lg btn-primary" href="/productos" role="button">Ver Productos</a></p>
+           <p><a class="btn btn-lg btn-primary" href="{{ url('/productos') }}" role="button">Ver Productos</a></p>
          </div>
        </div>
      </div>
@@ -62,31 +67,18 @@
  <div class="container marketing">
 
    <!-- Three columns of text below the carousel -->
-<h2 class="featurette-heading">Estas canastas<br> <span class="text-muted">No te pueden faltar</span></h2>
+<h2 class="featurette-heading">Estos productos<br> <span class="text-muted">No te pueden faltar</span></h2>
 
    <div class="row">
            <div class="col-md-4">
              <div class="card mb-4 shadow-sm">
-               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/vegetables.jpg">
+               <img class="bd-placeholder-img rounded" width="100%" height="225" src="{{ asset('images/home/manzana.jpg') }}">
                <div class="card-body">
-                 <h2>Canasta nº1</h2>
-                 <p class="card-text">
-                   <ul>
-                      <li>VERDURITAS PARA SOPA 1 paquete</li>
-                      <li>PAPA 1kg.</li>
-                      <li>BATATA 500 gr.</li>
-                      <li>ZAPALLO ANCO 1 unidad</li>
-                      <li>ZANAHORIA 600 gr.</li>
-                      <li>CEBOLLA 600 gr.</li>
-                      <li>MORRON ROJO 1 unidad</li>
-                      <li>TOMATES CHERRY 150 gr</li>
-                      <li>y más!</li>
-                   </ul>
-               </p>
+                 <h2>Manzanas</h2>
+
                  <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <a href="/productos"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
-                    <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
+<a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button></a>
                    </div>
                  </div>
                </div>
@@ -94,33 +86,13 @@
            </div>
            <div class="col-md-4">
              <div class="card mb-4 shadow-sm">
-               <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/frutas.jpg">
+               <img class="bd-placeholder-img rounded" width="100%" height="225" src="{{ asset('images/home/banana.jpg') }}">
                <div class="card-body">
-                 <h2>Canasta nº2</h2>
-                 <p class="card-text">
-                   <ul>
-                      <li>VERDURITAS PARA SOPA 1 paquete</li>
-                      <li>PAPA 1kg.</li>
-                      <li>BATATA 500 gr.</li>
-                      <li>ZAPALLO ANCO 1 unidad</li>
-                      <li>ZANAHORIA 600 gr.</li>
-                      <li>CEBOLLA 600 gr.</li>
-                      <li>MORRON ROJO 1 unidad</li>
-                      <li>TOMATES CHERRY 150 gr</li>
-                      <li>REPOLLITOS DE BRUCELAS 250 gr.</li>
-                      <li>ZAPALLITOS 600 gr</li>
-                      <li>TOMATE REDONDO 600 gr.</li>
-                      <li>REPOLLO COLORADO 1/4 unidad.</li>
-                      <li>REMOLACHA 500 gr</li>
-                      <li>PUERRO 250 gr</li>
-                      <li>LIMON 3 unidades</li>
-                      <li>MANDARINA NOVA 700 gr.</li>
-                      <li>PERAS 700 gr.</li>
-                   </ul></p>
+                 <h2>Bananas</h2>
+
                  <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <a href="/productos"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
-                    <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
+                    <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button></a>
                    </div>
                  </div>
                </div>
@@ -128,33 +100,13 @@
            </div>
            <div class="col-md-4">
              <div class="card mb-4 shadow-sm">
-              <img class="bd-placeholder-img rounded" width="100%" height="225" src="images/common/almacen.jpg">
+              <img class="bd-placeholder-img rounded" width="100%" height="225" src="{{ asset('images/home/pera.jpg') }}">
                <div class="card-body">
-                 <h2>Canasta nº3</h2>
-                 <p class="card-text">
-                   <ul>
-                      <li>VERDURITAS PARA SOPA 1 paquete</li>
-                      <li>PAPA 1kg.</li>
-                      <li>BATATA 500 gr.</li>
-                      <li>ZAPALLO ANCO 1 unidad</li>
-                      <li>ZANAHORIA 600 gr.</li>
-                      <li>CEBOLLA 600 gr.</li>
-                      <li>MORRON ROJO 1 unidad</li>
-                      <li>TOMATES CHERRY 150 gr</li>
-                      <li>REPOLLITOS DE BRUCELAS 250 gr.</li>
-                      <li>ZAPALLITOS 600 gr</li>
-                      <li>TOMATE REDONDO 600 gr.</li>
-                      <li>REPOLLO COLORADO 1/4 unidad.</li>
-                      <li>REMOLACHA 500 gr</li>
-                      <li>PUERRO 250 gr</li>
-                      <li>LIMON 3 unidades</li>
-                      <li>MANDARINA NOVA 700 gr.</li>
-                      <li>PERAS 700 gr.</li>
-                   </ul></p>
+                 <h2>Peras</h2>
+
                  <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
-                     <a href="/productos"><button type="button" class="btn btn-sm btn-outline-success">Ver más</button></a>
-                    <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Comprar</button></a>
+                    <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button></a>
                    </div>
                  </div>
                </div>

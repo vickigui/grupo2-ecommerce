@@ -1,7 +1,12 @@
-@extends('layouts.app')
+@extends('layouts/plantilla')
 
-@section('content')
+@section('contenido')
+
 <div class="container">
+  div class="container-fluid sectionHeader">
+    <h1 class="text-center">Restrablecé tu contraseña</h1>
+  </div>
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

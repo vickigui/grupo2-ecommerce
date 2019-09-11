@@ -1,14 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Productos;
 
-use App\User;
-use App\Http\Controllers\AdminController;
+use Illuminate\Http\Request;
 
-
-class AdminController extends Controller
+class adminController extends Controller
 {
-  public function admin () {
-      return view('admin');
+  public function listaProductos () {
+      $productos = Productos::all();
+      return view('admin', compact('productos'));
     }
 }

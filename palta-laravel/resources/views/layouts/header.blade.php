@@ -1,14 +1,16 @@
 
     <header>
      <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white">
-       <a class="navbar-brand" href="/"><img src="/images/common/logo-palta.png" width=80px;></a>
+       <a class="navbar-brand" href="{{ url('/') }}"><img src="{{ asset('/images/common/logo-palta.png') }}" width=80px;></a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
        </button>
+
+
        <div class="collapse navbar-collapse" id="navbarCollapse">
          <ul class="navbar-nav mr-auto">
            <li class="nav-item active">
-             <a class="nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+             <a class="nav-link" href="{{ url('/') }}">HOME <span class="sr-only">(current)</span></a>
            </li>
            <li class="nav-item">
              <a class="nav-link" href="{{ url('/nosotros') }}">NOSOTROS</a>
@@ -23,10 +25,11 @@
              <a class="nav-link" href="{{ url('/contacto') }}">CONTACTO</a>
            </li>
          </ul>
+       </div>
 
 
          <div class="user">
-           <div class="dropdown">
+            <div class="dropdown">
               <a class="nav-link dropdown-toggle user" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-user"></i>
               </a>
@@ -37,19 +40,16 @@
                 @else
                 <a class="dropdown-item" href="{{ url('/register') }}">Registrate</a>
                 <a class="dropdown-item" href="{{ url('/login') }}">Login</a>
-
-              @endif
+                @endif
               </div>
             </div>
+             </div>
 
+             <div class="carrito">
+               <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="{{ url('/carritos') }}">
+                 <i class="fas fa-shopping-cart"></i>
+               </a>
+             </div>
 
-         </div>
-
-         <div class="carrito">
-           <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="/carritos">
-             <i class="fas fa-shopping-cart"></i>
-           </a>
-         </div>
-       </div>
      </nav>
    </header>
