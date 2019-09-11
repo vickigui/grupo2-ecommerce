@@ -34,9 +34,6 @@
               <td>{{ $carrito->medioDePago }}</td>
               <td>{{ $carrito->cantItems }}</td>
               <td>${{ $carrito->monto }}</td>
-
-
-
             </tr>
           @endforeach
 

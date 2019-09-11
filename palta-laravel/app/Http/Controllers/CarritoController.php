@@ -7,6 +7,7 @@ use App\Http\Controllers\CarritoController;
 use App\Carrito;
 use App\Productos;
 use Auth;
+use Illuminate\Http\Request;
 
 
 class CarritoController extends Controller
@@ -24,6 +25,31 @@ class CarritoController extends Controller
   public function show ($id) {
     $carrito = Carrito::with("productos")->findOrFail($id);
     return view('carritos.show', compact('carrito'));
+  }
+
+  public function getCarrito () {
+    $carrito = Carrito::with("productos")->where("user_id", Auth::id());
+
+    if (!$carrito) {
+      $carrito = Carrito::create([
+        'user_id' => Auth::id(),
+        'fecha' => now(),
+        'medioDePago' => null,
+        'cantItems' => 0,
+        'monto' => 0,
+        'estado' => null
+      ]);
+    }
+
+    return $carrito;
+  }
+
+  public function agregarProducto (Request $req) {
+    // dd($req);
+    $producto = Productos::find($req->id);
+    $carrito = $this->getCarrito();
+    $carrito->attach($req['product_id']);
+    return redirect('/productos');
   }
 
 // // borra carrito
@@ -51,17 +77,6 @@ class CarritoController extends Controller
   //   return $carrito->productos_id = $productos->id;
   // }
 
-  // public function crearCarrito () {
-  //   $carrito = new Carrito;
-  //   $carrito = [
-  //     'user_id' => Auth::id(),
-  //     'fecha' => now(),
-  //     'medioDePago' => null,
-  //     'cantItems' => null,
-  //     'monto' => null
-  //   ];
-  //   return view('carritos.micarrito', compact('carrito'));
-  // }
 
 
   //

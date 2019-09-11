@@ -13,28 +13,27 @@
 <div class="container">
   <div class="row">
   @forelse ($productos as $producto)
-  <div class="col-lg-3 col-md-4 col-xs-6 thumb filter {{$producto['id_categorias'] }} ">
-   <form class="" action="{{url('/carritos/agregarProducto')}}" method="post">
-     @csrf
-     <input type="hidden" name="product_id" value="{{$producto["id"]}}">
+ <div class="col-lg-3 col-md-4 col-xs-6 thumb filter {{$producto['id_categorias'] }} ">
+
       <h4>{{$producto["nombre"]}}</h4>
           <img class="img-thumbnail" src="/storage/{{$producto->imagen}}">
               <div class="selector-cantidad">
-                <select class="form-control" id="cantidad" name="cantidad">
-                     <option value="0,25">0,25</option>
-                     <option value="0,50">0,50</option>
-                     <option value="0,75">0,75</option>
-                     <option value="1">1</option>
-                     <option value="2">2</option>
+                <select class="form-control" id="cantidad">
+                     <option>0,25</option>
+                     <option>0,50</option>
+                     <option>0,75</option>
+                     <option>1</option>
+                     <option>2</option>
                  </select>
                 <label>Kilogramos</label>
               </div>
               <h4>${{$producto["precio"]}}</h4>
                <div class="botones-productos">
-                  <button type="submit" class="btn btn-success">Agregar al carrito</button>
-              </div>
-   </form>
-  </div>
+
+                 <a href="{{crearCarrito($producto->id)}}" class="btn btn-success">Agregar al carrito</a>
+               </div>
+
+      </div>
 
   @empty
     <p>No hay productos disponibles</p>

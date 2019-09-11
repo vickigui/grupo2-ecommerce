@@ -9,13 +9,6 @@
   <!-- tabla de productos comprados -->
   <div class="container">
 
-<div class="">
-  <p>Fecha: {{ $carrito->fecha }}</p>
-  <p>Medio de pago: {{ $carrito->medioDePago }}</p>
-  <p>Cantidad de items: {{ $carrito->cantItems }}</p>
-  <p>Monto: {{ $carrito->monto }}</p>
-
-</div>
   <div class="table-responsive">
         <table class="table table-hover table-bordered table-fixed">
         <thead>

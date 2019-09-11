@@ -19,10 +19,12 @@ Route::get('/perfil', 'PerfilController@perfil');
 
 Route::get('/carritos/{id}', 'CarritoController@show')->name('carritos.show');
 Route::get('/carritos', 'CarritoController@index');
+Route::post('/carritos/agregarProducto', 'CarritoController@agregarProducto');
 
 Route::get('/productos', 'ProductosController@listaProductos');
 Route::get('/cargarProducto', 'ProductosController@nuevoProducto');
 Route::post('/cargarProducto', 'ProductosController@cargarProductos');
+Route::get('/productos/{id}', 'CarritoController@crearCarrito');
 
 Route::get('/contacto', 'ContactoController@contacto');
 
