@@ -186,6 +186,22 @@
     font-size: 4rem;
   }
 
+
+  /*Section HeaderAdmin*/
+    .sectionHeaderAdmin {
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      background-color:#595858;
+      background-size: cover;
+      padding: 3rem;
+    }
+
+    .sectionHeaderAdmin h1 {
+      color: white;
+      letter-spacing: 0.3rem;
+      font-size: 4rem;
+    }
+
   /* FORMS
   -------------------------------------------------- */
 .formSection h1{

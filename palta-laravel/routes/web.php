@@ -38,7 +38,7 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/admin', 'AdminController@admin');
+Route::get('/admin', 'AdminController@listaProductos');
 
 Auth::routes();
 
