@@ -34,10 +34,10 @@ class CarritoController extends Controller
       $carrito = Carrito::create([
         'user_id' => Auth::id(),
         'fecha' => now(),
-        'medioDePago' => null,
+        'medioDePago' => "cash",
         'cantItems' => 0,
         'monto' => 0,
-        'estado' => null
+        'estado' => "activo"
       ]);
     }
 
@@ -46,9 +46,9 @@ class CarritoController extends Controller
 
   public function agregarProducto (Request $req) {
     // dd($req);
-    $producto = Productos::find($req->id);
+    $producto = Productos::find($req["product_id"])->with("productos");
     $carrito = $this->getCarrito();
-    $carrito->attach($req['product_id']);
+    $carrito->productos()->attach($req["product_id"], ['cantidad' => $req['cantidad']]);
     return redirect('/productos');
   }
 

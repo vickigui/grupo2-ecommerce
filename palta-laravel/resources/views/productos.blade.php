@@ -16,7 +16,7 @@
   <div class="col-lg-3 col-md-4 col-xs-6 thumb filter {{$producto['id_categorias'] }} ">
    <form class="" action="{{url('/carritos/agregarProducto')}}" method="post">
      @csrf
-     <input type="hidden" name="product_id" value="{{$producto["id"]}}">
+     <input type="hidden" name="product_id" value="{{$producto->id}}">
       <h4>{{$producto["nombre"]}}</h4>
           <img class="img-thumbnail" src="/storage/{{$producto->imagen}}">
               <div class="selector-cantidad">
