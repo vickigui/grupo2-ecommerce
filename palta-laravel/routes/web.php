@@ -24,7 +24,8 @@ Route::get('/productos', 'ProductosController@listaProductos');
 Route::get('/cargarProducto', 'ProductosController@nuevoProducto');
 Route::post('/cargarProducto', 'ProductosController@cargarProductos');
 
-Route::get('/contacto', 'ContactoController@contacto');
+Route::get('/contacto', 'ContactoController@ConsultaIndex');
+Route::post('/contacto', 'ContactoController@GuardarConsulta');
 
 Route::get('/recetas', function () {
     return view('recetas');
