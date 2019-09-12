@@ -4,7 +4,7 @@
 
   <main>
     <div class="container-fluid sectionHeader">
-      <h1 class="text-center">Mis carritos</h1>
+      <h1 class="text-center">Mi carrito</h1>
     </div>
   <!-- tabla de productos comprados -->
   <div class="container">
@@ -26,7 +26,7 @@
           @foreach ($carrito->productos as $producto)
             <tr>
               <th scope="row"><a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
-                <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i></th>
+                <a href="{{url('/carritos/borrarProducto')}}"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i></th>
               <th scope="row">{{ $producto->nombre }}</th>
               <td>{{ $producto->pivot->cantidad }}</td>
               <td>{{ $producto->precio }}</td>

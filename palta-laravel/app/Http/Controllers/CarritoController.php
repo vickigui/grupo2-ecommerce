@@ -51,10 +51,10 @@ class CarritoController extends Controller
     $carrito->productos()->attach($req["product_id"], ['cantidad' => $req['cantidad']]);
     return redirect('/productos');
   }
-
+  // 
   // public function borrarProducto (Request $req) {
-  //   // dd($req);
-  //   $producto = Productos::find($req["product_id"])->with("productos");
+  //   $producto = Productos::find($req["carrito_id"]);
+  //   dd($producto);
   //   $producto->delete();
   //   return redirect('carritos.show');
   // }

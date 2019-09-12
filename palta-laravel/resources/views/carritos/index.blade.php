@@ -5,7 +5,7 @@
 
   <main>
     <div class="container-fluid sectionHeader">
-      <h1 class="text-center">Mi carrito</h1>
+      <h1 class="text-center">Mis carritos</h1>
     </div>
   <!-- tabla de productos comprados -->
   <div class="container">
@@ -17,7 +17,8 @@
             <th scope="col"></th>
             <th scope="col">Fecha de compra</th>
             <th scope="col">Medio de pago</th>
-            <th scope="col">Cantidad de Items </th>
+            <th scope="col">Cantidad de Items</th>
+            <th scope="col">Estado</th>
             <th scope="col">Total</th>
           </tr>
         </thead>
@@ -33,6 +34,7 @@
               <td>{{ $carrito->fecha }}</td>
               <td>{{ $carrito->medioDePago }}</td>
               <td>{{ $carrito->cantItems }}</td>
+              <td>{{ $carrito->estado }}</td>
               <td>${{ $carrito->monto }}</td>
             </tr>
           @endforeach
@@ -59,7 +61,7 @@
 
               <div class="card-body">
                 <h4 class="card-title strog">Domicilio de entrega</h5>
-                <p class="card-text">{{Auth::user()->direccion}}</p>
+                <p class="card-text">{{Auth::user()->direccion}}, {{Auth::user()->localidad}}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>

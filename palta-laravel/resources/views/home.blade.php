@@ -76,11 +76,11 @@
                <div class="card-body">
                  <h2>Manzanas</h2>
 
-                 <div class="d-flex justify-content-between align-items-center float-right">
+                 <!-- <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
 <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button></a>
                    </div>
-                 </div>
+                 </div> -->
                </div>
              </div>
            </div>
@@ -90,11 +90,11 @@
                <div class="card-body">
                  <h2>Bananas</h2>
 
-                 <div class="d-flex justify-content-between align-items-center float-right">
+                 <!-- <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
                     <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button></a>
                    </div>
-                 </div>
+                 </div> -->
                </div>
              </div>
            </div>
@@ -104,11 +104,11 @@
                <div class="card-body">
                  <h2>Peras</h2>
 
-                 <div class="d-flex justify-content-between align-items-center float-right">
+                 <!-- <div class="d-flex justify-content-between align-items-center float-right">
                    <div class="btn-group">
                     <a href="/carrito"> <button type="button" class="btn btn-sm btn-outline-success">Agregar al carrito</button></a>
                    </div>
-                 </div>
+                 </div> -->
                </div>
              </div>
            </div>
