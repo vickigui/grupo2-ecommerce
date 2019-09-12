@@ -16,7 +16,7 @@
         <button class="btn btn-secondary active filter-button" data-filter="todo">Todo</button>
         <button class="btn btn-secondary filter-button" data-filter="fruta">Frutas</button>
         <button class="btn btn-secondary filter-button " data-filter="verdura">Verduras</button>
-        <button class="btn btn-secondary filter-button" data-filter="almacen">Almacen Orgánico</button>
+        {{-- <button class="btn btn-secondary filter-button" data-filter="almacen">Almacen Orgánico</button> --}}
 
           <div class="row">
             <div class="row">
