@@ -20,7 +20,7 @@
 	@endif
 
   	<div class="col-12 col-md-6">
-  		<form class="form-horizontal" method="post" action="/contacto">
+  		<form class="form-horizontal" method="post">
   			{{ csrf_field() }}
   		<div class="form-group">
   			<label for="Name" >Nombre y Apellido:</label>
