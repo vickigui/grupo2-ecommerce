@@ -17,7 +17,7 @@ class CarritoController extends Controller
     }
 
     public function index () {
-    $carritos = Carrito::all();
+    $carritos = Carrito::all()->where("user_id", Auth::id());
 
     return view('carritos.index', compact('carritos'));
   }
@@ -28,7 +28,7 @@ class CarritoController extends Controller
   }
 
   public function getCarrito () {
-    $carrito = Carrito::with("productos")->where("user_id", Auth::id());
+    $carrito = Carrito::with("productos")->where("user_id", Auth::id())->first();
 
     if (!$carrito) {
       $carrito = Carrito::create([
