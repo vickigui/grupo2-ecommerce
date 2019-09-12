@@ -16,11 +16,11 @@ class CarritoController extends Controller
       return view('carrito');
     }
 
-    public function index () {
-    $carritos = Carrito::all()->where("user_id", Auth::id());
+  public function index () {
+  $carritos = Carrito::all()->where("user_id", Auth::id());
 
-    return view('carritos.index', compact('carritos'));
-  }
+  return view('carritos.index', compact('carritos'));
+}
 
   public function show ($id) {
     $carrito = Carrito::with("productos")->findOrFail($id);
@@ -51,6 +51,13 @@ class CarritoController extends Controller
     $carrito->productos()->attach($req["product_id"], ['cantidad' => $req['cantidad']]);
     return redirect('/productos');
   }
+
+  // public function borrarProducto (Request $req) {
+  //   // dd($req);
+  //   $producto = Productos::find($req["product_id"])->with("productos");
+  //   $producto->delete();
+  //   return redirect('carritos.show');
+  // }
 
 // // borra carrito
 //   public function borrar ($id){

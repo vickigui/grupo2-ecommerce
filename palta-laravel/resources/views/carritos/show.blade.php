@@ -102,9 +102,9 @@
     <div class="button-pantalla">
       <div class="row justify-content-end">
         <div class="btn-group" role="group" aria-label="Basic example">
-          <a href="#"> <button type="button" class="btn btn-outline-success">Cancelar</button></a>
+          <a href="{{ url('carritos') }}"> <button type="button" class="btn btn-outline-success">Cancelar</button></a>
           <a href="#"><button type="button" class="btn btn-success">Pagar</button></a>
-          <a href="#"><button type="button" class="btn btn-outline-success">Continuar Comprando</button></a>
+          <a href="{{ url('/productos') }}"><button type="button" class="btn btn-outline-success">Continuar Comprando</button></a>
         </div>
       </div>
     </div>

@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/perfil', 'PerfilController@perfil');
 
 Route::get('/carritos/{id}', 'CarritoController@show')->name('carritos.show');
+// Route::post('/carritos/borrarProducto', 'CarritoController@borrarProducto');
 Route::get('/carritos', 'CarritoController@index');
 Route::post('/carritos/agregarProducto', 'CarritoController@agregarProducto');
 

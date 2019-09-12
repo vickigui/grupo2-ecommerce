@@ -59,7 +59,7 @@
 
               <div class="card-body">
                 <h4 class="card-title strog">Domicilio de entrega</h5>
-                <p class="card-text">Av. De Los Lagos 7008. Nordelta</p>
+                <p class="card-text">{{Auth::user()->direccion}}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
@@ -106,17 +106,21 @@
     <div class="button-pantalla">
       <div class="row justify-content-end">
         <div class="btn-group" role="group" aria-label="Basic example">
-          <a href="#"> <button type="button" class="btn btn-outline-success">Cancelar</button></a>
+          <a href="{{ url('/') }}"> <button type="button" class="btn btn-outline-success">Cancelar</button></a>
           <a href="#"><button type="button" class="btn btn-success">Pagar</button></a>
-          <a href="#"><button type="button" class="btn btn-outline-success">Continuar Comprando</button></a>
+          <a href="{{ url('/productos') }}"><button type="button" class="btn btn-outline-success">Continuar Comprando</button></a>
         </div>
       </div>
     </div>
 
     <div class="button-movil container-fluid">
       <button type="button" class="btn btn-success btn-lg btn-block">PAGAR</button>
-      <button type="button" class="btn btn-outline-success btn-lg btn-block">CONTINUAR COMPRANDO</button>
-      <button type="button" class="btn btn-outline-success btn-lg btn-block">CANCELAR</button>
+      <a href="{{ url('/productos') }}">
+        <button type="button" class="btn btn-outline-success btn-lg btn-block">CONTINUAR COMPRANDO</button>
+      </a>
+      <a href="{{ url('/') }}">
+        <button type="button" class="btn btn-outline-success btn-lg btn-block">CANCELAR</button>
+      </a>
     </div>
   </div>
 
