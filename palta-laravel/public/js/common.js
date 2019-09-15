@@ -6,7 +6,6 @@ $(document).ready(function(){
    $('[data-toggle="tooltip"]').tooltip();
 });
 
-
 //Filter Button
 
 $(document).ready(function(){

@@ -17,10 +17,13 @@ Route::get('/', function () {
 
 Route::get('/perfil', 'PerfilController@perfil');
 
-Route::get('/carritos/{id}', 'CarritoController@show')->name('carritos.show');
-// Route::post('/carritos/borrarProducto', 'CarritoController@borrarProducto');
 Route::get('/carritos', 'CarritoController@index');
+Route::get('/carritos/{id}', 'CarritoController@show')->name('carritos.show');
+Route::get('/carritos/borrarCarrito/{id}', 'CarritoController@borrarCarrito');
 Route::post('/carritos/agregarProducto', 'CarritoController@agregarProducto');
+Route::get('/carritos/borrarProducto/{id}', 'CarritoController@borrarProducto');
+Route::get('/carritos/editar/{id}', 'CarritoController@editar');
+Route::post('/carritos/editarProducto', 'CarritoController@editarProducto');
 
 Route::get('/productos', 'ProductosController@listaProductos');
 Route::get('/cargarProducto', 'ProductosController@nuevoProducto');

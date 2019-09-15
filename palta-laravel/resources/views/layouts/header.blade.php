@@ -44,12 +44,13 @@
               </div>
             </div>
              </div>
-
+             @if($user = Auth::user())
              <div class="carrito">
                <a class="nav-link" data-toggle="tooltip" title="Mi Carrito"  href="{{ url('/carritos') }}">
                  <i class="fas fa-shopping-cart"></i>
                </a>
              </div>
+               @endif
 
      </nav>
    </header>

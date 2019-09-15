@@ -25,14 +25,25 @@
         <tbody>
           @foreach ($carrito->productos as $producto)
             <tr>
-              <th scope="row"><a href="productos.php"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>
-                <a href="{{url('/carritos/borrarProducto')}}"><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-trash-alt"></i></button></a></i></th>
+              <th scope="row">
+                <a href="/carritos/editar/{{$producto->pivot->id}}">
+                  <button type="button" class="btn btn-sm btn-outline-success">
+                    <i class="far fa-edit"></i>
+                  </button>
+                </a>
+                <a href="/carritos/borrarProducto/{{$producto->pivot->id}}">
+                  <button type="button" class="btn btn-sm btn-outline-success">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </a>
+              </th>
               <th scope="row">{{ $producto->nombre }}</th>
               <td>{{ $producto->pivot->cantidad }}</td>
               <td>{{ $producto->precio }}</td>
               <td>{{ $producto->pivot->cantidad * $producto->precio }}</td>
             </tr>
-          @endforeach
+            @endforeach
+
         </tbody>
         <thead>
           <tr>
@@ -55,7 +66,7 @@
 
               <div class="card-body">
                 <h4 class="card-title strog">Domicilio de entrega</h5>
-                <p class="card-text">Av. De Los Lagos 7008. Nordelta</p>
+                <p class="card-text">{{Auth::user()->direccion}}, {{Auth::user()->localidad}}</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                     <a href=""><button type="button" class="btn btn-sm btn-outline-success"><i class="far fa-edit"></i></button></a>

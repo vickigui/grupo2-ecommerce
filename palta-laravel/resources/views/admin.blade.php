@@ -16,7 +16,7 @@
                   <p>Stock: {{$producto["stock"]}} k.</p>
                   <p>Precio: ${{$producto["precio"]}}</p>
                    <div class="botones-productos">
-                     <a href="#" class="btn btn-info">MODIFICAR</a>
+                     <a href="/carritos/editar" class="btn btn-info">MODIFICAR</a>
                    </div>
 
               </div>

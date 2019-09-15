@@ -13,7 +13,7 @@ class Carrito extends Model
   public $guarded = [];
 
   public function productos () {
-    return $this->belongsToMany(Productos::class, "carritos_productos", "carritos_id", "productos_id")->withPivot("cantidad");
+    return $this->belongsToMany(Productos::class, "carritos_productos", "carritos_id", "productos_id")->withPivot("cantidad", "id");
    }
 
  public function user () {

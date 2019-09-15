@@ -65,7 +65,7 @@ class RegisterController extends Controller
             'apellido' => ['required', 'string', 'min:3', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'direccion' => ['required', 'string', 'min:7', 'max:255'],
-            'localidad' => ['required', 'string', 'min:7', 'max:255'],
+            'localidad' => ['required', 'string', 'min:4', 'max:255'],
             'telefono' => ['required', 'numeric'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ], $messages);

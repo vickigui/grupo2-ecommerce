@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\CarritoController;
 use App\Carrito;
 use App\Productos;
+use App\carritosProductos;
 use Auth;
 use Illuminate\Http\Request;
 
@@ -51,13 +52,29 @@ class CarritoController extends Controller
     $carrito->productos()->attach($req["product_id"], ['cantidad' => $req['cantidad']]);
     return redirect('/productos');
   }
-  // 
-  // public function borrarProducto (Request $req) {
-  //   $producto = Productos::find($req["carrito_id"]);
-  //   dd($producto);
-  //   $producto->delete();
-  //   return redirect('carritos.show');
-  // }
+  //
+  public function borrarCarrito ($id) {
+    $producto = Carrito::destroy($id);
+    return redirect('carritos');
+  }
+
+  public function borrarProducto ($id) {
+    $producto = carritosProductos::destroy($id);
+    return redirect()->back();
+  }
+
+  public function editar ($id) {
+    $carritos = carritosProductos::find($id);
+    return view ('carritos/editar', compact('carritos'));
+    }
+
+  public function editarProducto (Request $request) {
+    $producto = carritosProductos::find($request->id);
+    $producto->cantidad = $request->cantidad;
+    $producto->save();
+    return redirect('carritos');
+  }
+
 
 // // borra carrito
 //   public function borrar ($id){
